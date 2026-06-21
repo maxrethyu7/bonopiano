@@ -12,6 +12,24 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+    <style>
+      .lang-button {
+        border: none;
+        background: transparent;
+        font-size: 1.4rem;
+        cursor: pointer;
+        margin-left: 0.2rem;
+        padding: 0.2rem 0.3rem;
+      }
+      .lang-button.active {
+        outline: 2px solid rgba(255,255,255,0.8);
+        border-radius: 0.25rem;
+      }
+      .language-selector {
+        display: flex;
+        align-items: center;
+      }
+    </style>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </head>
@@ -19,12 +37,10 @@
     
   <nav>
     <div class="nav-wrapper container">
-      <a href="#" class="brand-logo right"><img class="responsive-img" id="logo" width="100%" src="Logo_64px.png"/></a>
       <div class="language-selector right" style="margin-top:12px; margin-right:8px;">
-        <select id="lang-select">
-          <option value="de">Deutsch</option>
-          <option value="en">English</option>
-        </select>
+        <button class="lang-button" data-lang="de" aria-label="Deutsch">🇩🇪</button>
+        <button class="lang-button" data-lang="en" aria-label="English">🇬🇧</button>
+        <button class="lang-button" data-lang="zh" aria-label="中文">🇨🇳</button>
       </div>
       <ul id="nav-mobile" class="center">
         <li class="active"><a href="#" data-i18n="nav.home">Home</a></li>
@@ -96,7 +112,7 @@
   
           </div>
           <div class="col l3 s12">
-            <h5 class="white-text">Navigation</h5>
+            <h5 class="white-text" data-i18n="footer.nav">Navigation</h5>
             <ul>
               <li><a class="white-text" href="index.html" data-i18n="nav.home">Home</a></li>
               <li><a class="white-text" href="shop.html" data-i18n="nav.shop">Shop</a></li>
@@ -105,9 +121,9 @@
             </ul>
           </div>
           <div class="col l3 s12">
-            <h5 class="white-text">Kontakt</h5>
+            <h5 class="white-text" data-i18n="footer.contact">Kontakt</h5>
             <ul>
-              <li><a class="white-text" href="mailto:entsetzlichgut@gmail.com">E-Mail</a></li>
+              <li><a class="white-text" href="mailto:entsetzlichgut@gmail.com" data-i18n="footer.email">E-Mail</a></li>
               <li><a class="white-text" href="https://www.instagram.com/entsetzlichgut/" target="_blank">Instagram</a></li>
             </ul>
           </div>
