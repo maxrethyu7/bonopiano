@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Entsetzlichgut.de</title>
+    <title>bono-piano.com</title>
     <link rel="icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
@@ -12,24 +12,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-    <style>
-      .lang-button {
-        border: none;
-        background: transparent;
-        font-size: 1.4rem;
-        cursor: pointer;
-        margin-left: 0.2rem;
-        padding: 0.2rem 0.3rem;
-      }
-      .lang-button.active {
-        outline: 2px solid rgba(255,255,255,0.8);
-        border-radius: 0.25rem;
-      }
-      .language-selector {
-        display: flex;
-        align-items: center;
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css" />
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </head>
@@ -37,31 +20,42 @@
     
   <nav>
     <div class="nav-wrapper container">
-      <div class="language-selector right" style="margin-top:12px; margin-right:8px;">
-        <button class="lang-button" data-lang="de" aria-label="Deutsch">🇩🇪</button>
-        <button class="lang-button" data-lang="en" aria-label="English">🇬🇧</button>
-        <button class="lang-button" data-lang="zh" aria-label="中文">🇨🇳</button>
+      <div class="nav-left">
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger hide-on-large-only"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="hide-on-med-and-down">
+          <li class="active"><a href="#" data-i18n="nav.home">Home</a></li>
+          <li><a href="product.html" data-i18n="nav.shop">Produkt</a></li>
+          <li><a href="tutorial.html" data-i18n="nav.instagram">Anleitung</a></li>
+          <li><a href="impressum.html" data-i18n="nav.impressum">Impressum</a></li>
+        </ul>
       </div>
-      <ul id="nav-mobile" class="center">
-        <li class="active"><a href="#" data-i18n="nav.home">Home</a></li>
-        <li><a href="shop.html" data-i18n="nav.shop">Shop</a></li>
-        <li><a href="instagram.html" data-i18n="nav.instagram">Instagram</a></li>
-        <li><a href="impressum.html" data-i18n="nav.impressum">Impressum</a></li>
-      </ul>
+      <a href="index.html" class="brand-logo logo2">
+        <img src="assets/logo2.png" alt="Logo" class="nav-logo" />
+      </a>
+      <div class="nav-right">
+        <div class="language-selector">
+          <button class="lang-button" data-lang="de" aria-label="Deutsch">DE</button>
+          <button class="lang-button" data-lang="en" aria-label="English">EN</button>
+          <button class="lang-button" data-lang="zh" aria-label="中文">ZH</button>
+        </div>
+      </div>
     </div>
   </nav>
-
-    
-
-    
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+    <li><a href="product.html" data-i18n="nav.shop">Produkt</a></li>
+    <li><a href="tutorial.html" data-i18n="nav.instagram">Anleitung</a></li>
+    <li><a href="impressum.html" data-i18n="nav.impressum">Impressum</a></li>
+  </ul>
     <div class="row">
       <div class="col s12">
         <div class="section no-pad-bot" id="index-banner">
           <div class="container">
             <br><br>
-            <h1 class="header center orange-text" data-i18n="header.title"><b>Herzlich Willkomment</b></h1>
+            <h1 class="header center orange-text" data-i18n="header.title"><b>Herzlich Willkommen</b></h1>
             <div class="row center">
-              <h5 class="header col s12 light" data-i18n="header.subtitle"><b>auf entsetzlichgut.de!<br>
+              <h5 class="header col s12 light" data-i18n="header.subtitle"><b>auf bono-piano.com!<br>
+              <br>
               Mein Name ist DerEntzücker und ich mag Wortspiele und Enten.<br>
               Die selbsterstellten Designs gibt es sowohl im Entladen (Shop) zu Kaufen (z.B. auf Tassen oder T-Shirts) als auch auf der Instagram Seite zum bloßen Anschauen und Liken.<br>
               Es ist also deine ENTscheidung, ob du Dir lustige Enten-T-Shirts kaufen möchtest oder lediglich so Fan wirst.<br>
@@ -104,9 +98,9 @@
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
-            <h5 class="white-text">Über die Enten</h5>
-            <p class="grey-text text-lighten-4">
-              Die Idee der Enten ist in einer Vorlesung entstanden. Durch den Support einiger Fangirls und -boys wurde die Idee weiterENTwickelt und hier sind wir nun mit einer eigenen Webseite, einem eigenem Shop und einem eigenem Instagram Account.
+            <h5 class="white-text" data-i18n="footer.about">Lorem Ipsum</h5>
+            <p class="grey-text text-lighten-4" data-i18n="footer.aboutText">
+              Lorem Ipsum sol ardet omnibus, asinus tacet.
             </p>
   
   
@@ -135,6 +129,12 @@
         </div>
       </div>
     </footer>
-    <script src="js/i18n.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.sidenav');
+      M.Sidenav.init(elems);
+    });
+  </script>
+  <script src="js/i18n.js"></script>
   </body>
 </html>

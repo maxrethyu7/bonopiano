@@ -12,6 +12,7 @@
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         />
+        <link rel="stylesheet" href="css/style.css" />
         
         <!-- Compiled and minified JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -27,17 +28,33 @@
     <body>
         <nav>
             <div class="nav-wrapper container">
-              <a href="index.html" class="brand-logo right"><img class="responsive-img" id="logo" src="Logo_64px.png"/></a>
-              <ul id="nav-mobile" class="left">
-                <li><a href="index.html">Home</a></li>
-                <li class="active"><a href="#">Shop</a></li>
-                <li><a href="instagram.html">Instagram</a></li>
-                <li><a href="impressum.html">Impressum</a></li>
-              </ul>
+              <div class="nav-left">
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger hide-on-large-only"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                  <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                  <li class="active"><a href="product.html" data-i18n="nav.shop">Produkt</a></li>
+                  <li><a href="tutorial.html" data-i18n="nav.instagram">Anleitung</a></li>
+                  <li><a href="impressum.html" data-i18n="nav.impressum">Impressum</a></li>
+                </ul>
+              </div>
+              <a href="index.html" class="brand-logo logo2"><img class="responsive-img" id="logo" src="Logo_64px.png"/></a>
+              <div class="nav-right">
+                <div class="language-selector">
+                  <button class="lang-button" data-lang="de" aria-label="Deutsch">DE</button>
+                  <button class="lang-button" data-lang="en" aria-label="English">EN</button>
+                  <button class="lang-button" data-lang="zh" aria-label="中文">ZH</button>
+                </div>
+              </div>
             </div>
           </nav>
+          <ul class="sidenav" id="mobile-demo">
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li class="active"><a href="product.html" data-i18n="nav.shop">Produkt</a></li>
+            <li><a href="tutorial.html" data-i18n="nav.instagram">Anleitung</a></li>
+            <li><a href="impressum.html" data-i18n="nav.impressum">Impressum</a></li>
+          </ul>
 
-        <div id="shop">Spreadshop lädt...</div>
+        <div id="shop" data-i18n="product.shopLoading">Spreadshop lädt...</div>
         <script>
             var spread_shop_config = {
               prefix: 'https://entsetzlichgut.myspreadshop.de',
@@ -47,6 +64,12 @@
               updateMetadata: false,
               swipeMenu: true
             };
+        </script>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(elems);
+          });
         </script>
         <script type="text/javascript" src="https://entsetzlichgut.myspreadshop.net/js/shopclient.nocache.js"></script>
     </body>

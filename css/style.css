@@ -6,9 +6,161 @@
  * Made By MaterializeCSS.com
  */
 
+.lang-button {
+  border: 1px solid rgba(241, 211, 111, 0.5);
+  background-color: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  margin-left: 0.3rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  color: transparent;
+  text-indent: -9999px;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  transition: background-color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.lang-button[data-lang="de"] {
+  background-image: url("../assets/flags/de.svg");
+}
+
+.lang-button[data-lang="en"] {
+  background-image: url("../assets/flags/gb.svg");
+}
+
+.lang-button[data-lang="zh"] {
+  background-image: url("../assets/flags/cn.svg");
+}
+
+.lang-button:hover,
+.lang-button.active {
+  background-color: rgba(241, 211, 111, 0.18);
+  transform: scale(1.05);
+  border-color: #f1d36f;
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  background-color: #000 !important;
+}
+
+nav .nav-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 56px;
+}
+
+nav .nav-left,
+nav .nav-right {
+  display: flex;
+  align-items: center;
+}
+
+nav .nav-left {
+  flex: 1 1 auto;
+}
+
+nav .brand-logo.logo2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+nav .brand-logo.logo2 .nav-logo {
+  max-height: 40px;
+  width: auto;
+  display: block;
+}
+
+nav .sidenav-trigger {
+  color: #f1d36f;
+  margin-right: 0.5rem;
+}
+
+nav ul#nav-mobile {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav .language-selector {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.4rem;
+}
+
+nav .language-selector .lang-button {
+  box-sizing: border-box;
+  line-height: 1;
+  min-width: 2.8rem;
+  min-height: 2.8rem;
+}
+
+.sidenav {
+  background-color: #000 !important;
+}
+
+.sidenav li a,
+.sidenav li a:hover {
+  color: #f1d36f !important;
+}
+
+.sidenav-overlay {
+  background-color: rgba(0,0,0,0.65) !important;
+}
+
+@media only screen and (max-width: 992px) {
+  nav ul#nav-mobile {
+    margin-left: 0;
+  }
+  nav .brand-logo.logo2 {
+    left: 50%;
+  }
+  nav .language-selector {
+    margin-left: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  nav .brand-logo.logo2 {
+    left: 50%;
+  }
+}
+
 nav ul a,
-nav .brand-logo {
-  color: #444;
+nav .brand-logo,
+nav a {
+  color: #f1d36f !important;
+}
+
+#title-banner,
+#index-banner .container,
+#index-banner .section {
+  text-align: center;
+}
+
+.card-image img.responsive-img,
+#logo {
+  display: block;
+  margin: 0 auto;
 }
 
 p {
