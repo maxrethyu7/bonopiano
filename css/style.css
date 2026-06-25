@@ -6,6 +6,34 @@
  * Made By MaterializeCSS.com
  */
 
+:root {
+  --bg-color: #2b2b2b; /* Anthrazit */
+  --text-color: #ffffff; /* Weiß für normalen Text */
+  --heading-color: #E6C07A; /* Hellgold für Überschriften */
+  --link-color: #ffffff;
+  --card-bg: #353535; /* Etwas helleres Dunkelgrau für Cards */
+}
+
+body {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color) !important;
+}
+
+a { color: var(--link-color); }
+a:hover { opacity: 0.9; }
+
+/* Card background slightly lighter than page background */
+.card,
+.card-panel,
+.card .card-content {
+  background-color: var(--card-bg) !important;
+  color: var(--text-color) !important;
+}
+
 .lang-button {
   border: 1px solid rgba(241, 211, 111, 0.5);
   background-color: rgba(255, 255, 255, 0.08);
@@ -160,15 +188,9 @@ nav a {
 .card-image img.responsive-img,
 #logo {
   display: block;
-  margin: 0 auto;
-}
-
-p {
-  line-height: 2rem;
-}
-
-.sidenav-trigger {
-  color: #26a69a;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 .parallax-container {
@@ -208,7 +230,128 @@ footer.page-footer {
   margin: 0;
 }
 
+/* Container, der die Cards hält */
+.card-container {
+  display: grid;
+  /* Erstellt 2 Spalten auf Desktop, bricht automatisch um, wenn sie unter 340px schrumpfen */
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+  justify-content: center; /* Zentriert die Cards, falls sie untereinander stehen */
+}
+
+/* Die einzelnen Cards */
+.custom-card {
+  background-color: #2b2b2b; /* Dunkler Hintergrund wie im Screenshot */
+  color: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  
+  /* Flexbox hier sorgt dafür, dass Inhalt und Bild sich den Platz aufteilen */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Textbereiche in den Cards */
+.card-text {
+  padding: 1.5rem;
+  flex-grow: 1; /* Zwingt den Text, den Raum auszufüllen, damit Buttons/Bilder bündig sind */
+}
+
+.card-text h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.card-text .flow-text {
+  font-size: 1.25rem; /* Erhöht die Grundschriftgröße (vorher meist ~1rem) */
+  line-height: 1.6;   /* Sorgt für einen angenehmen Zeilenabstand */
+}
+
+.card-text p {
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #cccccc;
+}
+
+/* Link-Container für die Bilder */
+.card-link {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Die Bilder selbst */
+.card-media {
+  display: block;
+  width: 100%;          /* Das Bild nutzt die volle Breite der Card */
+  height: auto;         /* ERSETZT 'relative': Berechnet die Höhe automatisch anhand des Seitenverhältnisses, verhindert Verzerrung! */
+  max-height: 350px;    /* Optional: Verhindert, dass ein Bild auf riesigen Bildschirmen unendlich hoch wird */
+  object-fit: contain;  /* Garantiert, dass das Bild innerhalb seiner Box niemals verzerrt oder beschnitten wird */
+  transition: transform 0.3s ease;
+}
+
+/* Kleiner visueller Effekt beim Drüberfahren */
+.card-link:hover .card-media {
+  transform: scale(1.02);
+}
+
+/* Responsive Anpassung für kleinere Bildschirme (Mobile) */
+@media (max-width: 768px) {
+  .card-container {
+    /* Begrenzt die Breite untereinander, damit die Cards auf Handys nicht zu riesig werden */
+    max-width: 500px; 
+  }
+  
+  .card-media {
+    height: 200px; /* Leicht kleinere Bildhöhe auf Smartphones */
+  }
+}
+
 /* Override Materialize footer color to a dark gray */
 footer.page-footer {
   background-color: #333333 !important;
+}
+
+/* Bereitet den Link-Container für das absolute Overlay vor */
+.card-link.youtube-link {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+/* Das unsichtbare Overlay, das den Play-Button enthält */
+.card-link.youtube-link::after {
+  content: "";
+  position: absolute;
+  inset: 0; /* Deckt das gesamte Bild ab */
+  background-color: rgba(0, 0, 0, 0.15); /* Leichte Abdunklung für besseren Kontrast */
+  
+  /* Zentriert das Play-Icon exakt in der Mitte */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Modernes, cleanes YouTube-Play-Icon als SVG */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48" width="68" height="48"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79 0 34 0 34 0S12.21 0 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C0 13.06 0 24 0 24s0 10.94 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 48 34 48 34 48s21.79 0 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C68 34.94 68 24 68 24s0-10.96-1.48-16.26z" fill="%23ff0000"/><polygon points="27,33 45,24 27,15" fill="%23ffffff"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 68px 48px; /* Originalgröße des YouTube-Buttons */
+  
+  transition: all 0.3s ease;
+  opacity: 0.9; /* Standardmäßig leicht transparent */
+}
+
+/* Hover-Effekt: Wenn man mit der Maus über das Bild fährt */
+.card-link.youtube-link:hover::after {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0); /* Verhindert doppelte Abdunklung beim Hover */
+  /* Macht den Play-Button beim Hover minimal dynamischer */
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
 }
