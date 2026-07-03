@@ -12,7 +12,12 @@
   --heading-color: #E6C07A; /* Hellgold für Überschriften */
   --link-color: #ffffff;
   --card-bg: #353535; /* Etwas helleres Dunkelgrau für Cards */
+  --nav-height: 140px; /* Höhe des Navs für scroll offset */
 }
+
+/* Smooth scroll and anchor offset for fixed headers */
+html { scroll-behavior: smooth; }
+.anchor { scroll-margin-top: var(--nav-height); }
 
 body {
   background-color: var(--bg-color) !important;
@@ -81,7 +86,7 @@ a:hover { opacity: 0.9; }
 
 nav {
   background-color: #000 !important;
-  min-height: 112px;
+  min-height: 250px;
 }
 
 nav .nav-wrapper {
@@ -89,9 +94,10 @@ nav .nav-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 112px;
-  padding: 0 !important;
+  min-height: 140px; /* tightened vertical space */
+  padding: 0.35rem 0.75rem !important;
   margin: 0 !important;
+  gap: 0.25rem;
 }
 
 nav .nav-wrapper.container {
@@ -130,12 +136,14 @@ nav .brand-logo.logo2 {
   justify-content: center;
   z-index: 0;
   pointer-events: none;
-  background-image: url(../assets/titelbild_banner.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  width: 600px;
-  height: 112px;
+  background-image: url(../assets/titelbild_banner.png);
+  width: 75%;
+  max-width: 1200px;
+  height: 230px; /* explicit height so background-image is visible */
+  max-height: 230px;
 }
 
 /* Entferne das separate Banner-Element */
@@ -172,6 +180,28 @@ nav .language-selector .lang-button {
 
 .sidenav {
   background-color: #000 !important;
+}
+
+/* Keep sidenav hidden off-canvas by default so its right edge isn't visible */
+.sidenav {
+  transform: translateX(-120%);
+  transition: transform 0.25s ease;
+}
+
+/* Force compact sidenav: show buttons inline (disable stacked vertical mode) */
+.sidenav {
+  width: auto !important;
+  max-width: calc(100% - 2rem) !important;
+  padding: 0.25rem 0.5rem !important;
+}
+.sidenav li {
+  display: inline-block !important;
+  margin: 0 0.25rem !important;
+}
+.sidenav li a {
+  display: inline-block !important;
+  padding: 0.5rem 0.75rem !important;
+  color: #f1d36f !important;
 }
 
 .sidenav li a,
@@ -280,6 +310,51 @@ nav .language-dropdown button.lang-button:hover {
   background-color: rgba(241, 211, 111, 0.1) !important;
 }
 
+/* Desktop: stack nav links and language buttons vertically */
+@media only screen and (min-width: 993px) {
+  nav ul#nav-mobile {
+    display: flex !important;
+    flex-direction: column !important;
+    padding-left: 0 !important;
+    align-items: flex-start !important;
+  }
+  nav ul#nav-mobile li {
+    display: block !important;
+    margin: 1px 0 !important; /* much tighter vertical gap */
+  }
+  nav ul#nav-mobile li a {
+    display: block !important;
+    padding: 2px 6px !important; /* tighter padding */
+    line-height: 1.1 !important;
+  }
+  nav .language-selector {
+    flex-direction: column !important;
+    gap: 0.12rem !important;
+    padding-top: 4px !important;
+    align-items: flex-end !important;
+  }
+}
+
+/* Very specific override to ensure vertical nav on desktop (highest specificity) */
+@media only screen and (min-width: 993px) {
+  nav.nav-wrapper, nav .nav-wrapper, nav .nav-wrapper.container {
+    /* no-op to increase specificity */
+  }
+  nav .nav-wrapper.container > .nav-left > ul#nav-mobile,
+  nav .nav-wrapper > .nav-left > ul#nav-mobile {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  nav .nav-wrapper.container > .nav-left > ul#nav-mobile > li,
+  nav .nav-wrapper > .nav-left > ul#nav-mobile > li {
+    display: block !important;
+    float: none !important;
+    width: auto !important;
+    margin: 6px 0 !important;
+  }
+}
+
 /* Keep dropdown compact and center flag buttons */
 .dropdown-content#language-menu-mobile {
   padding: 0.4rem !important;
@@ -299,19 +374,25 @@ nav .language-dropdown button.lang-button:hover {
   }
 }
 
-@media only screen and (max-width: 600px) {
-  /* Media query angepasst, da .brand-logo.logo2 jetzt im .nav-banner ist */
+@media only screen and (max-width: 992px) {
+  /* Media query angepasst: compact sidenav for tablet and mobile widths
+     This removes the large half-screen sidenav (Modus 2) and uses the
+     compact inline-style sliding panel (Modus 3) instead. */
   nav .brand-logo.logo2 {
-    width: 70%;
-    max-width: 420px;
-    height: 78px; /* ~70% von 112px */
+    /* Scale with viewport width: width controls size, padding-top keeps aspect ratio */
+    width: 90%;
+    max-width: none;
+    height: 0; /* rely on padding to create height proportional to width */
+    padding-top: 24%; /* controls aspect ratio — increase/decrease to taste */
     background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   /* Make the opened navigation (sidenav) compact: only as big as the buttons need */
   .sidenav {
     position: absolute !important;
-    top: 78px !important; /* place below the nav */
+    top: 140px !important; /* place below the nav (matches nav min-height) */
     left: 1rem !important;
     right: auto !important;
     width: auto !important;
@@ -319,22 +400,25 @@ nav .language-dropdown button.lang-button:hover {
     max-width: calc(100% - 2rem) !important;
     padding: 0.25rem 0.5rem !important;
     height: auto !important;
-    transform: translateX(-120%); /* hidden by default; Materialize inline style will override */
+    /* Let Materialize control the transform when opening/closing the sidenav */
     transition: transform 0.25s ease;
     border-radius: 8px !important;
     box-shadow: 0 6px 18px rgba(0,0,0,0.5) !important;
     background-color: #000 !important;
     display: block !important;
+    z-index: 3000 !important;
   }
 
+  /* Stack sidenav buttons vertically when the burger menu opens */
   .sidenav li {
-    display: inline-block !important;
-    margin: 0 0.25rem !important;
+    display: block !important;
+    margin: 6px 0 !important;
   }
 
   .sidenav li a {
-    display: inline-block !important;
-    padding: 0.5rem 0.75rem !important;
+    display: block !important;
+    width: 100% !important;
+    padding: 8px 12px !important;
     color: #f1d36f !important;
   }
   /* Remove page darkening overlay when sidenav opens */
@@ -410,6 +494,53 @@ footer.page-footer {
   margin: 0 auto;
   padding: 1rem;
   justify-content: center; /* Zentriert die Cards, falls sie untereinander stehen */
+}
+
+/* Homepage two-column layout: left = intro text, right = stacked cards */
+.home-split {
+  max-width: 1600px; /* increase max width so columns occupy more horizontal space */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.home-split .home-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem; /* reduce inner padding to allow wider content */
+}
+.home-split .home-left .container {
+  width: 100%;
+  max-width: none;
+  padding: 0 0.25rem;
+}
+.home-split .home-left .row.center {
+  justify-content: flex-start; /* keep text left-aligned inside column */
+}
+.home-split .home-left .section {
+  width: 95%;
+}
+.home-split .home-right {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0.5rem; /* reduce inner padding */
+}
+.home-split .home-right .card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 95%;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Mobile: all elements full-width, stacked */
+  .home-split .home-left,
+  .home-split .home-right {
+    padding: 0.5rem;
+  }
+  .home-split .home-right .card-container {
+    gap: 1rem;
+  }
 }
 
 /* Die einzelnen Cards */
@@ -524,4 +655,72 @@ footer.page-footer {
   background-color: rgba(0, 0, 0, 0); /* Verhindert doppelte Abdunklung beim Hover */
   /* Macht den Play-Button beim Hover minimal dynamischer */
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+}
+
+/* Collection list styling to match page colors */
+.collection {
+  background-color: var(--bg-color) !important; /* gleiche Hintergrundfarbe wie die Seite */
+  border: 0 none !important;
+  box-shadow: none !important;
+  margin-top: 0.5rem;
+}
+.collection .collection-item {
+  background-color: transparent !important;
+  color: var(--text-color) !important; /* Standardtextfarbe (weiß) */
+  border-bottom: 1px solid rgba(255,255,255,0.04) !important; /* dezente Trennung */
+  padding-left: 0.5rem !important;
+}
+.collection .collection-item a {
+  color: var(--heading-color) !important; /* Linkfarbe: Gold */
+  text-decoration: none;
+}
+.collection .collection-item a:hover {
+  text-decoration: underline;
+}
+
+/* Gallery thumbnails in cards */
+.gallery-thumbs {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.gallery-thumb {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid rgba(255,255,255,0.06);
+}
+.gallery-thumb:hover {
+  border-color: var(--heading-color);
+  transform: translateY(-2px);
+}
+
+/* Modal override to center image and darken background a bit more */
+.modal {
+  max-width: 85vw;
+  max-height: 85vh;
+  padding: 0;
+}
+.modal .modal-content {
+  background: transparent;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal .modal-close {
+  color: #fff;
+}
+/* Ensure the modal image fits the viewport without being cropped */
+.modal .modal-content img {
+  width: auto;
+  height: auto;
+  max-width: calc(85vw - 48px);
+  max-height: calc(85vh - 96px);
+  object-fit: contain;
+  display: block;
 }
