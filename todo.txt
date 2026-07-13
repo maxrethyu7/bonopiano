@@ -1,0 +1,28 @@
+Punkteliste größer
+DONE
+
+andre Schriftart (Calibri)
+DONE
+
+Titel größer und skaliert mit Seitenbreite
+DONE
+
+Hyperlinks für "Flügel" und "Klaviere" im Titel
+
+Textgröße Infos größer
+DONE
+
+Abstand zwischen Titel und Infotext geringer
+DONE
+
+Blocktext Modus
+DONE
+
+Website online stellen (ohne Domain)
+DONE
+
+Inhalt Produktseite
+
+Inhalt Anleitung + Video
+
+Inhalt Impressum

@@ -5,9 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
       'nav.product': 'Produkt',
       'nav.anleitung': 'Anleitung',
       'nav.impressum': 'Impressum',
-      'header.title': 'Innovative Schalldämpfung für Flügel und Klaviere',
-      'index.text1': '<b>Die elegante Akustiklösung von BONO Piano Akustik reduziert die Lautstärke akustischer Flügel und Klaviere deutlich — ohne den natürlichen Klangcharakter zu beeinträchtigen und ganz ohne Eingriffe in die Mechanik, das Gehäuse oder der Raumarchitektur!</b><br><br>Entwickelt für Konzertpianisten, Musikstudierende, Theater, Musikschulen und -Hochschulen, Studios und alle Privaträume.<br><br>Lesen Sie mehr und entdecken Sie das patentierte Produkt mit allen ausführlichen Informationen:',
-      'index.title2': '<b>Natürlich spielen. Leiser klingen.</b>',
+      'header.title': '<span style="color: #E6C07A"> Innovative Schalldämpfung</span>',
+      'header.subtitle': '<span style="color: #ffffff">für <em>Flügel</em> und <em>Klaviere</em></span>',
+      'index.text1': '<span style="font-size: 1.3em;">Die elegante Akustiklösung von BONO Piano Akustik reduziert die Lautstärke akustischer Flügel und Klaviere deutlich — ohne den natürlichen Klangcharakter zu beeinträchtigen und ganz ohne Eingriffe in die Mechanik, das Gehäuse oder der Raumarchitektur!</span><br><br>Entwickelt für Konzertpianisten, Musikstudierende, Theater, Musikschulen und -Hochschulen, Studios und alle Privaträume. <br><br>Schauen Sie sich das folgende Video an, um unser Produkt besser zu verstehen! ',
+      'index.text2': '<span style="font-size: 1.2em;">Lesen Sie mehr und entdecken Sie das patentierte Produkt mit allen ausführlichen Informationen:',
+      'index.title2': '<em>Natürlich spielen.<br>Leiser klingen.</em>',
       'index.gliederung1': '&rarr; Akustische Freiheit',
       'index.gliederung2': '&rarr; Das Produkt & seine Funktionsweise',
       'index.gliederung3': '&rarr; Gutachten & Messungen',
@@ -22,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'footer.nav': 'Navigation',
       'footer.contact': 'Kontakt',
       'footer.social': 'Soziale Medien',
-      'footer.purchase': 'Bestellen',
+      'footer.purchase': 'Bestellen bei Amazon',
       'footer.email-info': 'Info-Mail',
       'footer.email-purchase': 'Bestell-Mail',
       'product.title': 'Produkt',
@@ -47,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'nav.product': 'Product',
       'nav.anleitung': 'Tutorial',
       'nav.impressum': 'Imprint',
-      'header.title': 'Innovative sound damping for grands and uprights',
+      'header.title': 'Innovative sound damping for grand and upright pianos',
       'index.text1': '<b>The elegant acoustic solution from BONO Piano Akustik significantly reduces the volume of acoustic grand pianos and upright pianos — without compromising the natural tonal character and without any interventions in the mechanism, the case or the room architecture!</b><br><br>Designed for concert pianists, music students, theaters, music schools and conservatories, studios and all private spaces.<br><br>Read more and discover the patented product with all detailed information:',
       'index.title2': '<b>Play naturally. Sound quieter.</b>',
       'index.gliederung1': '&rarr; Acoustic freedom',
@@ -172,6 +174,12 @@ document.addEventListener('DOMContentLoaded', function () {
       const key = el.getAttribute('data-i18n');
       const txt = t(key);
       el.innerHTML = txt;
+      // set explicit language on translated elements to enable hyphenation and locale-aware typography
+      try {
+        el.setAttribute('lang', locale);
+      } catch (e) {
+        // ignore if element cannot have attributes
+      }
     });
 
     document.documentElement.lang = locale;

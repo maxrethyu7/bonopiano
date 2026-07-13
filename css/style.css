@@ -7,7 +7,7 @@
  */
 
 :root {
-  --bg-color: #2b2b2b; /* Anthrazit */
+  --bg-color: #000; /* Anthrazit #2b2b2b;*/
   --text-color: #ffffff; /* Weiß für normalen Text */
   --heading-color: #E6C07A; /* Hellgold für Überschriften */
   --link-color: #ffffff;
@@ -20,12 +20,42 @@ html { scroll-behavior: smooth; }
 .anchor { scroll-margin-top: var(--nav-height); }
 
 body {
+  font-family: Calibri, "Segoe UI", Arial, sans-serif;
   background-color: var(--bg-color) !important;
   color: var(--text-color) !important;
+}
+/* Force Calibri site-wide except for Material Icons which require their own font */
+html, body, *:not(.material-icons) {
+  font-family: Calibri, "Segoe UI", Arial, sans-serif !important;
+}
+
+/* Keep Materialize default fonts for menu/language controls and icon glyphs */
+.material-icons,
+nav .sidenav-trigger,
+nav .language-toggle {
+  font-family: "Material Icons" !important;
+}
+
+nav .lang-button {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--heading-color) !important;
+}
+
+/* Reduce vertical spacing between title and subtitle */
+h1.header {
+  margin-top: 0.25rem;
+  margin-bottom: 0.15rem;
+  line-height: 1;
+}
+
+h2.header {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  line-height: 1.1;
+  font-weight: 400;
 }
 
 a { color: var(--link-color); }
@@ -488,7 +518,7 @@ footer.page-footer {
 .card-container {
   display: grid;
   /* Erstellt 2 Spalten auf Desktop, bricht automatisch um, wenn sie unter 340px schrumpfen */
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2rem;
   max-width: 1100px;
   margin: 0 auto;
@@ -545,7 +575,7 @@ footer.page-footer {
 
 /* Die einzelnen Cards */
 .custom-card {
-  background-color: #2b2b2b; /* Dunkler Hintergrund wie im Screenshot */
+  background-color: #000;/*#2b2b2b; /* Dunkler Hintergrund wie im Screenshot */
   color: #ffffff;
   border-radius: 4px;
   overflow: hidden;
@@ -570,8 +600,21 @@ footer.page-footer {
 }
 
 .card-text .flow-text {
-  font-size: 1.25rem; /* Erhöht die Grundschriftgröße (vorher meist ~1rem) */
+  font-size: 1.3rem; /* Erhöht die Grundschriftgröße (vorher meist ~1rem) */
   line-height: 1.6;   /* Sorgt für einen angenehmen Zeilenabstand */
+}
+
+/* Blocksatz für Fließtexte und Card-Text: gleichmäßige Zeilenlängen */
+.flow-text,
+.card-text p,
+.card-text .flow-text {
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  /* Do not stretch the last line; keep it left-aligned for better readability */
+  text-align-last: left;
 }
 
 .card-text p {
@@ -669,6 +712,8 @@ footer.page-footer {
   color: var(--text-color) !important; /* Standardtextfarbe (weiß) */
   border-bottom: 1px solid rgba(255,255,255,0.04) !important; /* dezente Trennung */
   padding-left: 0.5rem !important;
+  font-size: 1.30rem !important; /* größere Schrift für bessere Lesbarkeit */
+  line-height: 1.5 !important;
 }
 .collection .collection-item a {
   color: var(--heading-color) !important; /* Linkfarbe: Gold */
@@ -701,16 +746,111 @@ footer.page-footer {
 
 /* Modal override to center image and darken background a bit more */
 .modal {
-  max-width: 85vw;
-  max-height: 85vh;
-  padding: 0;
+  /* remove Materialize's default constrained white card appearance */
+  max-width: none !important;
+  width: 100% !important;
+  max-height: 90vh;
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
 }
 .modal .modal-content {
-  background: transparent;
-  padding: 0.5rem;
+  /* ensure inner content is fully transparent and doesn't add extra padding/width */
+  background: transparent !important;
+  padding: 0 !important;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: none !important;
+}
+
+/* Gallery modal navigation buttons (overlayed on image) */
+/* Ensure modal wrapper allows the image to grow and not be clipped */
+/* Center the gallery modal using flexbox on the modal wrapper so Materialize's
+   internal positioning doesn't conflict — this centers vertically + horizontally */
+#gallery-modal.modal {
+  overflow: visible !important;
+  max-height: 90vh;
+  max-width: none !important;
+  width: 100% !important;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+/* Apply flex centering only when Materialize sets the modal visible
+   (Materialize toggles inline `display: block` on open). This prevents
+   the modal from capturing pointer events when closed. */
+#gallery-modal.modal[style*="display: block"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#gallery-modal .modal-content {
+  /* fixed-size invisible box: 90vw x 90vh so buttons stay aligned */
+  position: relative;
+  z-index: 4000;
+  width: 90vw;
+  height: auto; /* allow caption below the box */
+  max-width: none;
+  box-sizing: border-box;
+  padding: 0; /* remove extra padding so image positioning is predictable */
+  display: flex;
+  flex-direction: column; /* stack gallery-box above caption */
+  align-items: center; /* center horizontally */
+  justify-content: center;
+  overflow: visible; /* allow caption to be visible outside the box */
+}
+#gallery-modal .gallery-prev,
+#gallery-modal .gallery-next {
+  position: absolute; /* positioned relative to .modal-content box */
+  top: 50%; 
+  transform: translateY(-50%); 
+  background: rgba(0,0,0,0.72); /* less transparent for better contrast */
+  color: var(--heading-color); /* golden arrows */
+  border: none; 
+  width: 56px; 
+  height: 56px; 
+  border-radius: 50%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-size: 28px; 
+  cursor: pointer; 
+  z-index: 4100; /* above the image */ 
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6); 
+  transition: background 0.18s ease, transform 0.12s ease, color 0.12s ease; 
+}
+#gallery-modal .gallery-prev { left: 14px; }
+#gallery-modal .gallery-next { right: 14px; }
+#gallery-modal .gallery-prev:hover,
+#gallery-modal .gallery-next:hover {
+  background: rgba(0,0,0,0.9);
+  transform: translateY(-50%) scale(1.04);
+  color: #fff; /* subtle invert on hover for clarity */
+}
+
+/* Smaller buttons for narrow screens */
+@media (max-width: 480px) {
+  #gallery-modal .gallery-prev,
+  #gallery-modal .gallery-next {
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+  }
+}
+
+/* Ensure modal image fits within the invisible box and is centered */
+#gallery-modal img#gallery-modal-img {
+  display: block;
+  /* make the image as large as possible inside the fixed 90vw x 90vh box */
+  max-width: calc(90vw - 80px); /* leave space for buttons and small padding */
+  max-height: calc(90vh - 80px);
+  width: auto;
+  height: auto;
+  object-fit: contain; /* ensure scaling without cropping */
+  margin: 0 auto;
 }
 .modal .modal-close {
   color: #fff;
@@ -723,4 +863,53 @@ footer.page-footer {
   max-height: calc(85vh - 96px);
   object-fit: contain;
   display: block;
+}
+
+/* Gallery box: fixed-size invisible container inside modal-content */
+.gallery-box {
+  width: 90vw;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+}
+
+/* Close button centered above the image */
+.gallery-close {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4200;
+  background: rgba(255, 255, 255, 0.897); /* stronger contrast */
+  color: black; /* golden cross */
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.12s ease, color 0.12s ease, transform 0.08s ease;
+}
+.gallery-close:hover { background: rgba(0,0,0,0.9); color: #fff; transform: scale(1.04); }
+
+/* Caption below the gallery box */
+.gallery-caption {
+  display: inline-block; /* shrink to text width */
+  margin-top: 8px;
+  text-align: center;
+  color: black;
+  font-size: 0.95rem;
+  max-width: calc(90vw - 40px);
+  overflow-wrap: break-word;
+  background: rgba(255, 255, 255, 0.822);
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-sizing: border-box;
 }

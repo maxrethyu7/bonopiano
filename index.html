@@ -61,11 +61,24 @@
     <div class="col s12 m12 l12">
       <div class="home-split container">
         <div class="row">
-          <h1 class="header center gold-text" data-i18n="header.title"></h1>
+          <div class="row">
+            <h1 class="header center gold-text" data-i18n="header.title"></h1>
+          </div>
+          <div class="row">
+            <h2 class="header center gold-text" data-i18n="header.subtitle"></h2>
+          </div>  
           <div class="home-left col s12 m6">
             <div class="container">
               <div class="card-text">
                   <p class="flow-text" data-i18n="index.text1"></p>
+                  <!-- Lokal abspielbares Video -->
+                  <div class="card-media">
+                    <video controls preload="metadata" poster="assets/logo_highres.PNG" style="width:100%; height:auto; max-height:350px;">
+                      <source src="assets/sick.mp4" type="video/mp4">
+                      Ihr Browser unterstützt das Video-Tag nicht.
+                    </video>
+                  </div>
+                  <p class="flow-text" data-i18n="index.text2"></p>
                 <ul class="collection">
                   <li class="collection-item"><a href="product.html#feature-1" data-i18n="index.gliederung1">Eintrag 1</a></li>
                   <li class="collection-item"><a href="product.html#feature-2" data-i18n="index.gliederung2">Eintrag 2</a></li>
@@ -75,17 +88,6 @@
                   <li class="collection-item"><a href="product.html#feature-6" data-i18n="index.gliederung6">Eintrag 3</a></li>
                 </ul>
               </div>
-              <div class="custom-card">
-                <a href="https://www.youtube.com/watch?v=wUIIDc1RzXw" target="_blank" class="card-link youtube-link">
-                  <img class="card-media" src="assets/youtubeThumbnail.jpg" alt="YouTube Video Thumbnail"/>
-                </a>
-                <div class="card-text">
-                  <p class="flow-text" data-i18n="card.youtubeVid">
-                    <b>Überzeugen Sie sich von der Akustik!</b><br><br>
-                    In diesem Video spielt die Erfinderin und Gründerin von Bono Piano Akustik, Nataliya Tkachenko, das Stück <i>Gnossienne Nr. 1</i> von <i>Satie</i> mit verbautem Schalldämpfer. Dadurch wird die Lautstärke deutlich reduziert, ohne den natürlichen Klangcharakter zu verlieren.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
           <div class="home-right col s12 m6">
@@ -93,7 +95,7 @@
               <div class="custom-card">
                 <h3 class="center gold-text" data-i18n="index.title2"></h3>
                 <a href="product.html" class="card-link">
-                  <img class="card-media" src="assets/product1.png" alt="Bono Piano Akustik Schalldämpfer"/>
+                  <img class="card-media" src="assets/produkt_anwendung1.png" alt="Bono Piano Akustik Schalldämpfer"/>
                 </a>
                   <div class="card-text">
                   <p class="flow-text" data-i18n="index.card.product1">
@@ -102,10 +104,12 @@
                   </p>
                 </div>
                   <div class="gallery-thumbs">
-                    <img class="gallery-thumb" src="assets/produkt_eingebaut_vorne.PNG" data-large="assets/produkt_eingebaut_vorne.PNG" alt="Vorne 1">
-                    <img class="gallery-thumb" src="assets/produkt_eingebaut_vorne2.PNG" data-large="assets/produkt_eingebaut_vorne2.PNG" alt="Vorne 2">
-                    <img class="gallery-thumb" src="assets/produkt_eingebaut_vorne3.PNG" data-large="assets/produkt_eingebaut_vorne3.PNG" alt="Vorne 3">
-                    <img class="gallery-thumb" src="assets/produkt_eingebaut_straps.PNG" data-large="assets/produkt_eingebaut_straps.PNG" alt="Straps">
+                    <img class="gallery-thumb" src="assets/produkt_anwendung1.png" data-large="assets/produkt_anwendung1.png" alt="Bild 1">
+                    <img class="gallery-thumb" src="assets/produkt_anwendung2.png" data-large="assets/produkt_anwendung2.png" alt="Bild 2">
+                    <img class="gallery-thumb" src="assets/produkt_anwendung3.png" data-large="assets/produkt_anwendung3.png" alt="Dies ist eine Bildunterschrift blablabla das ist imme rnoch eine Bildunterschrift bliblablub lorem ipsum ">
+                    <img class="gallery-thumb" src="assets/produkt_anwendung4.png" data-large="assets/produkt_anwendung4.png" alt="Bild 4">
+                    <img class="gallery-thumb" src="assets/produkt_anwendung5.png" data-large="assets/produkt_anwendung5.png" alt="Bild 5">
+                  
                   </div>
                 <div class="card-text">
                   <p class="flow-text" data-i18n="index.card.product2">
@@ -169,22 +173,9 @@
       var elems = document.querySelectorAll('.sidenav');
       M.Sidenav.init(elems);
 
-      // Initialize modals for gallery
+      // Initialize modals (gallery handled centrally in js/init.js)
       var modalElems = document.querySelectorAll('.modal');
       M.Modal.init(modalElems);
-
-      // Gallery thumbnail click -> open modal with large image
-      var galleryThumbs = document.querySelectorAll('.gallery-thumb');
-      var galleryModal = document.getElementById('gallery-modal');
-      var galleryModalInstance = galleryModal ? M.Modal.init(galleryModal) : null;
-      galleryThumbs.forEach(function(thumb) {
-        thumb.addEventListener('click', function() {
-          var src = thumb.dataset.large || thumb.src;
-          var img = document.getElementById('gallery-modal-img');
-          if (img) img.src = src;
-          if (galleryModalInstance && typeof galleryModalInstance.open === 'function') galleryModalInstance.open();
-        });
-      });
     });
   </script>
   <script src="js/i18n.js"></script>
