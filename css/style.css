@@ -913,3 +913,15 @@ footer.page-footer {
   border-radius: 6px;
   box-sizing: border-box;
 }
+
+/* Force theme consistency on small screens: ensure dark backgrounds and intended heading colors */
+@media only screen and (max-width: 992px) {
+  body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+  }
+  h2.header { color: var(--text-color) !important; }
+  .gallery-close { background: rgba(0,0,0,0.72) !important; color: var(--heading-color) !important; }
+  .gallery-caption { background: rgba(0,0,0,0.6) !important; color: var(--text-color) !important; }
+  .card, .card-panel, .card .card-content { background-color: var(--card-bg) !important; color: var(--text-color) !important; }
+}
