@@ -402,15 +402,28 @@ nav .language-dropdown button.lang-button:hover {
 }
 
 @media only screen and (max-width: 992px) {
+  :root {
+    --nav-height: clamp(88px, 23vw, 170px);
+  }
+
+  nav {
+    min-height: var(--nav-height);
+  }
+
+  nav .nav-wrapper {
+    min-height: var(--nav-height);
+  }
+
   /* Media query angepasst: compact sidenav for tablet and mobile widths
      This removes the large half-screen sidenav (Modus 2) and uses the
      compact inline-style sliding panel (Modus 3) instead. */
   nav .brand-logo.logo2 {
-    /* Scale with viewport width: width controls size, padding-top keeps aspect ratio */
+    /* Keep logo and navbar height in sync on narrow screens */
     width: 90%;
     max-width: none;
-    height: 0; /* rely on padding to create height proportional to width */
-    padding-top: 24%; /* controls aspect ratio — increase/decrease to taste */
+    height: calc(var(--nav-height) - 0.5rem);
+    max-height: none;
+    padding-top: 0;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -419,7 +432,7 @@ nav .language-dropdown button.lang-button:hover {
   /* Make the opened navigation (sidenav) compact: only as big as the buttons need */
   .sidenav {
     position: absolute !important;
-    top: 140px !important; /* place below the nav (matches nav min-height) */
+    top: var(--nav-height) !important;
     left: 1rem !important;
     right: auto !important;
     width: auto !important;
