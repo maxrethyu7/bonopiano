@@ -40,8 +40,8 @@ nav .lang-button {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: var(--heading-color) !important;
+h1 {
+  color: var(--heading-color);
 }
 
 /* Reduce vertical spacing between title and subtitle */
@@ -653,7 +653,7 @@ section.anchor p[data-i18n$=".text"] {
 }
 
 .card-text p {
-  margin-bottom: 0;
+  margin: 0; /* remove top and bottom margins inside cards to avoid extra gaps */
   font-size: 1rem;
   line-height: 1.5;
   color: #cccccc;
@@ -761,6 +761,7 @@ footer.page-footer {
 .product-feature-list {
   margin: 1rem 0 1rem 1.5rem;
   padding-left: 0.5rem;
+  font-size: 1.3rem;
 }
 
 .product-feature-list li {
@@ -816,6 +817,36 @@ footer.page-footer {
   align-items: center;
   justify-content: center;
   box-shadow: none !important;
+}
+
+/* Default styling for h3 as requested */
+h3 {
+  color: #ffffff !important;
+  font-size: 1.3rem !important;
+  font-weight: 400 !important;
+  
+
+/* Make h2 white by default */
+h2 {
+  color: #ffffff !important;
+}
+}
+
+/* Make section text match index sizing */
+.anchor.section,
+.section {
+  font-size: 1.3rem !important;
+}
+.anchor.section p,
+.anchor.section li,
+.anchor.section a,
+.anchor.section .flow-text,
+.section p,
+.section li,
+.section a,
+.section .flow-text {
+  font-size: 1.3rem !important;
+  line-height: 1.5 !important;
 }
 
 /* Gallery modal navigation buttons (overlayed on image) */
@@ -978,3 +1009,55 @@ footer.page-footer {
   .gallery-caption { background: rgba(0,0,0,0.6) !important; color: var(--text-color) !important; }
   .card, .card-panel, .card .card-content { background-color: var(--card-bg) !important; color: var(--text-color) !important; }
 }
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+  background: transparent;
+}
+.results-table th,
+.results-table td {
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 8px 12px;
+  text-align: left;
+}
+.results-table thead th {
+  background: rgba(0,0,0,0.6);
+  font-weight: 700;
+}
+.results-table .group-heading th {
+  background: rgba(0,0,0,0.75);
+  text-align: left;
+  font-weight: 700;
+  padding-top: 10px;
+  padding-bottom: 6px;
+}
+.results-table th[scope="row"] { font-weight: 600; } /* Zeilenköpfe */
+.results-table td { font-weight: 400; }
+
+@media (max-width: 600px){
+  .results-table, .results-table thead, .results-table tbody, .results-table th, .results-table td, .results-table tr {
+    display: block;
+  }
+  .results-table thead { display: none; } /* einfache mobile Darstellung; kann weiter verbessert werden */
+  .results-table tr { margin-bottom: 0.5rem; }
+  .results-table td { padding-left: 50%; position: relative; }
+  .results-table td::before {
+    content: attr(data-label); /* ggf. mit JS setzen für bessere responsive Tabellen */
+    position: absolute;
+    left: 0;
+    width: 45%;
+    padding-left: 12px;
+    font-weight: 700;
+  }
+}
+
+blockquote {
+  margin: 1rem 0;
+  padding: 0.8rem 1rem;
+  border-left: 4px solid rgba(241,211,111,0.9);
+  background: rgba(255,255,255,0.02);
+  color: #fff;
+}
+blockquote footer { font-size: 1.2rem; color: #ccc; margin-top:0.5rem; }

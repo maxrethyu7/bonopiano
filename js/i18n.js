@@ -5,13 +5,14 @@ document.addEventListener('DOMContentLoaded', function () {
       'nav.product': 'Produkt',
       'nav.anleitung': 'Anleitung',
       'nav.impressum': 'Impressum',
-      'header.title': '<span style="color: #E6C07A"> Innovative Schalldämpfung</span>',
-      'header.subtitle': '<span style="color: #ffffff">für <em>Flügel</em> und <em>Klaviere</em></span>',
-      'index.text1': '<span style="font-size: 1.3em;">Die elegante Akustiklösung von BONO Piano Akustik reduziert die Lautstärke akustischer Flügel und Klaviere deutlich — ohne den natürlichen Klangcharakter zu beeinträchtigen und ganz ohne Eingriffe in die Mechanik, das Gehäuse oder der Raumarchitektur!</span><br><br>Entwickelt für Konzertpianisten, Musikstudierende, Theater, Musikschulen und -Hochschulen, Studios und alle Privaträume. <br><br>Schauen Sie sich das folgende Video an, um unser Produkt besser zu verstehen! ',
-      'index.text2': '<span style="font-size: 1.2em;">Lesen Sie mehr und entdecken Sie das patentierte Produkt mit allen ausführlichen Informationen:',
+      'header.title': '<span style="color: #E6C07A"> Innovative</span> <span style="color: #910909">Schalldämpfung</span>',
+      'header.subtitle': '<span style="color: #E6C07A">für <em>Flügel</em> und <em>Klaviere</em></span>',
+      'index.text1': '<span style="font-size: 1.5em;">Die elegante Akustiklösung von BONO Piano Akustik reduziert die Lautstärke akustischer Flügel und Klaviere deutlich — ohne den natürlichen Klangcharakter zu beeinträchtigen und ganz ohne Eingriffe in die Mechanik, das Gehäuse oder der Raumarchitektur!</span>',
+      'index.text1b': 'Entwickelt für Konzertpianisten, Musikstudierende, Theater, Musikschulen und -Hochschulen, Studios und alle Privaträume.',
+      'index.text2': 'Mehr Infos zum Produkt:',
       'index.title2': '<em>Natürlich spielen.<br>Leiser klingen.</em>',
       'index.gliederung1': '&rarr; Akustische Freiheit',
-      'index.gliederung2': '&rarr; Das Produkt & seine Funktionsweise',
+      'index.gliederung2': '&rarr; Produkt & Funktionsweise',
       'index.gliederung3': '&rarr; Gutachten & Messungen',
       'index.gliederung4': '&rarr; Innovation & Patent',
       'index.gliederung5': '&rarr; Entwickelt aus der Praxis',
@@ -27,6 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
       'footer.purchase': 'Bestellen bei Amazon',
       'footer.email-info': 'Info-Mail',
       'footer.email-purchase': 'Bestell-Mail',
+      
+      
       'product.title': 'Produkt',
       'product.feature1.title': 'Akustische Freiheit<span style="font-size: 0.7em;"><span style="color: #ffffff"><em> für Flügel und Klaviere</em></span></span>',
       'product.feature11.text': 'Akustische Flügel entfalten ihre volle Klangkraft besonders mit geöffnetem Deckel. In kleineren Räumen, kleinen Theatern oder privaten Wohnungen wird genau das jedoch häufig zur Herausforderung.<br><br> Schauspieler werden übertönt, Nachbarn belastet, Proberäume akustisch überfordert. Bisher bedeutete die Lösung oft:',
@@ -34,9 +37,10 @@ document.addEventListener('DOMContentLoaded', function () {
       'product.feature1.list2': 'dauerhafte Umbauten am Instrument oder Raum',
       'product.feature1.list3': 'der Verzicht auf den vollen Klang des geöffneten Instruments',
       'product.feature12.text': '<span style="color: #E6C07A">BONO Piano Akustik</span> geht einen neuen, einfacheren Weg:<br><span style="text-decoration: underline;">Die Schalldämpfung erfolgt direkt am Instrument und lässt sich jederzeit rückstandslos entfernen.</span>',
+      
       'product.feature2.title': 'Das Produkt & seine Funktionsweise',
       'product.feature21.text': 'Die speziell entwickelte Schalldämpfung wird im Inneren des Flügeldeckels befestigt und reduziert die Schallabstrahlung kontrolliert und gleichmäßig.<br><br> Das Ergebnis: ein weicherer, runder Klang mit deutlich reduzierter Lautsärke — ohne Verlust der musikalischen Ausdruckskraft. <br><br> Vorteile:',
-      'product.feature21.list1': 'Reduktion der Lautsärke um ca. 6-10 dB(A)',
+      'product.feature21.list1': 'Reduktion der Lautstärke um ca. 6-10 dB(A)',
       'product.feature21.list2': 'Erhaltung des natürlichen Klangs',
       'product.feature21.list3': 'Variable Dämpfung',
       'product.feature21.list4': 'Kein Bedarf an baulichen Veränderungen',
@@ -51,14 +55,27 @@ document.addEventListener('DOMContentLoaded', function () {
       'product.feature23.list1': 'akustisch wirksam,',
       'product.feature23.list2': 'optisch dezent und',
       'product.feature23.list3': 'instrumentenschonend sind.',
+
       'product.feature3.title': 'Gutachten & Messungen',
-      'product.feature3.text': 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer',
+      'product.feature3.text1': 'Die Wirksamkeit des <span style="color: #E6C07A">BONO Piano Akustik</span> Schalldämpfung wurde von der <b>Schorer + Wolf Technische Dienstleistungen GmbH</b> in einer <b>unabhängigen Untersuchung</b> geprüft. Die Messergebnisse bestätigen eine deutliche und messbare Reduzierung der Schallemissionen. Dabei wurden die Schallpegel sowohl am Platz der Pianistin als auch im Zuhörerbereich erfasst und ausgewertet.<br><br>Die wichtigsten Ergebnisse auf einen Blick:',
+      'product.feature31.list1': '<span style="color: #ffffff">&check; Reduktion der Lautstärke um <b>bis zu 6 dB(A)</b></span>',
+      'product.feature31.list2': '<span style="color: #ffffff">&check; Reduktion des Dauerschallpegels um <b>bis zu 3,5 dB(A)</b></span>',
+      'product.feature31.list3': '<span style="color: #ffffff">&check; Mindestens eine <b>Halbierung der Schallleistung</b></span>',
+      'product.feature31.list4': '<span style="color: #ffffff">&check; Hörbare Schallminderung sowohl am Platz am Piano als auch im Zuhörerbereich</span>',
+      'product.feature31.list5': '<span style="color: #ffffff">&check; <b>Über 100% längere Übungsdauer</b> für Pianistinnen und Pianisten bis zum Erreichen der arbeitsmedizinischer Lärmrichtwerte (Lärmexpositionsgrenze)</span>',
+      'product.feature3.text2': 'Das Gutachten kommt zu dem Ergebnis, dass die Schallminderung hörbar ist und die Lärmbelastung für Pianistinnen und Pianisten reduziert. Dadurch verlängert sich die mögliche Spielzeit bis zum Erreichen relevanter Lärmexpositionswerte erheblich.',
+      'product.feature3.text3': '<span style="font-size: 1.5em;"> Fazit</span><br>Die unabhängige Untersuchung von <b>Schorer + Wolf Technische Dienstleistungen GmbH</b> bestätigt die wirksame Schallreduzierung des <span style="color: #E6C07A">BONO Piano Akustik</span> Schalldämpfers. Die Messergebnisse zeigen eine hörbare Verringerung der Lärmbelastung und eine deutliche Verlängerung der möglichen Spielzeiten bei vergleichbarer Belastung.',
+
       'product.feature4.title': 'Innovation & Patent',
       'product.feature4.text': 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer',
+      
       'product.feature5.title': 'Entwickelt aus der Praxis',
       'product.feature5.text': 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer',
+      
       'product.feature6.title': 'Künstlerstimmen',
       'product.feature6.text': 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer',
+      
+      
       'tutorial.title': 'Anleitung',
       'impressum.title': 'Impressum',
       'impressum.contact': 'Kontakt'

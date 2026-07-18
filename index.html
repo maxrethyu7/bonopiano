@@ -70,22 +70,31 @@
           <div class="home-left col s12 m6">
             <div class="container">
               <div class="card-text">
-                  <p class="flow-text" data-i18n="index.text1"></p>
+                  <h2 class="flow-text" data-i18n="index.text1"></h2>
                   <!-- Lokal abspielbares Video -->
-                  <div class="card-media">
-                    <video controls preload="metadata" poster="assets/thumbnail_werbevideo.png" style="width:100%; height:auto; max-height:350px;">
+                  <div class="card-media" style="position:relative; overflow:hidden; margin-top:20px;">
+                    <video id="hero-video" controls autoplay muted playsinline preload="metadata" poster="assets/thumbnail_werbevideo.png" style="display:block; width:100%; max-width:100%; height:auto; max-height:350px;">
                       <source src="assets/BONO_Werbeclip.mp4" type="video/mp4">
                       Ihr Browser unterstützt das Video-Tag nicht.
                     </video>
+                    <div id="video-poster-overlay" style="position:absolute;inset:0;display:none;background-image:url('assets/thumbnail_werbevideo.png');background-size:cover;background-position:center;pointer-events:none;z-index:1;"></div>
+                    <div id="video-replay" class="video-replay-overlay" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:2;">
+                      <button id="video-replay-btn" aria-label="Replay" style="pointer-events:auto;display:none;width:72px;height:72px;border-radius:50%;border:none;background:rgba(0,0,0,0.6);color:#fff;align-items:center;justify-content:center;display:flex;cursor:pointer;">
+                        <i class="material-icons" aria-hidden="true" style="font-size:36px;line-height:1">replay</i>
+                      </button>
+                    </div>
                   </div>
-                  <p class="flow-text" data-i18n="index.text2"></p>
+                  <div style="height:20px;"></div>
+                  <h3 class="flow-text" data-i18n="index.text1b"></h3>
+                  <div style="height:20px;"></div>
+                  <h3 class="flow-text" data-i18n="index.text2"></h3>
                 <ul class="collection">
                   <li class="collection-item"><a href="product.html#feature-1" data-i18n="index.gliederung1">Eintrag 1</a></li>
                   <li class="collection-item"><a href="product.html#feature-2" data-i18n="index.gliederung2">Eintrag 2</a></li>
                   <li class="collection-item"><a href="product.html#feature-3" data-i18n="index.gliederung3">Eintrag 3</a></li>
-                  <li class="collection-item"><a href="product.html#feature-4" data-i18n="index.gliederung4">Eintrag 1</a></li>
-                  <li class="collection-item"><a href="product.html#feature-5" data-i18n="index.gliederung5">Eintrag 2</a></li>
-                  <li class="collection-item"><a href="product.html#feature-6" data-i18n="index.gliederung6">Eintrag 3</a></li>
+                  <li class="collection-item"><a href="product.html#feature-4" data-i18n="index.gliederung4">Eintrag 4</a></li>
+                  <li class="collection-item"><a href="product.html#feature-5" data-i18n="index.gliederung5">Eintrag 5</a></li>
+                  <li class="collection-item"><a href="product.html#feature-6" data-i18n="index.gliederung6">Eintrag 6</a></li>
                 </ul>
               </div>
             </div>
@@ -93,7 +102,7 @@
           <div class="home-right col s12 m6">
             <div class="card-container">
               <div class="custom-card">
-                <h3 class="center gold-text" data-i18n="index.title2"></h3>
+                <h1 class="center gold-text" data-i18n="index.title2"></h1>
                 <a href="product.html" class="card-link">
                   <img class="card-media" src="assets/produkt_anwendung1.png" alt="Bono Piano Akustik Schalldämpfer"/>
                 </a>
@@ -180,6 +189,46 @@
   </script>
   <script src="js/i18n.js"></script>
   <script src="js/init.js"></script>
+  <script>
+    (function(){
+      var video = document.getElementById('hero-video');
+      var replayBtn = document.getElementById('video-replay-btn');
+      var posterOverlay = document.getElementById('video-poster-overlay');
+
+      if (!video || !replayBtn) return;
+
+      function showReplay(){
+        if(posterOverlay) posterOverlay.style.display = 'block';
+        replayBtn.style.display = 'flex';
+        replayBtn.setAttribute('aria-hidden','false');
+      }
+
+      function hideReplay(){
+        if(posterOverlay) posterOverlay.style.display = 'none';
+        replayBtn.style.display = 'none';
+        replayBtn.setAttribute('aria-hidden','true');
+      }
+
+      video.addEventListener('ended', function(){
+        showReplay();
+      });
+
+      video.addEventListener('play', function(){
+        hideReplay();
+      });
+
+      // In case user pauses at end or seeks
+      video.addEventListener('pause', function(){
+        if (video.ended) showReplay();
+      });
+
+      replayBtn.addEventListener('click', function(e){
+        e.preventDefault();
+        hideReplay();
+        try{ video.currentTime = 0; video.play(); }catch(err){ /* ignore */ }
+      });
+    })();
+  </script>
   <!-- Gallery modal -->
   <div id="gallery-modal" class="modal">
     <div class="modal-content center">
