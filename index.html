@@ -56,79 +56,62 @@
     <li><a href="impressum.html" data-i18n="nav.impressum">Impressum</a></li>
   </ul>
 
-
+  <!-- Main Site Items -->
   <div class="row">
-    <div class="col s12 m12 l12">
-      <div class="home-split container">
-        <div class="row">
-          <div class="row">
-            <h1 class="header center gold-text" data-i18n="header.title"></h1>
-          </div>
-          <div class="row">
-            <h2 class="header center gold-text" data-i18n="header.subtitle"></h2>
-          </div>  
-          <div class="home-left col s12 m6">
-            <div class="container">
-              <div class="card-text">
-                  <h2 class="flow-text" data-i18n="index.text1"></h2>
-                  <!-- Lokal abspielbares Video -->
-                  <div class="card-media" style="position:relative; overflow:hidden; margin-top:20px;">
-                    <video id="hero-video" controls autoplay muted playsinline preload="metadata" poster="assets/thumbnail_werbevideo.png" style="display:block; width:100%; max-width:100%; height:auto; max-height:350px;">
-                      <source src="assets/Bono_Werbeclip.mp4" type="video/mp4">
-                      Ihr Browser unterstützt das Video-Tag nicht.
-                    </video>
-                    <div id="video-poster-overlay" style="position:absolute;inset:0;display:none;background-image:url('assets/thumbnail_werbevideo.png');background-size:cover;background-position:center;pointer-events:none;z-index:1;"></div>
-                    <div id="video-replay" class="video-replay-overlay" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:2;">
-                      <button id="video-replay-btn" aria-label="Replay" style="pointer-events:auto;display:none;width:72px;height:72px;border-radius:50%;border:none;background:rgba(0,0,0,0.6);color:#fff;align-items:center;justify-content:center;display:flex;cursor:pointer;">
-                        <i class="material-icons" aria-hidden="true" style="font-size:36px;line-height:1">replay</i>
-                      </button>
-                    </div>
-                  </div>
-                  <div style="height:20px;"></div>
-                  <h3 class="flow-text" data-i18n="index.text1b"></h3>
-                  <div style="height:20px;"></div>
-                  <h3 class="flow-text" data-i18n="index.text2"></h3>
-                <ul class="collection">
-                  <li class="collection-item"><a href="product.html#feature-1" data-i18n="index.gliederung1">Eintrag 1</a></li>
-                  <li class="collection-item"><a href="product.html#feature-2" data-i18n="index.gliederung2">Eintrag 2</a></li>
-                  <li class="collection-item"><a href="product.html#feature-3" data-i18n="index.gliederung3">Eintrag 3</a></li>
-                  <li class="collection-item"><a href="product.html#feature-4" data-i18n="index.gliederung4">Eintrag 4</a></li>
-                  <li class="collection-item"><a href="product.html#feature-5" data-i18n="index.gliederung5">Eintrag 5</a></li>
-                  <li class="collection-item"><a href="product.html#feature-6" data-i18n="index.gliederung6">Eintrag 6</a></li>
-                </ul>
-              </div>
+    <div class="container">
+      <h1 class="header center gold-text" data-i18n="index.header.title1"></h1>
+      <h1 class="header center gold-text" data-i18n="index.header.title2"></h1>
+      <h2 class="header center gold-text" data-i18n="index.header.subtitle"></h2>
+    </div>
+    
+  </div>
+  <div class="row">
+    <div class="home-left col s12 m6">
+      <div class="container">
+        <div class="custom-card">
+          <h3 class="flow-text" data-i18n="index.text1"></h3>
+          <!-- Lokal abspielbares Video -->
+          <div class="card-media" style="position:relative; overflow:hidden; margin-top:20px;">
+            <video id="hero-video" controls autoplay muted playsinline preload="metadata" poster="assets/thumbnail_werbevideo.png" style="display:block; width:100%; max-width:100%; height:auto; max-height:350px;">
+              <source src="assets/Bono_Werbeclip.mp4" type="video/mp4">
+              Ihr Browser unterstützt das Video-Tag nicht.
+            </video>
+            <div id="video-poster-overlay" style="position:absolute;inset:0;display:none;background-image:url('assets/thumbnail_werbevideo.png');background-size:cover;background-position:center;pointer-events:none;z-index:1;"></div>
+            <div id="video-replay" class="video-replay-overlay" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:2;">
+              <button id="video-replay-btn" aria-label="Replay" style="pointer-events:auto;display:none;width:72px;height:72px;border-radius:50%;border:none;background:rgba(0,0,0,0.6);color:#fff;align-items:center;justify-content:center;display:flex;cursor:pointer;">
+                <i class="material-icons" aria-hidden="true" style="font-size:36px;line-height:1">replay</i>
+              </button>
             </div>
           </div>
-          <div class="home-right col s12 m6">
-            <div class="card-container">
-              <div class="custom-card">
-                <h1 class="center gold-text" data-i18n="index.title2"></h1>
-                <a href="product.html" class="card-link">
-                  <img class="card-media" src="assets/produkt_anwendung1.png" alt="Bono Piano Akustik Schalldämpfer"/>
-                </a>
-                  <div class="card-text">
-                  <p class="flow-text" data-i18n="index.card.product1">
-                    <b>Der patentierte Schalldämpfer von Bono Piano Akustik</b><br>
-                    Erfahren Sie mehr über das Produkt, indem Sie auf das Bild klicken.
-                  </p>
-                </div>
-                  <div class="gallery-thumbs">
-                    <img class="gallery-thumb" src="assets/produkt_anwendung1.png" data-large="assets/produkt_anwendung1.png" alt="Bild 1">
-                    <img class="gallery-thumb" src="assets/produkt_anwendung2.png" data-large="assets/produkt_anwendung2.png" alt="Bild 2">
-                    <img class="gallery-thumb" src="assets/produkt_anwendung3.png" data-large="assets/produkt_anwendung3.png" alt="Dies ist eine Bildunterschrift blablabla das ist imme rnoch eine Bildunterschrift bliblablub lorem ipsum ">
-                    <img class="gallery-thumb" src="assets/produkt_anwendung4.png" data-large="assets/produkt_anwendung4.png" alt="Bild 4">
-                    <img class="gallery-thumb" src="assets/produkt_anwendung5.png" data-large="assets/produkt_anwendung5.png" alt="Bild 5">
-                  
-                  </div>
-                <div class="card-text">
-                  <p class="flow-text" data-i18n="index.card.product2">
-                    <b>Der patentierte Schalldämpfer von Bono Piano Akustik</b><br>
-                    Erfahren Sie mehr über das Produkt, indem Sie auf das Bild klicken.
-                  </p>
-                </div>
-              </div>
-            </div>
+          <h4 class="flow-text" data-i18n="index.text1b"></h4>
+          <h4 class="flow-text" data-i18n="index.text2"></h4>
+          <ul class="collection">
+            <li class="collection-item"><a href="product.html#feature-1" data-i18n="index.gliederung1">Eintrag 1</a></li>
+            <li class="collection-item"><a href="product.html#feature-2" data-i18n="index.gliederung2">Eintrag 2</a></li>
+            <li class="collection-item"><a href="product.html#feature-3" data-i18n="index.gliederung3">Eintrag 3</a></li>
+            <li class="collection-item"><a href="product.html#feature-4" data-i18n="index.gliederung4">Eintrag 4</a></li>
+            <li class="collection-item"><a href="product.html#feature-5" data-i18n="index.gliederung5">Eintrag 5</a></li>
+            <li class="collection-item"><a href="product.html#feature-6" data-i18n="index.gliederung6">Eintrag 6</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="home-right col s12 m6">
+      <div class="container">
+        <div class="custom-card">
+          <h2 class="center gold-text" data-i18n="index.title2"></h2>
+          <a href="product.html" class="card-link">
+            <img class="card-media" src="assets/produkt_anwendung1.png" alt="Bono Piano Akustik Schalldämpfer"/>
+          </a>
+          <h4 class="flow-text" data-i18n="index.card.product1"></h4>
+          <div class="gallery-thumbs">
+            <img class="gallery-thumb" src="assets/produkt_anwendung1.png" data-large="assets/produkt_anwendung1.png" alt="Bild 1">
+            <img class="gallery-thumb" src="assets/produkt_anwendung2.png" data-large="assets/produkt_anwendung2.png" alt="Bild 2">
+            <img class="gallery-thumb" src="assets/produkt_anwendung3.png" data-large="assets/produkt_anwendung3.png" alt="Dies ist eine Bildunterschrift blablabla das ist imme rnoch eine Bildunterschrift bliblablub lorem ipsum ">
+            <img class="gallery-thumb" src="assets/produkt_anwendung4.png" data-large="assets/produkt_anwendung4.png" alt="Bild 4">
+            <img class="gallery-thumb" src="assets/produkt_anwendung5.png" data-large="assets/produkt_anwendung5.png" alt="Bild 5">
           </div>
+          <h4 class="flow-text" data-i18n="index.card.product2"></h4>
         </div>
       </div>
     </div>

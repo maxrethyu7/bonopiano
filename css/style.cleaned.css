@@ -14,53 +14,40 @@
   --card-bg: #353535; /* Etwas helleres Dunkelgrau für Cards */
   --nav-height: 140px; /* Höhe des Navs für scroll offset */
   --title-max-font-size: 56px; /* Max font-size for main title on large viewports */
-}
-/* Smooth scroll and anchor offset for fixed headers */
-html { scroll-behavior: smooth; }
-.anchor { scroll-margin-top: var(--nav-height); }
-body {
+}/* Smooth scroll and anchor offset for fixed headers */
+html { scroll-behavior: smooth; }.anchor { scroll-margin-top: var(--nav-height); }body {
   font-family: Calibri, "Segoe UI", Arial, sans-serif;
   background-color: var(--bg-color) !important;
   color: var(--text-color) !important;
-}
-/* Force Calibri site-wide except for Material Icons which require their own font */
+}/* Force Calibri site-wide except for Material Icons which require their own font */
 html, body, *:not(.material-icons) {
   font-family: Calibri, "Segoe UI", Arial, sans-serif !important;
-}
-/* Keep Materialize default fonts for menu/language controls and icon glyphs */
+}/* Keep Materialize default fonts for menu/language controls and icon glyphs */
 .material-icons,
 nav .sidenav-trigger,
 nav .language-toggle {
   font-family: "Material Icons" !important;
-}
-nav .lang-button {
+}nav .lang-button {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
-}
-h1 {
+}h1 {
   color: var(--heading-color);
-}
-/* Reduce vertical spacing between title and subtitle */
+}/* Reduce vertical spacing between title and subtitle */
 h1.header {
   margin-top: 0.25rem;
   margin-bottom: 0.15rem;
   line-height: 1;
-}
-h2.header {
+}h2.header {
   margin-top: 0;
   margin-bottom: 0.6rem;
   line-height: 1.0;
   font-weight: 400;
-}
-a { color: var(--link-color); }
-a:hover { opacity: 0.9; }
-/* Card background slightly lighter than page background */
+}a { color: var(--link-color); }a:hover { opacity: 0.9; }/* Card background slightly lighter than page background */
 .card,
 .card-panel,
 .card .card-content {
   background-color: var(--card-bg) !important;
   color: var(--text-color) !important;
-}
-.lang-button {
+}.lang-button {
   border: 1px solid rgba(241, 211, 111, 0.5);
   background-color: rgba(255, 255, 255, 0.08);
   cursor: pointer;
@@ -79,31 +66,24 @@ a:hover { opacity: 0.9; }
   background-repeat: no-repeat;
   background-size: 70%;
   transition: background-color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
-}
-.lang-button[data-lang="de"] {
+}.lang-button[data-lang="de"] {
   background-image: url("../assets/flags/de.svg");
-}
-.lang-button[data-lang="en"] {
+}.lang-button[data-lang="en"] {
   background-image: url("../assets/flags/gb.svg");
-}
-.lang-button[data-lang="zh"] {
+}.lang-button[data-lang="zh"] {
   background-image: url("../assets/flags/cn.svg");
-}
-.lang-button:hover,
+}.lang-button:hover,
 .lang-button.active {
   background-color: rgba(241, 211, 111, 0.18);
   transform: scale(1.05);
   border-color: #f1d36f;
-}
-.language-selector {
+}.language-selector {
   display: flex;
   align-items: center;
-}
-nav {
+}nav {
   background-color: #000 !important;
   min-height: 250px;
-}
-nav .nav-wrapper {
+}nav .nav-wrapper {
   position: relative;
   display: flex;
   align-items: center;
@@ -112,29 +92,24 @@ nav .nav-wrapper {
   padding: 0.35rem 0.75rem !important;
   margin: 0 !important;
   gap: 0.25rem;
-}
-nav .nav-wrapper.container {
+}nav .nav-wrapper.container {
   padding: 0 !important;
   width: 100% !important;
   max-width: none !important;
   margin: 0 auto !important;
-}
-nav .nav-left,
+}nav .nav-left,
 nav .nav-right {
   display: flex;
   align-items: center;
   z-index: 10;
   position: relative;
-}
-nav .nav-left {
+}nav .nav-left {
   flex: 0 0 auto;
   padding-left: 1rem;
-}
-nav .nav-right {
+}nav .nav-right {
   margin-left: auto;
   padding-right: 1rem;
-}
-/* Banner direkt in der Navigation */
+}/* Banner direkt in der Navigation */
 nav .brand-logo.logo2 {
   position: absolute;
   left: 50%;
@@ -153,70 +128,56 @@ nav .brand-logo.logo2 {
   max-width: 1200px;
   height: 230px; /* explicit height so background-image is visible */
   max-height: 230px;
-}
-/* Entferne das separate Banner-Element */
-.nav-banner { display: none; }
-nav .sidenav-trigger {
+}/* Entferne das separate Banner-Element */
+.nav-banner { display: none; }nav .sidenav-trigger {
   color: #f1d36f;
   margin: 0 !important;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-}
-nav ul#nav-mobile {
+}nav ul#nav-mobile {
   margin: 0;
   display: flex;
   align-items: center;
-}
-nav .language-selector {
+}nav .language-selector {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 0.4rem;
   margin-right: 0;
-}
-nav .language-selector .lang-button {
+}nav .language-selector .lang-button {
   box-sizing: border-box;
   line-height: 1;
   min-width: 2.8rem;
   min-height: 2.8rem;
   margin-right: 0;
-}
-.sidenav {
+}.sidenav {
   background-color: #000 !important;
-}
-/* Keep sidenav hidden off-canvas by default so its right edge isn't visible */
+}/* Keep sidenav hidden off-canvas by default so its right edge isn't visible */
 .sidenav {
   transform: translateX(-120%);
   transition: transform 0.25s ease;
-}
-/* Force compact sidenav: show buttons inline (disable stacked vertical mode) */
+}/* Force compact sidenav: show buttons inline (disable stacked vertical mode) */
 .sidenav {
   width: auto !important;
   max-width: calc(100% - 2rem) !important;
   padding: 0.25rem 0.5rem !important;
-}
-.sidenav li {
+}.sidenav li {
   display: inline-block !important;
   margin: 0 0.25rem !important;
-}
-.sidenav li a {
+}.sidenav li a {
   display: inline-block !important;
   padding: 0.5rem 0.75rem !important;
   color: #f1d36f !important;
-}
-.sidenav li a,
+}.sidenav li a,
 .sidenav li a:hover {
   color: #f1d36f !important;
-}
-.sidenav-overlay {
+}.sidenav-overlay {
   background-color: rgba(0,0,0,0.65) !important;
-}
-/* Burger Menu für Sprachauswahl (Mobile) */
+}/* Burger Menu für Sprachauswahl (Mobile) */
 nav .language-burger {
   position: relative;
   margin-right: 0;
-}
-nav .language-toggle {
+}nav .language-toggle {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -227,12 +188,10 @@ nav .language-toggle {
   border: none;
   font-size: 1.5rem;
   transition: color 0.2s ease;
-}
-nav .language-toggle:hover {
+}nav .language-toggle:hover {
   color: #f1d36f;
   opacity: 0.8;
-}
-nav .language-dropdown {
+}nav .language-dropdown {
   display: none;
   position: absolute;
   top: 100%;
@@ -246,11 +205,9 @@ nav .language-dropdown {
   z-index: 3000;
   min-width: 80px;
   pointer-events: auto;
-}
-nav .language-dropdown.active {
+}nav .language-dropdown.active {
   display: flex;
-}
-nav .language-dropdown button.lang-button {
+}nav .language-dropdown button.lang-button {
   width: 100%;
   padding: 0.5rem;
   border: none;
@@ -259,11 +216,9 @@ nav .language-dropdown button.lang-button {
   cursor: pointer;
   transition: background-color 0.2s ease;
   font-size: 0.9rem;
-}
-nav .language-dropdown button.lang-button:hover {
+}nav .language-dropdown button.lang-button:hover {
   background-color: rgba(241, 211, 111, 0.1);
-}
-/* Force dark background for Materialize dropdowns and sidenav (fix accidental white) */
+}/* Force dark background for Materialize dropdowns and sidenav (fix accidental white) */
 .dropdown-content,
 .dropdown-content li,
 .dropdown-content a,
@@ -271,11 +226,9 @@ nav .language-dropdown button.lang-button:hover {
 .sidenav li {
   background-color: #000 !important;
   color: #f1d36f !important;
-}
-.dropdown-content a {
+}.dropdown-content a {
   color: #f1d36f !important;
-}
-/* Style Flag buttons inside Materialize dropdowns to match .lang-button appearance */
+}/* Style Flag buttons inside Materialize dropdowns to match .lang-button appearance */
 .dropdown-content a.lang-button {
   display: flex;
   align-items: center;
@@ -293,11 +246,9 @@ nav .language-dropdown button.lang-button:hover {
   background-repeat: no-repeat;
   background-size: 70%;
   color: transparent;
-}
-.dropdown-content a.lang-button:hover {
+}.dropdown-content a.lang-button:hover {
   background-color: rgba(241, 211, 111, 0.1) !important;
-}
-/* Desktop: stack nav links and language buttons vertically */
+}/* Desktop: stack nav links and language buttons vertically */
 @media only screen and (min-width: 993px) {
   nav ul#nav-mobile {
     display: flex !important;
@@ -320,8 +271,7 @@ nav .language-dropdown button.lang-button:hover {
     padding-top: 4px !important;
     align-items: flex-end !important;
   }
-}
-/* Very specific override to ensure vertical nav on desktop (highest specificity) */
+}/* Very specific override to ensure vertical nav on desktop (highest specificity) */
 @media only screen and (min-width: 993px) {
   nav .nav-wrapper.container > .nav-left > ul#nav-mobile,
   nav .nav-wrapper > .nav-left > ul#nav-mobile {
@@ -336,25 +286,21 @@ nav .language-dropdown button.lang-button:hover {
     width: auto !important;
     margin: 6px 0 !important;
   }
-}
-/* Keep dropdown compact and center flag buttons */
+}/* Keep dropdown compact and center flag buttons */
 .dropdown-content#language-menu-mobile {
   padding: 0.4rem !important;
   min-width: auto !important;
-}
-.dropdown-content#language-menu-mobile li {
+}.dropdown-content#language-menu-mobile li {
   display: flex !important;
   justify-content: center !important;
-}
-@media only screen and (max-width: 992px) {
+}@media only screen and (max-width: 992px) {
   nav ul#nav-mobile {
     margin-left: 0;
   }
   nav .language-selector {
     margin-left: auto;
   }
-}
-@media only screen and (max-width: 992px) {
+}@media only screen and (max-width: 992px) {
   :root {
     --nav-height: clamp(88px, 23vw, 170px);
   }
@@ -418,31 +364,23 @@ nav .language-dropdown button.lang-button:hover {
   .sidenav-overlay {
     display: none !important;
   }
-}
-nav ul a,
+}nav ul a,
 nav .brand-logo,
 nav a {
   color: #f1d36f !important;
-}
-
-#title-banner,
+}#title-banner,
 #index-banner .container,
 #index-banner .section {
   text-align: center;
-}
-
-.card-image img.responsive-img,
+}.card-image img.responsive-img,
 #logo {
   display: block;
   width: 100%;
   max-width: 100%;
   height: auto;
-}
-
-.parallax-container .section {
+}.parallax-container .section {
     width: 100%;
-  }
-@media only screen and (max-width : 992px) {
+  }@media only screen and (max-width : 992px) {
   .parallax-container .section {
     position: absolute;
     top: 40%;
@@ -450,20 +388,15 @@ nav a {
   #index-banner .section {
     top: 10%;
   }
-}
-@media only screen and (max-width : 600px) {
+}@media only screen and (max-width : 600px) {
   #index-banner .section {
     top: 0;
   }
-}
-
-.icon-block .material-icons {
+}.icon-block .material-icons {
   font-size: inherit;
-}
-footer.page-footer {
+}footer.page-footer {
   margin: 0;
-}
-/* Container, der die Cards hält */
+}/* Container, der die Cards hält */
 .card-container {
   display: grid;
   /* Erstellt 2 Spalten auf Desktop, bricht automatisch um, wenn sie unter 340px schrumpfen */
@@ -473,50 +406,38 @@ footer.page-footer {
   margin: 0 auto;
   padding: 1rem;
   justify-content: center; /* Zentriert die Cards, falls sie untereinander stehen */
-}
-
-/* Homepage two-column layout: left = intro text, right = stacked cards */
+}/* Homepage two-column layout: left = intro text, right = stacked cards */
 .home-split {
   max-width: 1600px; /* increase max width so columns occupy more horizontal space */
   margin: 0 auto;
   padding: 0 0.35rem;
-}
-
-.home-split.container {
+}.home-split.container {
   width: 94%;
   max-width: 1800px;
-}
-.home-split .home-left {
+}.home-split .home-left {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.25rem; /* reduce inner padding to allow wider content */
-}
-.home-split .home-left .container {
+}.home-split .home-left .container {
   width: 100%;
   max-width: none;
   padding: 0;
-}
-.home-split .home-left .row.center {
+}.home-split .home-left .row.center {
   justify-content: flex-start; /* keep text left-aligned inside column */
-}
-.home-split .home-left .section {
+}.home-split .home-left .section {
   width: 95%;
-}
-.home-split .home-right {
+}.home-split .home-right {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   padding: 0.25rem; /* reduce inner padding */
-}
-.home-split .home-right .card-container {
+}.home-split .home-right .card-container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   width: 100%;
-}
-
-@media only screen and (max-width: 600px) {
+}@media only screen and (max-width: 600px) {
   /* Mobile: all elements full-width, stacked */
   .home-split .home-left,
   .home-split .home-right {
@@ -525,9 +446,7 @@ footer.page-footer {
   .home-split .home-right .card-container {
     gap: 1rem;
   }
-}
-
-/* Die einzelnen Cards */
+}/* Die einzelnen Cards */
 .custom-card {
   background-color: #000;/*#2b2b2b; /* Dunkler Hintergrund wie im Screenshot */
   color: #ffffff;
@@ -538,27 +457,19 @@ footer.page-footer {
   /* Flexbox hier sorgt dafür, dass Inhalt und Bild sich den Platz aufteilen */
   display: flex;
   flex-direction: column;
-}
-
-/* Textbereiche in den Cards */
+}/* Textbereiche in den Cards */
 .card-text {
   padding: 1.5rem;
   flex-grow: 1; /* Zwingt den Text, den Raum auszufüllen, damit Buttons/Bilder bündig sind */
-}
-
-.card-text h3 {
+}.card-text h3 {
   margin-top: 0;
   font-size: 1.3rem;
   font-weight: bold;
   color: #ffffff;
-}
-
-.card-text .flow-text {
+}.card-text .flow-text {
   font-size: 1.3rem; /* Erhöht die Grundschriftgröße (vorher meist ~1rem) */
   line-height: 1.2;   /* Sorgt für einen angenehmen Zeilenabstand */
-}
-
-/* Blocksatz für Fließtexte und Card-Text: gleichmäßige Zeilenlängen */
+}/* Blocksatz für Fließtexte und Card-Text: gleichmäßige Zeilenlängen */
 .flow-text,
 .card-text p,
 .card-text .flow-text {
@@ -569,51 +480,14 @@ footer.page-footer {
   hyphens: auto;
   /* Do not stretch the last line; keep it left-aligned for better readability */
   text-align-last: left;
-}
-
-/* Product page: force block (justified) layout for all common text elements */
-.product-page,
-.product-page p,
-.product-page .flow-text,
-.product-page li,
-.product-page .card-text,
-.product-page .product-feature-list,
-.product-page .collection-item,
-.product-page .results-cards-caption,
-.product-page .result-val {
-  text-align: justify !important;
-  text-justify: inter-word !important;
-  -webkit-hyphens: auto !important;
-  -moz-hyphens: auto !important;
-  hyphens: auto !important;
-  text-align-last: left !important;
-}
-
-/* Keep headings visually distinct: left-align last line of headings but allow centered titles */
-.product-page h1,
-.product-page h2,
-.product-page h4 {
-  text-align: left !important;
-}
-.product-page h3 {
-  text-align: justify !important;
-  text-justify: inter-word !important;
-  -webkit-hyphens: auto !important;
-  -moz-hyphens: auto !important;
-  hyphens: auto !important;
-  text-align-last: left !important;
-}
-
-section.anchor p[data-i18n$=".text"] {
+}section.anchor p[data-i18n$=".text"] {
   text-align: justify;
   text-justify: inter-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
   text-align-last: left;
-}
-
-section.anchor p[data-i18n$=".text"] {
+}section.anchor p[data-i18n$=".text"] {
   font-size: 1.2rem;
   line-height: 1.6;
   text-align: justify;
@@ -622,23 +496,17 @@ section.anchor p[data-i18n$=".text"] {
   -moz-hyphens: auto;
   hyphens: auto;
   text-align-last: left;
-}
-
-.card-text p {
+}.card-text p {
   margin: 0; /* remove top and bottom margins inside cards to avoid extra gaps */
   font-size: 1rem;
   line-height: 1.5;
   color: #cccccc;
-}
-
-/* Link-Container für die Bilder */
+}/* Link-Container für die Bilder */
 .card-link {
   display: block;
   width: 100%;
   overflow: hidden;
-}
-
-/* Die Bilder selbst */
+}/* Die Bilder selbst */
 .card-media {
   display: block;
   width: 100%;          /* Das Bild nutzt die volle Breite der Card */
@@ -646,14 +514,10 @@ section.anchor p[data-i18n$=".text"] {
   max-height: 350px;    /* Optional: Verhindert, dass ein Bild auf riesigen Bildschirmen unendlich hoch wird */
   object-fit: contain;  /* Garantiert, dass das Bild innerhalb seiner Box niemals verzerrt oder beschnitten wird */
   transition: transform 0.3s ease;
-}
-
-/* Kleiner visueller Effekt beim Drüberfahren */
+}/* Kleiner visueller Effekt beim Drüberfahren */
 .card-link:hover .card-media {
   transform: scale(1.02);
-}
-
-/* Responsive Anpassung für kleinere Bildschirme (Mobile) */
+}/* Responsive Anpassung für kleinere Bildschirme (Mobile) */
 @media (max-width: 768px) {
   .card-container {
     /* Begrenzt die Breite untereinander, damit die Cards auf Handys nicht zu riesig werden */
@@ -663,21 +527,15 @@ section.anchor p[data-i18n$=".text"] {
   .card-media {
     height: 200px; /* Leicht kleinere Bildhöhe auf Smartphones */
   }
-}
-
-/* Override Materialize footer color to a dark gray */
+}/* Override Materialize footer color to a dark gray */
 footer.page-footer {
   background-color: #333333 !important;
-}
-
-/* Bereitet den Link-Container für das absolute Overlay vor */
+}/* Bereitet den Link-Container für das absolute Overlay vor */
 .card-link.youtube-link {
   position: relative;
   display: block;
   cursor: pointer;
-}
-
-/* Das unsichtbare Overlay, das den Play-Button enthält */
+}/* Das unsichtbare Overlay, das den Play-Button enthält */
 .card-link.youtube-link::after {
   content: "";
   position: absolute;
@@ -697,104 +555,75 @@ footer.page-footer {
   
   transition: all 0.3s ease;
   opacity: 0.9; /* Standardmäßig leicht transparent */
-}
-
-/* Hover-Effekt: Wenn man mit der Maus über das Bild fährt */
+}/* Hover-Effekt: Wenn man mit der Maus über das Bild fährt */
 .card-link.youtube-link:hover::after {
   opacity: 1;
   background-color: rgba(0, 0, 0, 0); /* Verhindert doppelte Abdunklung beim Hover */
   /* Macht den Play-Button beim Hover minimal dynamischer */
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
-}
-
-/* Collection list styling to match page colors */
+}/* Collection list styling to match page colors */
 .collection {
   background-color: var(--bg-color) !important; /* gleiche Hintergrundfarbe wie die Seite */
   border: 0 none !important;
   box-shadow: none !important;
   margin-top: 0.5rem;
-}
-.collection .collection-item {
+}.collection .collection-item {
   background-color: transparent !important;
   color: var(--text-color) !important; /* Standardtextfarbe (weiß) */
   border-bottom: 1px solid rgba(255,255,255,0.04) !important; /* dezente Trennung */
   padding-left: 0.5rem !important;
   font-size: 1.30rem !important; /* größere Schrift für bessere Lesbarkeit */
   line-height: 1.5 !important;
-}
-.collection .collection-item a {
+}.collection .collection-item a {
   color: var(--heading-color) !important; /* Linkfarbe: Gold */
   text-decoration: none;
-}
-.collection .collection-item a:hover {
+}.collection .collection-item a:hover {
   text-decoration: underline;
-}
-
-.product-feature-list {
+}.product-feature-list {
   margin: 1rem 0 1rem 1.5rem;
   padding-left: 0.5rem;
   font-size: 1.3rem;
-}
-
-.product-feature-list li {
+}.product-feature-list li {
   margin-bottom: 0.45rem;
   color: var(--text-color);
-}
-
-.product-feature-list a {
+}.product-feature-list a {
   color: var(--text-color);
-}
-
-.product-feature-list a:hover {
+}.product-feature-list a:hover {
   text-decoration: underline;
-}
-
-/* Gallery thumbnails in cards */
+}/* Gallery thumbnails in cards */
 .gallery-thumbs {
   display: flex;
   gap: 0.5rem;
   margin-top: 0.75rem;
   justify-content: center;
   flex-wrap: wrap;
-}
-.gallery-thumb {
+}.gallery-thumb {
   width: 128px;
   height: 128px;
   object-fit: cover;
   border-radius: 4px;
   cursor: pointer;
   border: 2px solid rgba(255,255,255,0.06);
-}
-.gallery-thumb:hover {
+}.gallery-thumb:hover {
   border-color: var(--heading-color);
   transform: translateY(-2px);
-}
-
-/* Mobile-specific header sizing and centering
+}/* Mobile-specific header sizing and centering
    - Larger title on small screens
    - Force a comfortable line-height when title is split into two lines
 */
 @media only screen and (max-width: 600px) {
   h1.header {
-    font-size: 3.5rem !important;
+    font-size: 2.4rem !important;
     line-height: 1.02 !important;
     text-align: center !important;
     display: block !important;
-    max-width: 90vw !important;
+    max-width: 94% !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    /* Prevent breaking words in the middle on narrow viewports */
-    overflow-wrap: normal !important;
-    word-break: normal !important;
+    word-wrap: break-word !important;
     hyphens: none !important;
   }
   h1.header br { display: block; line-height: 1.02; }
-  /* Ensure inline spans injected by i18n don't override h1 sizing */
-  h1.header span,
-  h1.header span * {
-    font-size: inherit !important;
-    line-height: inherit !important;
-  }
   /* Reduce space after subtitle and tighten spacing for mobile */
   h2.header {
     font-size: 1.6rem !important;
@@ -803,21 +632,13 @@ footer.page-footer {
     margin-bottom: 0.4rem !important;
     text-align: center !important;
     color: var(--heading-color) !important;
-    max-width: 90vw !important;
-  }
-  h2.header span,
-  h2.header span * {
-    font-size: inherit !important;
-    line-height: inherit !important;
   }
   /* Reduce card-text padding on mobile so content sits closer to headings */
   .card-text {
     padding-top: 0.75rem !important;
     padding-bottom: 0.75rem !important;
   }
-}
-
-/* Modal override to center image and darken background a bit more */
+}/* Modal override to center image and darken background a bit more */
 .modal {
   /* remove Materialize's default constrained white card appearance */
   max-width: none !important;
@@ -827,8 +648,7 @@ footer.page-footer {
   background: transparent !important;
   box-shadow: none !important;
   border-radius: 0 !important;
-}
-.modal .modal-content {
+}.modal .modal-content {
   /* ensure inner content is fully transparent and doesn't add extra padding/width */
   background: transparent !important;
   padding: 0 !important;
@@ -836,37 +656,32 @@ footer.page-footer {
   align-items: center;
   justify-content: center;
   box-shadow: none !important;
-}
-
-/* Default styling for h3 as requested */
+}/* Default styling for h3 as requested */
 h3 {
   color: #ffffff !important;
   font-size: 1.9rem !important;
   font-weight: 400 !important;
-}
+  
 
 /* Make h2 white by default */
 h3 {
   color: #ffffff !important;
 }
-
-h4 {
+}h4 {
   color: #ffffff !important;
   font-size: 1.5rem !important;
   font-weight: 400 !important;
-}
+  
 
 /* Make h2 white by default */
 h4 {
   color: #ffffff !important;
 }
-
-/* Make section text match index sizing */
+}/* Make section text match index sizing */
 .anchor.section,
 .section {
   font-size: 1.3rem !important;
-}
-.anchor.section p,
+}.anchor.section p,
 .anchor.section li,
 .anchor.section a,
 .anchor.section .flow-text,
@@ -876,9 +691,7 @@ h4 {
 .section .flow-text {
   font-size: 1.3rem !important;
   line-height: 1.5 !important;
-}
-
-/* Gallery modal navigation buttons (overlayed on image) */
+}/* Gallery modal navigation buttons (overlayed on image) */
 /* Ensure modal wrapper allows the image to grow and not be clipped */
 /* Center the gallery modal using flexbox on the modal wrapper so Materialize's
    internal positioning doesn't conflict — this centers vertically + horizontally */
@@ -889,18 +702,14 @@ h4 {
   width: 100% !important;
   background: transparent !important;
   padding: 0 !important;
-}
-
-/* Apply flex centering only when Materialize sets the modal visible
+}/* Apply flex centering only when Materialize sets the modal visible
    (Materialize toggles inline `display: block` on open). This prevents
    the modal from capturing pointer events when closed. */
 #gallery-modal.modal[style*="display: block"] {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-#gallery-modal .modal-content {
+}#gallery-modal .modal-content {
   /* fixed-size invisible box: 90vw x 90vh so buttons stay aligned */
   position: relative;
   z-index: 4000;
@@ -914,8 +723,7 @@ h4 {
   align-items: center; /* center horizontally */
   justify-content: center;
   overflow: visible; /* allow caption to be visible outside the box */
-}
-#gallery-modal .gallery-prev,
+}#gallery-modal .gallery-prev,
 #gallery-modal .gallery-next {
   position: absolute; /* positioned relative to .modal-content box */
   top: 50%; 
@@ -934,17 +742,12 @@ h4 {
   z-index: 4100; /* above the image */ 
   box-shadow: 0 6px 18px rgba(0,0,0,0.6); 
   transition: background 0.18s ease, transform 0.12s ease, color 0.12s ease; 
-}
-#gallery-modal .gallery-prev { left: 14px; }
-#gallery-modal .gallery-next { right: 14px; }
-#gallery-modal .gallery-prev:hover,
+}#gallery-modal .gallery-prev { left: 14px; }#gallery-modal .gallery-next { right: 14px; }#gallery-modal .gallery-prev:hover,
 #gallery-modal .gallery-next:hover {
   background: rgba(0,0,0,0.9);
   transform: translateY(-50%) scale(1.04);
   color: #fff; /* subtle invert on hover for clarity */
-}
-
-/* Smaller buttons for narrow screens */
+}/* Smaller buttons for narrow screens */
 @media (max-width: 480px) {
   #gallery-modal .gallery-prev,
   #gallery-modal .gallery-next {
@@ -952,9 +755,7 @@ h4 {
     height: 44px;
     font-size: 22px;
   }
-}
-
-/* Ensure modal image fits within the invisible box and is centered */
+}/* Ensure modal image fits within the invisible box and is centered */
 #gallery-modal img#gallery-modal-img {
   display: block;
   /* make the image as large as possible inside the fixed 90vw x 90vh box */
@@ -964,11 +765,9 @@ h4 {
   height: auto;
   object-fit: contain; /* ensure scaling without cropping */
   margin: 0 auto;
-}
-.modal .modal-close {
+}.modal .modal-close {
   color: #fff;
-}
-/* Ensure the modal image fits the viewport without being cropped */
+}/* Ensure the modal image fits the viewport without being cropped */
 .modal .modal-content img {
   width: auto;
   height: auto;
@@ -976,9 +775,7 @@ h4 {
   max-height: calc(85vh - 96px);
   object-fit: contain;
   display: block;
-}
-
-/* Gallery box: fixed-size invisible container inside modal-content */
+}/* Gallery box: fixed-size invisible container inside modal-content */
 .gallery-box {
   width: 90vw;
   height: 80vh;
@@ -988,9 +785,7 @@ h4 {
   position: relative;
   overflow: hidden;
   background: transparent;
-}
-
-/* Close button centered above the image */
+}/* Close button centered above the image */
 .gallery-close {
   position: absolute;
   top: 8px;
@@ -1009,10 +804,7 @@ h4 {
   font-size: 20px;
   cursor: pointer;
   transition: background 0.12s ease, color 0.12s ease, transform 0.08s ease;
-}
-.gallery-close:hover { background: rgba(0,0,0,0.9); color: #fff; transform: scale(1.04); }
-
-/* Caption below the gallery box */
+}.gallery-close:hover { background: rgba(0,0,0,0.9); color: #fff; transform: scale(1.04); }/* Caption below the gallery box */
 .gallery-caption {
   display: inline-block; /* shrink to text width */
   margin-top: 8px;
@@ -1025,9 +817,7 @@ h4 {
   padding: 8px 12px;
   border-radius: 6px;
   box-sizing: border-box;
-}
-
-/* Force theme consistency on small screens: ensure dark backgrounds and intended heading colors */
+}/* Force theme consistency on small screens: ensure dark backgrounds and intended heading colors */
 @media only screen and (max-width: 992px) {
   body {
     background-color: var(--bg-color) !important;
@@ -1037,59 +827,45 @@ h4 {
   .gallery-close { background: rgba(0,0,0,0.72) !important; color: var(--heading-color) !important; }
   .gallery-caption { background: rgba(0,0,0,0.6) !important; color: var(--text-color) !important; }
   .card, .card-panel, .card .card-content { background-color: var(--card-bg) !important; color: var(--text-color) !important; }
-}
-
-.results-table {
+}.results-table {
   width: 100%;
   border-collapse: collapse;
   color: #fff;
   background: transparent;
-}
-.results-table th,
+}.results-table th,
 .results-table td {
   border: 1px solid rgba(255,255,255,0.12);
   padding: 8px 12px;
   text-align: left;
-}
-.results-table thead th {
+}.results-table thead th {
   background: rgba(0,0,0,0.6);
   font-weight: 700;
-}
-.results-table .group-heading th {
+}.results-table .group-heading th {
   background: rgba(0,0,0,0.75);
   text-align: left;
   font-weight: 700;
   padding-top: 10px;
   padding-bottom: 6px;
-}
-.results-table th[scope="row"] { font-weight: 600; } /* Zeilenköpfe */
-.results-table td { font-weight: 400; }
-
-@media (max-width: 600px){
-  /* Hide original table header on small screens, show card view instead */
-  .results-table thead { display: none; }
-  .results-table { border: 0; }
-  .results-table tbody { display: block; }
-  .results-table tr { display: block; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.06); }
-  .results-table th[scope="row"], .results-table td { display: block; width: 100%; padding: 0.6rem 0.8rem; text-align: center; border: none; }
-  .results-table th[scope="row"] { background: rgba(0,0,0,0.25); font-weight: 700; text-align: left; padding-left: 0.8rem; }
-  .results-table td { border-top: 1px solid rgba(255,255,255,0.04); }
-
-  /* Styles for generated card-list produced by JS */
-  .results-cards { margin-bottom: 1.25rem; }
-  .results-cards-caption { font-size: 1.15rem; margin: 0 0 0.75rem 0; color: #fff; }
-  .result-card { background: rgba(255,255,255,0.02); border-radius: 6px; margin-bottom: 0.6rem; overflow: hidden; }
-  .result-row { display: flex; flex-direction: row; align-items: stretch; }
-  .result-label { flex: 0 0 45%; padding: 0.8rem; font-weight: 700; color: #fff; background: rgba(0,0,0,0.28); }
-  .result-values { flex: 1 1 55%; display: flex; flex-direction: column; justify-content: center; }
-  .result-val { padding: 0.8rem; text-align: center; border-top: 1px solid rgba(255,255,255,0.04); color: #fff; }
-}
-
-blockquote {
+}.results-table th[scope="row"] { font-weight: 600; }/* Zeilenköpfe */
+.results-table td { font-weight: 400; }@media (max-width: 600px){
+  .results-table, .results-table thead, .results-table tbody, .results-table th, .results-table td, .results-table tr {
+    display: block;
+  }
+  .results-table thead { display: none; } /* einfache mobile Darstellung; kann weiter verbessert werden */
+  .results-table tr { margin-bottom: 0.5rem; }
+  .results-table td { padding-left: 50%; position: relative; }
+  .results-table td::before {
+    content: attr(data-label); /* ggf. mit JS setzen für bessere responsive Tabellen */
+    position: absolute;
+    left: 0;
+    width: 45%;
+    padding-left: 12px;
+    font-weight: 700;
+  }
+}blockquote {
   margin: 1rem 0;
   padding: 0.8rem 1rem;
   border-left: 4px solid rgba(241,211,111,0.9);
   background: rgba(255,255,255,0.02);
   color: #fff;
-}
-blockquote footer { font-size: 1.2rem; color: #ccc; margin-top:0.5rem; }
+}blockquote footer { font-size: 1.2rem; color: #ccc; margin-top:0.5rem; }
