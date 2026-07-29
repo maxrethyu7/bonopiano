@@ -337,6 +337,21 @@ nav .language-dropdown button.lang-button:hover {
     margin: 6px 0 !important;
   }
 }
+
+/* Desktop: keep the two main index titles on a single row */
+@media only screen and (min-width: 993px) {
+  [data-i18n="index.header.title1"],
+  [data-i18n="index.header.title2"] {
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: baseline;
+  }
+
+  [data-i18n="index.header.title1"] {
+    margin-right: 0.45rem;
+  }
+}
+
 /* Keep dropdown compact and center flag buttons */
 .dropdown-content#language-menu-mobile {
   padding: 0.4rem !important;
@@ -463,6 +478,15 @@ nav a {
 footer.page-footer {
   margin: 0;
 }
+
+/* Keep footer.aboutText in justified mode across pages */
+[data-i18n="footer.aboutText"] {
+  display: block;
+  text-align: justify !important;
+  text-justify: inter-word !important;
+  text-align-last: left !important;
+}
+
 /* Container, der die Cards hält */
 .card-container {
   display: grid;
