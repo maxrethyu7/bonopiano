@@ -667,7 +667,7 @@ section.anchor p[data-i18n$=".text"] {
   display: block;
   width: 100%;          /* Das Bild nutzt die volle Breite der Card */
   height: auto;         /* ERSETZT 'relative': Berechnet die Höhe automatisch anhand des Seitenverhältnisses, verhindert Verzerrung! */
-  max-height: 350px;    /* Optional: Verhindert, dass ein Bild auf riesigen Bildschirmen unendlich hoch wird */
+  max-height: 420px;    /* Optional: Verhindert, dass ein Bild auf riesigen Bildschirmen unendlich hoch wird */
   object-fit: contain;  /* Garantiert, dass das Bild innerhalb seiner Box niemals verzerrt oder beschnitten wird */
   transition: transform 0.3s ease;
 }
@@ -694,41 +694,21 @@ footer.page-footer {
   background-color: #333333 !important;
 }
 
-/* Bereitet den Link-Container für das absolute Overlay vor */
-.card-link.youtube-link {
-  position: relative;
+/* Embedded YouTube player inside cards */
+.youtube-embed-wrap {
+  width: calc(100% - 3rem);
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #000;
+}
+
+.youtube-embed {
+  width: 100%;
+  height: 100%;
+  border: 0;
   display: block;
-  cursor: pointer;
-}
-
-/* Das unsichtbare Overlay, das den Play-Button enthält */
-.card-link.youtube-link::after {
-  content: "";
-  position: absolute;
-  inset: 0; /* Deckt das gesamte Bild ab */
-  background-color: rgba(0, 0, 0, 0.15); /* Leichte Abdunklung für besseren Kontrast */
-  
-  /* Zentriert das Play-Icon exakt in der Mitte */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  /* Modernes, cleanes YouTube-Play-Icon als SVG */
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48" width="68" height="48"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79 0 34 0 34 0S12.21 0 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C0 13.06 0 24 0 24s0 10.94 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 48 34 48 34 48s21.79 0 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C68 34.94 68 24 68 24s0-10.96-1.48-16.26z" fill="%23ff0000"/><polygon points="27,33 45,24 27,15" fill="%23ffffff"/></svg>');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 68px 48px; /* Originalgröße des YouTube-Buttons */
-  
-  transition: all 0.3s ease;
-  opacity: 0.9; /* Standardmäßig leicht transparent */
-}
-
-/* Hover-Effekt: Wenn man mit der Maus über das Bild fährt */
-.card-link.youtube-link:hover::after {
-  opacity: 1;
-  background-color: rgba(0, 0, 0, 0); /* Verhindert doppelte Abdunklung beim Hover */
-  /* Macht den Play-Button beim Hover minimal dynamischer */
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
 }
 
 /* Collection list styling to match page colors */
@@ -1087,23 +1067,15 @@ h4 {
 .results-table td { font-weight: 400; }
 
 @media (max-width: 600px){
-  /* Hide original table header on small screens, show card view instead */
-  .results-table thead { display: none; }
-  .results-table { border: 0; }
-  .results-table tbody { display: block; }
-  .results-table tr { display: block; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.06); }
-  .results-table th[scope="row"], .results-table td { display: block; width: 100%; padding: 0.6rem 0.8rem; text-align: center; border: none; }
-  .results-table th[scope="row"] { background: rgba(0,0,0,0.25); font-weight: 700; text-align: left; padding-left: 0.8rem; }
-  .results-table td { border-top: 1px solid rgba(255,255,255,0.04); }
-
-  /* Styles for generated card-list produced by JS */
-  .results-cards { margin-bottom: 1.25rem; }
-  .results-cards-caption { font-size: 1.15rem; margin: 0 0 0.75rem 0; color: #fff; }
-  .result-card { background: rgba(255,255,255,0.02); border-radius: 6px; margin-bottom: 0.6rem; overflow: hidden; }
-  .result-row { display: flex; flex-direction: row; align-items: stretch; }
-  .result-label { flex: 0 0 45%; padding: 0.8rem; font-weight: 700; color: #fff; background: rgba(0,0,0,0.28); }
-  .result-values { flex: 1 1 55%; display: flex; flex-direction: column; justify-content: center; }
-  .result-val { padding: 0.8rem; text-align: center; border-top: 1px solid rgba(255,255,255,0.04); color: #fff; }
+  .results-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+  .results-table caption {
+    white-space: normal;
+  }
 }
 
 blockquote {
@@ -1111,9 +1083,60 @@ blockquote {
   padding: 0.8rem 1rem;
   border-left: 4px solid rgba(241,211,111,0.9);
   background: rgba(255,255,255,0.02);
-  color: #fff;
+  color: rgba(241,211,111,0.9);
+  font-size: 1.9rem;
+  font-style: italic;
+  line-height: 1.5;
 }
-blockquote footer { font-size: 1.2rem; color: #ccc; margin-top:0.5rem; }
+blockquote footer { font-size: inherit; color: white; margin-top:0.5rem; }
+
+blockquote-artist {
+  display: block;
+  margin: 1rem 0;
+  padding: 0.8rem 1rem;
+  border-left: 4px solid rgba(241,211,111,0.9);
+  background: rgba(255,255,255,0.02);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.9rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+blockquote-artist .artist-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid rgba(241,211,111,0.9);
+  flex: 0 0 auto;
+}
+blockquote-artist .artist-quote-content {
+  display: block;
+}
+blockquote-artist .artist-signature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-top: 0.75rem;
+  flex-wrap: nowrap;
+}
+blockquote-artist footer {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: block;
+  font-size: inherit;
+  color: rgba(241,211,111,0.9);
+  margin-top: 0;
+  line-height: 1.35;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  blockquote-artist .artist-photo {
+    width: 96px;
+    height: 96px;
+  }
+}
 
 /* Small reusable vertical spacer */
 .spacer-sm {

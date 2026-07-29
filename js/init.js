@@ -435,64 +435,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // initialize gallery modal handlers
   initGalleryModal();
 
-  // Responsive conversion: transform narrow .results-table into card list
-  function buildResultsCards(table) {
-    var caption = table.querySelector('caption');
-    var headers = Array.from(table.querySelectorAll('thead th')).map(function(h){ return h.textContent.trim(); });
-    var rows = Array.from(table.querySelectorAll('tbody tr'));
-    var container = document.createElement('div');
-    container.className = 'results-cards';
-    if (caption) {
-      var cap = document.createElement('div'); cap.className = 'results-cards-caption'; cap.innerHTML = caption.innerHTML; container.appendChild(cap);
-    }
-    rows.forEach(function(r){
-      var cells = Array.from(r.children);
-      // Expect first cell to be th (label) followed by td values
-      if (cells.length < 2) return;
-      var label = cells[0].textContent.trim();
-      var vals = cells.slice(1).map(function(c){ return c.innerHTML; });
-      var card = document.createElement('div'); card.className = 'result-card';
-      var row = document.createElement('div'); row.className = 'result-row';
-      var lbl = document.createElement('div'); lbl.className = 'result-label'; lbl.textContent = label;
-      var valsWrap = document.createElement('div'); valsWrap.className = 'result-values';
-      vals.forEach(function(v){ var d = document.createElement('div'); d.className = 'result-val'; d.innerHTML = v; valsWrap.appendChild(d); });
-      row.appendChild(lbl); row.appendChild(valsWrap); card.appendChild(row); container.appendChild(card);
-    });
-    return container;
-  }
-
-  var responsiveTables = [];
-  function updateResponsiveTables() {
-    var vp = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-    var tables = Array.from(document.querySelectorAll('table.results-table'));
-    tables.forEach(function(table){
-      var marker = table.dataset._responsiveCardId;
-      if (vp <= 600) {
-        if (marker) return; // already converted
-        var cards = buildResultsCards(table);
-        table.parentNode.insertBefore(cards, table);
-        table.style.display = 'none';
-        // mark
-        table.dataset._responsiveCardId = '1';
-        responsiveTables.push({ table: table, cards: cards });
-      } else {
-        if (!marker) return; // nothing to do
-        // remove cards
-        var entryIndex = responsiveTables.findIndex(function(e){ return e.table === table; });
-        if (entryIndex !== -1) {
-          var entry = responsiveTables[entryIndex];
-          try { entry.cards.parentNode.removeChild(entry.cards); } catch(e) {}
-          responsiveTables.splice(entryIndex, 1);
-        }
-        table.style.display = '';
-        delete table.dataset._responsiveCardId;
-      }
-    });
-  }
-
-  // run once and on resize
-  updateResponsiveTables();
-  window.addEventListener('resize', function(){ if (typeof updateResponsiveTables === 'function') updateResponsiveTables(); });
+  // Results tables keep the same layout on mobile; CSS provides horizontal scrolling when needed.
 
   // Run once after DOM is ready (and after any i18n text replacement)
   // Use a small timeout to allow translations to populate the header text
