@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'nav.anleitung': 'Anleitung',
       'nav.impressum': 'Impressum',
       'footer.about': 'Über uns',
-      'footer.aboutText': '<span style="color: #E6C07A"><b>BONO Piano Akustik</b></span> steht für natürliche Schalldämpfung von Flügeln und Klavieren. Das Produkt verbindet musikalische Praxiserfahrung mit hochwertigen Materialien und präziser Verarbeitung – für kompromisslosen Klang bei reduziertem Schallpegel. Erfunden von der Konzertpianistin, Theatermusikerin und Klavierpädagogin <b>Nataliya Tkachenko</b>, vereint <span style="color: #E6C07A">BONO Piano Akustik</span> musikalische Expertise mit der Erfahrung chinesischer Spezialisten für akustische Materialtechnologie. Gemeinsam entwickeln und perfektionieren wir unser Produkt kontinuierlich weiter, um höchste Qualität mit einer wirtschaftlichen Fertigung zu verbinden. <b>Der Musikwelt zuliebe.</b>',
+      'footer.aboutText': '<span style="color: #E6C07A"><b>BONO Piano Akustik</b></span> steht für natürliche Schalldämpfung von Flügeln und Klavieren. Das Produkt verbindet musikalische Praxiserfahrung mit hochwertigen Materialien und präziser Verarbeitung – für kompromisslosen Klang bei reduziertem Schallpegel. Erfunden von der Konzertpianistin, Theatermusikerin und Klavierpädagogin <b>Nataliya Tkachenko</b>, vereint <span style="color: #E6C07A">BONO Piano Akustik</span> musikalische Expertise mit der Erfahrung chinesischer Spezialisten für akustische Materialtechnologie. Gemeinsam entwickeln und perfektionieren wir unser Produkt kontinuierlich weiter, um höchste Qualität mit einer wirtschaftlichen Fertigung zu verbinden. <br><span style="font-size: 1.4rem;"><b>Der Musikwelt zuliebe.</b></span>',
       'footer.nav': 'Navigation',
       'footer.contact': 'Kontakt',
       'footer.social': 'Soziale Medien',
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'index.header.title2': '<span style="font-size: 5rem;"> <span style="color: #b50a0a"> Schalldämpfung</span></span>',
       'index.header.subtitle': '<span style="font-size: 3.5rem; color: #E6C07A">für <em>Flügel</em> und <em>Klaviere</em></span>',
       'index.text1': 'Die elegante Akustiklösung von BONO Piano Akustik reduziert die Lautstärke akustischer Flügel und Klaviere deutlich — ohne den natürlichen Klangcharakter zu beeinträchtigen und ganz ohne Eingriffe in die Mechanik, das Gehäuse oder der Raumarchitektur!',
-      'index.text1b': '<span style="color: #E6C07A">Entwickelt für Konzertpianisten, Musikstudierende, Theater, Musikschulen und -Hochschulen, Studios und alle Privaträume.</span>',
+      'index.text1b': 'Entwickelt für Konzertpianisten, Musikstudierende, Theater, Musikschulen und -Hochschulen, Studios und alle Privaträume.',
       'index.text2': '<span style="color: #b50a0a">Mehr Infos zum Produkt:</span>',
       'index.title2': '<em>Natürlich spielen.</em>',
       'index.title2b': '<em>Leiser klingen.</em>',
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
       
       
       'product.title': 'Produkt',
-      'product.feature1.title': 'Akustische Freiheit für <em>Flügel</em> und <em>Klaviere</em>',
+      'product.feature1.title': 'Akustische Freiheit',
       'product.feature11.text': 'Akustische Flügel entfalten ihre volle Klangkraft besonders mit geöffnetem Deckel. In kleineren Räumen, kleinen Theatern oder privaten Wohnungen wird genau das jedoch häufig zur Herausforderung.<br><br> Schauspieler werden übertönt, Nachbarn belastet, Proberäume akustisch überfordert. Bisher bedeutete die Lösung oft:',
       'product.feature1.list1': 'kostspielige Raumdämmung',
       'product.feature1.list2': 'dauerhafte Umbauten am Instrument oder Raum',
