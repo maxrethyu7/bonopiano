@@ -733,7 +733,7 @@ footer.page-footer {
 .product-feature-list {
   margin: 1rem 0 1rem 1.5rem;
   padding-left: 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .product-feature-list li {
@@ -745,9 +745,6 @@ footer.page-footer {
   color: var(--text-color);
 }
 
-.product-feature-list a:hover {
-  text-decoration: underline;
-}
 
 /* Gallery thumbnails in cards */
 .gallery-thumbs {
@@ -1093,3 +1090,15 @@ blockquote {
   color: #fff;
 }
 blockquote footer { font-size: 1.2rem; color: #ccc; margin-top:0.5rem; }
+
+/* Small reusable vertical spacer */
+.spacer-sm {
+  display: block;
+  margin-block: 0.5rem;
+}
+
+/* Middle reusable vertical spacer */
+.spacer-md {
+  display: block;
+  margin-block: 1rem;
+}

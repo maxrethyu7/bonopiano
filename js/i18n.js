@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
       'nav.product': 'Produkt',
       'nav.anleitung': 'Anleitung',
       'nav.impressum': 'Impressum',
-      'index.header.title1': '<span style="font-size: 1.7em;"><span style="color: #E6C07A"> Innovative</span></span>',
-      'index.header.title2': '<span style="font-size: 1.8em;"> <span style="color: #910909"> Schalldämpfung</span></span>',
-      'index.header.subtitle': '<span style="font-size: 1.7em; color: #E6C07A">für <em>Flügel</em> und <em>Klaviere</em></span>',
+      'index.header.title1': '<span style="font-size: 5rem;"><span style="color: #E6C07A"> Innovative</span></span>',
+      'index.header.title2': '<span style="font-size: 5rem;"> <span style="color: #910909"> Schalldämpfung</span></span>',
+      'index.header.subtitle': '<span style="font-size: 3.5rem; color: #E6C07A">für <em>Flügel</em> und <em>Klaviere</em></span>',
       'index.text1': 'Die elegante Akustiklösung von BONO Piano Akustik reduziert die Lautstärke akustischer Flügel und Klaviere deutlich — ohne den natürlichen Klangcharakter zu beeinträchtigen und ganz ohne Eingriffe in die Mechanik, das Gehäuse oder der Raumarchitektur!',
       'index.text1b': 'Entwickelt für Konzertpianisten, Musikstudierende, Theater, Musikschulen und -Hochschulen, Studios und alle Privaträume.',
       'index.text2': 'Mehr Infos zum Produkt:',
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
       
       
       'product.title': 'Produkt',
-      'product.feature1.title': 'Akustische Freiheit<span style="font-size: 0.7em;"><span style="color: #ffffff"><em> für Flügel und Klaviere</em></span></span>',
+      'product.feature1.title': 'Akustische Freiheit für <em>Flügel</em> und <em>Klaviere</em>',
       'product.feature11.text': 'Akustische Flügel entfalten ihre volle Klangkraft besonders mit geöffnetem Deckel. In kleineren Räumen, kleinen Theatern oder privaten Wohnungen wird genau das jedoch häufig zur Herausforderung.<br><br> Schauspieler werden übertönt, Nachbarn belastet, Proberäume akustisch überfordert. Bisher bedeutete die Lösung oft:',
       'product.feature1.list1': 'kostspielige Raumdämmung',
       'product.feature1.list2': 'dauerhafte Umbauten am Instrument oder Raum',
