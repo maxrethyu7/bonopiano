@@ -487,6 +487,58 @@ footer.page-footer {
   text-align-last: left !important;
 }
 
+/* Footer: center Navigation, Kontakt, Soziales columns including list items */
+footer.page-footer h5[data-i18n="footer.nav"],
+footer.page-footer h5[data-i18n="footer.contact"],
+footer.page-footer h5[data-i18n="footer.social"] {
+  text-align: center !important;
+}
+
+footer.page-footer h5[data-i18n="footer.nav"] ~ ul,
+footer.page-footer h5[data-i18n="footer.contact"] ~ ul,
+footer.page-footer h5[data-i18n="footer.social"] ~ ul {
+  text-align: center !important;
+}
+
+footer.page-footer h5[data-i18n="footer.nav"] ~ ul li,
+footer.page-footer h5[data-i18n="footer.contact"] ~ ul li,
+footer.page-footer h5[data-i18n="footer.social"] ~ ul li {
+  text-align: center !important;
+}
+
+footer.page-footer h5[data-i18n="footer.nav"] ~ ul li a,
+footer.page-footer h5[data-i18n="footer.contact"] ~ ul li a,
+footer.page-footer h5[data-i18n="footer.social"] ~ ul li a {
+  display: inline-block;
+  width: 100%;
+  text-align: center !important;
+}
+
+/* Product page has a global justified list rule; reset footer columns to centered */
+.product-page footer.page-footer h5[data-i18n="footer.nav"] ~ ul,
+.product-page footer.page-footer h5[data-i18n="footer.contact"] ~ ul,
+.product-page footer.page-footer h5[data-i18n="footer.social"] ~ ul,
+.product-page footer.page-footer h5[data-i18n="footer.nav"] ~ ul li,
+.product-page footer.page-footer h5[data-i18n="footer.contact"] ~ ul li,
+.product-page footer.page-footer h5[data-i18n="footer.social"] ~ ul li,
+.product-page footer.page-footer h5[data-i18n="footer.nav"] ~ ul li a,
+.product-page footer.page-footer h5[data-i18n="footer.contact"] ~ ul li a,
+.product-page footer.page-footer h5[data-i18n="footer.social"] ~ ul li a {
+  text-align: center !important;
+  text-align-last: center !important;
+  text-justify: auto !important;
+  hyphens: none !important;
+}
+
+.product-page footer.page-footer h5[data-i18n="footer.nav"],
+.product-page footer.page-footer h5[data-i18n="footer.contact"],
+.product-page footer.page-footer h5[data-i18n="footer.social"] {
+  display: block;
+  width: 100%;
+  text-align: center !important;
+  text-align-last: center !important;
+}
+
 .impressum-layout {
   padding-bottom: 2rem;
 }

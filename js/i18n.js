@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'footer.aboutText': '<span style="color: #E6C07A">BONO Piano Akustik</span> steht für natürliche Schalldämpfung von Flügeln und Klavieren. Das Produkt verbindet musikalische Praxiserfahrung mit hochwertigen Materialien und präziser Verarbeitung – für kompromisslosen Klang bei reduziertem Schallpegel. Erfunden von der Konzertpianistin, Theatermusikerin und Klavierpädagogin <b>Nataliya Tkachenko</b>, vereint <span style="color: #E6C07A">BONO Piano Akustik</span> musikalische Expertise mit der Erfahrung chinesischer Spezialisten für akustische Materialtechnologie. Gemeinsam entwickeln und perfektionieren wir unser Produkt kontinuierlich weiter, um höchste Qualität mit einer wirtschaftlichen Fertigung zu verbinden. <br><span style="font-size: 1.4rem;"><b><em>Der Musikwelt zuliebe!</em></b></span>',
       'footer.nav': 'Navigation',
       'footer.contact': 'Kontakt',
-      'footer.social': 'Soziale Medien',
+      'footer.social': 'Soziales',
       'footer.purchase': 'Bestellen bei Amazon',
       'footer.email-info': 'Info-Mail',
       'footer.email-purchase': 'Bestell-Mail',
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'product.feature6.youtubeVid': 'In diesem Video spielt die Erfinderin des Produkts, Nataliya Tkachenko, Erik Saties <em>Gnossienne Nr. 1</em> auf einem Flügel mit der BONO Piano Akustik Schalldämpfung. Die Lautstärke wird dabei deutlich reduziert und ermöglicht so hochwertige Aufnahmen auch in relativ kleinen Räumen — ohne den natürlichen Klangcharakter und die Ausdruckskraft des Instruments zu beeinträchtigen.<br><br><span style="font-size: 2.3rem; color: #E6C07A"><b>Überzeugen Sie sich von der Akustik!</b></span>',
 
       'tutorial.title': 'Anleitung',
-      'tutorial.subtitle': 'Diese Webseite ist momentan noch in Arbeit!<br>Bitte haben Sie Geduld.',
+      'tutorial.subtitle': 'Hier wird Ihnen erklärt, wie sie den <span style="color: #E6C07A">BONO Piano Akustik Schalldämpfer</span> korrekt einbauen.<br><br>Diese Webseite ist momentan noch in Arbeit!<br>Bitte haben Sie Geduld.',
 
       'impressum.title': 'Impressum',
       'impressum.subtitle': 'Angaben gemäß § 5 TMG',
