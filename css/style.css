@@ -100,7 +100,7 @@ a:hover { opacity: 0.9; }
   align-items: center;
 }
 nav {
-  background-color: #000 !important;
+  background-color: #090909 !important;
   min-height: 250px;
 }
 nav .nav-wrapper {
@@ -485,6 +485,57 @@ footer.page-footer {
   text-align: justify !important;
   text-justify: inter-word !important;
   text-align-last: left !important;
+}
+
+.impressum-layout {
+  padding-bottom: 2rem;
+}
+
+.impressum-note {
+  max-width: 900px;
+  margin: 0.5rem auto 1.4rem auto;
+  color: #d7d7d7;
+}
+
+.impressum-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.impressum-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(230,192,122,0.2);
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+}
+
+.impressum-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.65rem;
+  color: var(--heading-color) !important;
+}
+
+.impressum-card p {
+  margin: 0.3rem 0;
+  color: #fff;
+}
+
+.impressum-card a {
+  color: var(--heading-color);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.impressum-card-wide {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 900px) {
+  .impressum-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Container, der die Cards hält */
