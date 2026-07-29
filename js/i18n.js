@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'nav.anleitung': 'Anleitung',
       'nav.impressum': 'Impressum',
       'footer.about': 'Über uns',
-      'footer.aboutText': '<span style="color: #E6C07A"><b>BONO Piano Akustik</b></span> steht für natürliche Schalldämpfung von Flügeln und Klavieren. Das Produkt verbindet musikalische Praxiserfahrung mit hochwertigen Materialien und präziser Verarbeitung – für kompromisslosen Klang bei reduziertem Schallpegel. Erfunden von der Konzertpianistin, Theatermusikerin und Klavierpädagogin <b>Nataliya Tkachenko</b>, vereint <span style="color: #E6C07A">BONO Piano Akustik</span> musikalische Expertise mit einem erfahrenen Team aus Spezialisten für Materialtechnologie und Produktion in China. Gemeinsam entwickeln und perfektionieren wir unser Produkt kontinuierlich weiter.',
+      'footer.aboutText': '<span style="color: #E6C07A"><b>BONO Piano Akustik</b></span> steht für natürliche Schalldämpfung von Flügeln und Klavieren. Das Produkt verbindet musikalische Praxiserfahrung mit hochwertigen Materialien und präziser Verarbeitung – für kompromisslosen Klang bei reduziertem Schallpegel. Erfunden von der Konzertpianistin, Theatermusikerin und Klavierpädagogin <b>Nataliya Tkachenko</b>, vereint <span style="color: #E6C07A">BONO Piano Akustik</span> musikalische Expertise mit der Erfahrung chinesischer Spezialisten für akustische Materialtechnologie. Gemeinsam entwickeln und perfektionieren wir unser Produkt kontinuierlich weiter, um höchste Qualität mit einer wirtschaftlichen Fertigung zu verbinden. <b>Der Musikwelt zuliebe.</b>',
       'footer.nav': 'Navigation',
       'footer.contact': 'Kontakt',
       'footer.social': 'Soziale Medien',
