@@ -745,6 +745,20 @@ footer.page-footer h5[data-i18n="footer.social"] ~ ul li a {
   margin: 0.15rem 0 0.25rem;
 }
 
+.product-page .collection {
+  margin-top: 0.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.product-page .collection-item li{
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
+.product-page .collection-item h4 {
+  margin: 0;
+}
+
 section.anchor p[data-i18n$=".text"] {
   text-align: justify;
   text-justify: inter-word;

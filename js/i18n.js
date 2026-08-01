@@ -35,14 +35,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
       
       'product.title': 'Produkt',
-      'product.feature1.title': 'Akustische Freiheit',
+      'product.feature1.title': '<b>Akustische Freiheit</b>',
       'product.feature11.text': '<span style="font-size: 1.7rem; color: #E6C07A"><em>Wenn gute Akustik zur problematischen Lautstärke wird...</span></em><br><br>Akustische Flügel entfalten ihre volle Klangkraft besonders mit geöffnetem Deckel. In kleineren Räumen, kleinen Theatern oder privaten Wohnungen wird genau das jedoch häufig zur Herausforderung.<br><br> Schauspieler werden übertönt, Nachbarn belastet, Proberäume akustisch überfordert. Bisher bedeutete die Lösung oft:',
       'product.feature1.list1': 'kostspielige Raumdämmung',
       'product.feature1.list2': 'dauerhafte Umbauten am Instrument oder Raum',
       'product.feature1.list3': 'der Verzicht auf den vollen Klang des geöffneten Instruments',
       'product.feature12.text': '<span style="color: #E6C07A">BONO Piano Akustik</span> geht einen neuen, einfacheren Weg:<br><span style="text-decoration: underline;">Die Schalldämpfung erfolgt direkt am Instrument und lässt sich jederzeit rückstandslos entfernen.</span>',
       
-      'product.feature2.title': 'Produkt & Funktionsweise',
+      'product.feature2.title': '<b>Produkt & Funktionsweise</b>',
       'product.feature21.text': 'Die speziell entwickelte Schalldämpfung wird im Inneren des Flügeldeckels befestigt und reduziert die Schallabstrahlung kontrolliert und gleichmäßig.<br><br> Das Ergebnis: ein weicherer, runder Klang mit deutlich reduzierter Lautstärke — ohne Verlust der musikalischen Ausdruckskraft. <br><br> Vorteile:',
       'product.feature21.list1': 'Reduktion der Lautstärke um ca. 6-10 dB(A)',
       'product.feature21.list2': 'Erhaltung des natürlichen Klangs',
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'product.feature23.list2': 'optisch dezent und',
       'product.feature23.list3': 'instrumentenschonend sind.',
 
-      'product.feature3.title': 'Gutachten & Messungen',
+      'product.feature3.title': '<b>Gutachten & Messungen</b>',
       'product.feature3.text1': 'Die Wirksamkeit des <span style="color: #E6C07A">BONO Piano Akustik</span> Schalldämpfung wurde von der <b>Schorer + Wolf Technische Dienstleistungen GmbH</b> in einer <b>unabhängigen Untersuchung</b> geprüft. Die Messergebnisse bestätigen eine deutliche und messbare Reduzierung der Schallemissionen. Dabei wurden die Schallpegel sowohl am Platz der Pianistin als auch im Zuhörerbereich erfasst und ausgewertet.<br><br><span style="font-size: 1.7rem; color: #E6C07A">Die wichtigsten Ergebnisse auf einen Blick:</span>',
       'product.feature31.list1': '<span style="color: #ffffff">&check; Reduktion der Lautstärke um <b>bis zu 6 dB(A)</b></span>',
       'product.feature31.list2': '<span style="color: #ffffff">&check; Reduktion des Dauerschallpegels um <b>bis zu 3,5 dB(A)</b></span>',
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'product.table2.closed.without': '12 Std. 23 Min.',
       'product.table2.closed.with': '18 Std. 41 Min.',
 
-      'product.feature4.title': 'Innovation & Patent',
+      'product.feature4.title': '<b>Innovation & Patent</b>',
       'product.feature4.text1': '<span style="font-size: 1.7rem; color: #E6C07A"><em>Eine neue Lösung für die Akustik von Flügeln und Klavieren</em></span><br><br>Die Innovation dieses Produkts liegt in der Nutzung der natürlichen Resonanzfläche des Flügeldeckels selbst. Anstatt den Raum zu dämmen, wird die Schallabstrahlung direkt am Instrument — an zwei optisch unauffälligen Stellen — kontrolliert.<br><br> Dadurch entsteht:',
       'product.feature4.list1': 'eine reversible Lösung',
       'product.feature4.list2': 'kein Eingriff ins Instrument',
@@ -95,10 +95,10 @@ document.addEventListener('DOMContentLoaded', function () {
       'product.feature4.list4': 'eine gleichmäßige Klangreduktion über das gesamte akustische Frequenzspektrum',
       'product.feature4.text2': '<span style="font-size: 1.7rem; color: #E6C07A"><em>Die Schalldämpfung BONO Piano Akustik ist patent- und markenrechtlich geschützt.</em></span>',
       
-      'product.feature5.title': 'Entwickelt aus der Praxis',
+      'product.feature5.title': '<b>Entwickelt aus der Praxis</b>',
       'product.feature5.text1': '<span style="font-size: 1.7rem; color: #E6C07A"><em>Von einer Konzertpianistin erfunden — mit chinesischem Know-How entwickelt!</em></span><br><br>Die Idee entstand aus der täglichen Praxis auf Bühnen, in Theatern und Proberäumen. Als professionelle Konzertpianistin und Theatermusikerin suchte die Erfinderin nach einer Lösung, welche musikalische Qualität mit kontrollierbarer Lautstärke verbindet. Durch internationales Know-How eines chinesischen Teams in den Bereichen Materialtechnologie, Akustik und Verarbeitung konnte das System optimiert und zu einer praxisorientierten Lösung ausgebaut werden. Das Ergebnis ist eine natürliche Akustiklösung, die musikalische Ausdruckskraft bewahrt und gleichzeitig neue Möglichkeiten für den Einsatz akustischer Instrumente in unterschiedlichsten Räumen schafft. In Zusammenarbeit mit einem erfahrenen chinesischen Entwicklungsteam wurde die Schalldämpfung technisch und akustisch weiterentwickelt. Das Ergebnis ist eine professionelle Lösung, die innovative Funktionalität mit musikalischem Anspruch vereint.',
       
-      'product.feature6.title': 'Künstlerstimmen',
+      'product.feature6.title': '<b>Künstlerstimmen</b>',
       'product.feature6.quote1': '„Eine ideal praktische Lösung für das tägliche Üben, für das Theater und kleinere Bühnen sowie zum Schutz des Gehörs. Auch zu Hause benutze ich diese Schalldämpfung beim Üben oder beim Unterrichten. Inzwischen spiele ich fast nie mehr ohne sie. Auch bei meinen professionellen CDs wurde die Schalldämpfung an dem Flügel benuzt:<br>(TIK/36music) \'Chopin und seine Frauen\', \'Nussknacker und Mäusekönig\', \'La Vie De Coco Chanel\'<br>(NEOS Music) \'Fazil Say: Troy-Sonata\'.“',
       'product.feature6.quoteSource1': '<br>— Nataliya Tkachenko,<br>Konzertpianistin und Klavierpädagogin',
       'product.feature6.quote2': '„Ich bin Pianistin und wohne in einer Altbauwohnung, in der auch mein Steinway steht. Für meine Konzerte muss ich regelmäßig üben, außerdem unterrichte ich zahlreiche Schüler. Ein Flügel in einer Wohnung kann bekanntlich schnell zum Problem werden, zum einen wegen der Nachbarn, vor allem aber, weil ein solches Instrument ja für einen großen Saal gedacht ist und in einem normalen Zimmer oft einfach zu laut klingt — auch wenn man es geschlossen lässt.<br><br>Von der Lautstärke des Flügels, egal ob ich ihn spielte oder meine Schüler, war ich zunehmend genervt und suchte nach Lösungen, den Klang etwas zu dämpfen. Zum Beispiel legte ich einen separaten Teppich unter das Instrument (wir haben Parkettboden). Das half nur wenig. Ich war schon drauf und dran, den schönen Flügel zu verkaufen und durch ein Klavier zu ersetzen, als ich von der Lösung erfuhr, die BONO Piano anbietet. Ich versuchte es und war mit dem Ergebnis hochzufrieden. Die Dämpfung funktioniert wirklich und ohne die Klangqualität zu beeinträchtigen, sie lässt sich leicht anbringen und ist optisch unauffällig.<br><br>Ich kann BONO Piano guten Gewissens weiterempfehlen.“',
