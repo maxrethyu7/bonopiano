@@ -133,3 +133,19 @@ legend( ...
     'Location', 'northwest');
 
 hold off;
+
+%%
+xticks(x);
+xticklabels({'80 dB(A)', '85 dB(A)'});
+
+xlabel('Reached Sound Level');
+ylabel('Time until Limit [h]');
+
+legend( ...
+    'Lid open (with SD)', ...
+    'Lid half-open (with SD)', ...
+    'Lid open (without SD)', ...
+    'Lid half-open (without SD)', ...
+    'Location', 'northwest');
+
+hold off;

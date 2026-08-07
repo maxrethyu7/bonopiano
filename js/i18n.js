@@ -86,6 +86,8 @@ document.addEventListener('DOMContentLoaded', function () {
       'product.table2.open.with': '15 Std. 36 Min.',
       'product.table2.closed.without': '12 Std. 23 Min.',
       'product.table2.closed.with': '18 Std. 41 Min.',
+      'product.feature3.chartSrc': 'assets/lautstaerkeGrafik_de.png',
+      'product.feature3.chartAlt': 'Messgrafik zur Schallmessung',
 
       'product.feature4.title': '<b>Innovation & Patent</b>',
       'product.feature4.text1': '<span style="font-size: 1.7rem; color: #E6C07A"><em>Eine neue Lösung für die Akustik von Flügeln und Klavieren</em></span><br><br>Die Innovation dieses Produkts liegt in der Nutzung der natürlichen Resonanzfläche des Flügeldeckels selbst. Anstatt den Raum zu dämmen, wird die Schallabstrahlung direkt am Instrument — an zwei optisch unauffälligen Stellen — kontrolliert.<br><br> Dadurch entsteht:',
@@ -191,6 +193,8 @@ document.addEventListener('DOMContentLoaded', function () {
       'product.table85.row1.with': '15 Std. 36 Min.',
       'product.table85.row2.without': '12 Std. 23 Min.',
       'product.table85.row2.with': '18 Std. 41 Min.',
+      'product.feature3.chartSrc': 'assets/lautstaerkeGrafik_en.png',
+      'product.feature3.chartAlt': 'Measurement chart for sound level analysis',
       'tutorial.title': 'Tutorial',
       'impressum.title': 'Imprint',
       'impressum.subtitle': 'Information according to Section 5 TMG',
@@ -258,6 +262,8 @@ document.addEventListener('DOMContentLoaded', function () {
       'product.title': '产品',
       'product.feature1.title': '声学自由',
       'product.feature1.text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'product.feature3.chartSrc': 'assets/lautstaerkeGrafik_zh.png',
+      'product.feature3.chartAlt': '声级测量图表',
       'product.feature2.title': '产品介绍',
       'product.feature2.text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.',
       'product.feature3.title': '报告与测量',
@@ -361,6 +367,31 @@ document.addEventListener('DOMContentLoaded', function () {
         el.setAttribute('lang', locale);
       } catch (e) {
         // ignore if element cannot have attributes
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-src]').forEach((el) => {
+      const key = el.getAttribute('data-i18n-src');
+      const src = t(key);
+      if (src && src !== key) {
+        const fallbackSrc = el.getAttribute('data-i18n-src-fallback');
+        if (fallbackSrc && el.tagName === 'IMG') {
+          el.onerror = function () {
+            if (el.getAttribute('src') !== fallbackSrc) {
+              el.setAttribute('src', fallbackSrc);
+            }
+            el.onerror = null;
+          };
+        }
+        el.setAttribute('src', src);
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-alt]').forEach((el) => {
+      const key = el.getAttribute('data-i18n-alt');
+      const alt = t(key);
+      if (alt && alt !== key) {
+        el.setAttribute('alt', alt);
       }
     });
 
