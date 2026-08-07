@@ -122,7 +122,7 @@ end
 xticks(x);
 xticklabels({'80 dB(A)', '85 dB(A)'});
 
-xlabel('Erreichter Schallpegel');
+xlabel('Erreichter Schallpegel mit und ohne Schalldämpfung (SD)');
 ylabel('Zeit bis Grenzwert [h]');
 
 legend( ...
@@ -138,7 +138,7 @@ hold off;
 xticks(x);
 xticklabels({'80 dB(A)', '85 dB(A)'});
 
-xlabel('Reached Sound Level');
+xlabel('Reached Sound Level with and without the Sound Dampening (SD)');
 ylabel('Time until Limit [h]');
 
 legend( ...
