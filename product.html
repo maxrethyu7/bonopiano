@@ -1,27 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bono Piano Akustik</title>
-    <link rel="icon" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  </head>
-  <body class="product-page">
-    
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bono Piano Akustik</title>
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body class="product-page">
+
   <nav>
     <div class="nav-wrapper container">
       <div class="nav-left">
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger hide-on-large-only"><i class="material-icons">menu</i></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger hide-on-large-only"><i
+            class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="hide-on-med-and-down">
           <li><a href="index.html" data-i18n="nav.home">Home</a></li>
           <li class="active"><a href="product.html" data-i18n="nav.product">Produkt</a></li>
@@ -38,7 +41,8 @@
         </div>
         <!-- Mobile: Burger-Menu für Sprachen (Materialize dropdown) -->
         <div class="language-burger hide-on-large-only">
-          <a class="dropdown-trigger language-toggle" href="#!" data-target="language-menu-mobile" aria-label="Sprachen"><i class="material-icons">language</i></a>
+          <a class="dropdown-trigger language-toggle" href="#!" data-target="language-menu-mobile"
+            aria-label="Sprachen"><i class="material-icons">language</i></a>
           <ul id="language-menu-mobile" class="dropdown-content">
             <li><a class="lang-button" data-lang="de" aria-label="Deutsch">DE</a></li>
             <li><a class="lang-button" data-lang="en" aria-label="English">EN</a></li>
@@ -46,7 +50,7 @@
           </ul>
         </div>
       </div>
-    <a href="index.html" class="brand-logo logo2"></a>
+      <a href="index.html" class="brand-logo logo2"></a>
     </div>
   </nav>
   <ul class="sidenav" id="mobile-demo">
@@ -55,16 +59,50 @@
     <li><a href="tutorial.html" data-i18n="nav.anleitung">Anleitung</a></li>
     <li><a href="impressum.html" data-i18n="nav.impressum">Impressum</a></li>
   </ul>
-        
+
+  <main class="product-main">
+    <section class="product-hero">
+      <div class="product-hero-copy">
+        <p class="product-eyebrow">BONO PIANO AKUSTIK</p>
+        <h1 data-i18n="product.hero.title">Natürlich spielen. Leiser klingen.</h1>
+        <p class="product-hero-intro" data-i18n="product.hero.text">Die elegante Schalldämpfung für Flügel und Klaviere
+          - ohne Eingriff in Instrument oder Klangcharakter.</p>
+        <a class="product-hero-cta" href="#feature-2"><span data-i18n="product.hero.cta">Produkt entdecken</span><span
+            aria-hidden="true">&rarr;</span></a>
+      </div>
+      <div class="product-hero-image">
+        <img src="assets/product1.jpg" alt="BONO Piano Akustik Schalldämpfung" />
+        <span class="product-hero-tag" data-i18n="product.hero.tag">Für Flügel von 151 bis 180 cm</span>
+      </div>
+    </section>
+
+    <section class="product-benefits" aria-label="Produktvorteile">
+      <div><span class="benefit-number">01</span><strong data-i18n="product.benefit1.title">Natürlich</strong>
+        <p data-i18n="product.benefit1.text">Der Klang bleibt musikalisch und ausdrucksstark.</p>
+      </div>
+      <div><span class="benefit-number">02</span><strong data-i18n="product.benefit2.title">Reversibel</strong>
+        <p data-i18n="product.benefit2.text">Einfach montieren, jederzeit rückstandslos entfernen.</p>
+      </div>
+      <div><span class="benefit-number">03</span><strong data-i18n="product.benefit3.title">Messbar</strong>
+        <p data-i18n="product.benefit3.text">Bis zu 6 dB(A) weniger Lautstärke.</p>
+      </div>
+    </section>
+
     <!-- Anchor sections for collection links -->
     <div class="container">
       <section id="feature-1" class="anchor section">
         <h3 data-i18n="product.feature1.title">Akustische Freiheit</h3>
         <h4 data-i18n="product.feature11.text">Lorem ipsum.</h4>
         <ul class="browser-default product-feature-list">
-          <li><h4 data-i18n="product.feature1.list1">Eintrag 1</h4></li>
-          <li><h4 data-i18n="product.feature1.list2">Eintrag 2</h4></li>
-          <li><h4 data-i18n="product.feature1.list3">Eintrag 3</h4></li>
+          <li>
+            <h4 data-i18n="product.feature1.list1">Eintrag 1</h4>
+          </li>
+          <li>
+            <h4 data-i18n="product.feature1.list2">Eintrag 2</h4>
+          </li>
+          <li>
+            <h4 data-i18n="product.feature1.list3">Eintrag 3</h4>
+          </li>
         </ul>
         <h4 data-i18n="product.feature12.text">Lorem ipsum</h4>
       </section>
@@ -73,41 +111,80 @@
         <h3 data-i18n="product.feature2.title">Das Produkt & seine Funktionsweise</h3>
         <h4 data-i18n="product.feature21.text">Lorem ipsum.</h4>
         <ul class="browser-default product-feature-list">
-          <li><h4 data-i18n="product.feature21.list1">Eintrag 1</h4></li>
-          <li><h4 data-i18n="product.feature21.list2">Eintrag 2</h4></li>
-          <li><h4 data-i18n="product.feature21.list3">Eintrag 3</h4></li>
-          <li><h4 data-i18n="product.feature21.list4">Eintrag 4</h4></li>
-          <li><h4 data-i18n="product.feature21.list5">Eintrag 5</h4></li>
-          <li><h4 data-i18n="product.feature21.list6">Eintrag 6</h4></li>
+          <li>
+            <h4 data-i18n="product.feature21.list1">Eintrag 1</h4>
+          </li>
+          <li>
+            <h4 data-i18n="product.feature21.list2">Eintrag 2</h4>
+          </li>
+          <li>
+            <h4 data-i18n="product.feature21.list3">Eintrag 3</h4>
+          </li>
+          <li>
+            <h4 data-i18n="product.feature21.list4">Eintrag 4</h4>
+          </li>
+          <li>
+            <h4 data-i18n="product.feature21.list5">Eintrag 5</h4>
+          </li>
+          <li>
+            <h4 data-i18n="product.feature21.list6">Eintrag 6</h4>
+          </li>
         </ul>
         <h4 data-i18n="product.feature22.text">Lorem ipsum</h4>
         <ul class="browser-default product-feature-list">
-          <li><h4 data-i18n="product.feature22.list1">Eintrag 1</h4></li>
-          <li><h4 data-i18n="product.feature22.list2">Eintrag 2</h4></li>
-          <li><h4 data-i18n="product.feature22.list3">Eintrag 3</h4></li>
-          <li><h4 data-i18n="product.feature22.list4">Eintrag 4</h4></li>
+          <li>
+            <h4 data-i18n="product.feature22.list1">Eintrag 1</h4>
+          </li>
+          <li>
+            <h4 data-i18n="product.feature22.list2">Eintrag 2</h4>
+          </li>
+          <li>
+            <h4 data-i18n="product.feature22.list3">Eintrag 3</h4>
+          </li>
+          <li>
+            <h4 data-i18n="product.feature22.list4">Eintrag 4</h4>
+          </li>
         </ul>
         <h4 data-i18n="product.feature23.text">Lorem ipsum</h4>
         <ul class="browser-default product-feature-list">
-          <li><h4 data-i18n="product.feature23.list1">Eintrag 1</h4></li>
-          <li><h4 data-i18n="product.feature23.list2">Eintrag 2</h4></li>
-          <li><h4 data-i18n="product.feature23.list3">Eintrag 3</h4></li>
+          <li>
+            <h4 data-i18n="product.feature23.list1">Eintrag 1</h4>
+          </li>
+          <li>
+            <h4 data-i18n="product.feature23.list2">Eintrag 2</h4>
+          </li>
+          <li>
+            <h4 data-i18n="product.feature23.list3">Eintrag 3</h4>
+          </li>
         </ul>
       </section>
 
       <section id="feature-3" class="anchor section">
         <h3 data-i18n="product.feature3.title">Gutachten & Messungen</h3>
-        <h4 data-i18n="product.feature3.text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec tellus sed augue semper porta. Mauris massa.</h4>
+        <h4 data-i18n="product.feature3.text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec tellus
+          sed augue semper porta. Mauris massa.</h4>
         <ul class="collection">
-          <li class="collection-item"><h4 data-i18n="product.feature31.list1">Eintrag 1</h4></li>
-          <li class="collection-item"><h4 data-i18n="product.feature31.list2">Eintrag 2</h4></li>
-          <li class="collection-item"><h4 data-i18n="product.feature31.list3">Eintrag 3</h4></li>
-          <li class="collection-item"><h4 data-i18n="product.feature31.list4">Eintrag 4</h4></li>
-          <li class="collection-item"><h4 data-i18n="product.feature31.list5">Eintrag 5</h4></li>
+          <li class="collection-item">
+            <h4 data-i18n="product.feature31.list1">Eintrag 1</h4>
+          </li>
+          <li class="collection-item">
+            <h4 data-i18n="product.feature31.list2">Eintrag 2</h4>
+          </li>
+          <li class="collection-item">
+            <h4 data-i18n="product.feature31.list3">Eintrag 3</h4>
+          </li>
+          <li class="collection-item">
+            <h4 data-i18n="product.feature31.list4">Eintrag 4</h4>
+          </li>
+          <li class="collection-item">
+            <h4 data-i18n="product.feature31.list5">Eintrag 5</h4>
+          </li>
         </ul>
-        <h4 data-i18n="product.feature3.text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec tellus sed augue semper porta. Mauris massa.</h4>
+        <h4 data-i18n="product.feature3.text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec tellus
+          sed augue semper porta. Mauris massa.</h4>
         <div style="height:20px;"></div>
-        <h3><span style="font-size: 1.7rem; color: #E6C07A;" data-i18n="product.feature3.table1.caption">Messwerte: Zeit bis Erreichen des Pegels von 80 dB(A)</span></h3>
+        <h3><span style="font-size: 1.7rem; color: #E6C07A;" data-i18n="product.feature3.table1.caption">Messwerte: Zeit
+            bis Erreichen des Pegels von 80 dB(A)</span></h3>
         <table class="results-table">
           <caption></caption>
           <thead>
@@ -131,7 +208,8 @@
           </tbody>
         </table>
         <div style="height:20px;"></div>
-        <h3><span style="font-size: 1.7rem; color: #E6C07A;" data-i18n="product.feature3.table2.caption">Messwerte: Zeit bis Erreichen des Pegels von 85 dB(A)</span></h3>
+        <h3><span style="font-size: 1.7rem; color: #E6C07A;" data-i18n="product.feature3.table2.caption">Messwerte: Zeit
+            bis Erreichen des Pegels von 85 dB(A)</span></h3>
         <table class="results-table">
           <caption></caption>
           <thead>
@@ -155,10 +233,14 @@
           </tbody>
         </table>
         <div class="spacer-md"></div>
-        <img class="card-media" src="assets/lautstaerkeGrafik_de.png" data-i18n-src="product.feature3.chartSrc" data-i18n-src-fallback="assets/lautstaerkeGrafik_en.png" data-i18n-alt="product.feature3.chartAlt" alt="Messgrafik zur Schallmessung"/>
+        <img class="card-media" src="assets/lautstaerkeGrafik_de.png" data-i18n-src="product.feature3.chartSrc"
+          data-i18n-src-fallback="assets/lautstaerkeGrafik_en.png" data-i18n-alt="product.feature3.chartAlt"
+          alt="Messgrafik zur Schallmessung" />
         <h4 data-i18n="product.feature3.text3">Fazit<br>blablabla</h4>
         <blockquote>
-          <span data-i18n="product.feature3.quote">„Durch die Reduzierung des Schallpegels durch den Schallschutz von BONO Piano Akustik können die Spielzeiten verlängert werden, um den Auslösewert zu erreichen bzw. einer gleichen gesundheitlichen Gefährdung ausgesetzt zu sein.“</span>
+          <span data-i18n="product.feature3.quote">„Durch die Reduzierung des Schallpegels durch den Schallschutz von
+            BONO Piano Akustik können die Spielzeiten verlängert werden, um den Auslösewert zu erreichen bzw. einer
+            gleichen gesundheitlichen Gefährdung ausgesetzt zu sein.“</span>
           <footer data-i18n="product.feature3.quoteSource">— Schorer + Wolf GmbH</footer>
         </blockquote>
       </section>
@@ -166,19 +248,30 @@
     <div class="container">
       <section id="feature-4" class="anchor section">
         <h3 data-i18n="product.feature4.title">Innovation & Patent</h3>
-        <h4 data-i18n="product.feature4.text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
+        <h4 data-i18n="product.feature4.text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua.</h4>
         <ul class="browser-default product-feature-list">
-          <li><h4 data-i18n="product.feature4.list1">Eintrag 1</h4></li>
-          <li><h4 data-i18n="product.feature4.list2">Eintrag 2</h4></li>
-          <li><h4 data-i18n="product.feature4.list3">Eintrag 3</h4></li>
-          <li><h4 data-i18n="product.feature4.list4">Eintrag 4</h4></li>
+          <li>
+            <h4 data-i18n="product.feature4.list1">Eintrag 1</h4>
+          </li>
+          <li>
+            <h4 data-i18n="product.feature4.list2">Eintrag 2</h4>
+          </li>
+          <li>
+            <h4 data-i18n="product.feature4.list3">Eintrag 3</h4>
+          </li>
+          <li>
+            <h4 data-i18n="product.feature4.list4">Eintrag 4</h4>
+          </li>
         </ul>
-        <h4 data-i18n="product.feature4.text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
+        <h4 data-i18n="product.feature4.text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua.</h4>
       </section>
 
       <section id="feature-5" class="anchor section">
         <h3 data-i18n="product.feature5.title">Entwickelt aus der Praxis</h3>
-        <h4 data-i18n="product.feature5.text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</h4>
+        <h4 data-i18n="product.feature5.text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
+          odio. Praesent libero. Sed cursus ante dapibus diam.</h4>
       </section>
 
       <section id="feature-6" class="anchor section">
@@ -202,79 +295,81 @@
             <footer data-i18n="product.feature6.quoteSource1">— Nataliya Tkachenko</footer>
           </div>
         </blockquote-artist>
-        <div class="spacer-bg"></div>     
+        <div class="spacer-bg"></div>
         <div class="custom-card">
           <div class="youtube-embed-wrap" aria-label="YouTube Video">
-            <iframe
-              class="youtube-embed"
-              src="https://www.youtube-nocookie.com/embed/wUIIDc1RzXw"
-              title="BONO Piano Akustik Video"
-              loading="lazy"
+            <iframe class="youtube-embed" src="https://www.youtube-nocookie.com/embed/wUIIDc1RzXw"
+              title="BONO Piano Akustik Video" loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen>
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
             </iframe>
           </div>
-            <div class="card-text">
+          <div class="card-text">
             <h4 data-i18n="product.feature6.youtubeVid">
               <b>Überzeugen Sie sich von der Akustik!</b><br><br>
-              In diesem Video spielt die Erfinderin und Gründerin von Bono Piano Akustik, Nataliya Tkachenko, das Stück <i>Gnossienne Nr. 1</i> von <i>Satie</i> mit verbautem Schalldämpfer. Dadurch wird die Lautstärke deutlich reduziert, ohne den natürlichen Klangcharakter zu verlieren.
+              In diesem Video spielt die Erfinderin und Gründerin von Bono Piano Akustik, Nataliya Tkachenko, das Stück
+              <i>Gnossienne Nr. 1</i> von <i>Satie</i> mit verbautem Schalldämpfer. Dadurch wird die Lautstärke deutlich
+              reduziert, ohne den natürlichen Klangcharakter zu verlieren.
             </h4>
           </div>
         </div>
       </section>
     </div>
+  </main>
 
 
-    <footer class="page-footer gray">
+  <footer class="page-footer gray">
+    <div class="container">
+      <div class="row">
+        <div class="col l4 s12">
+          <h5 class="gold-text" data-i18n="footer.about">Leiser klingen. Natürlich spielen.</h5>
+          <p class="grey-text text-lighten-4" data-i18n="footer.aboutText">
+            Lorem Ipsum, sol ardet omnibus, asinus tacet.
+          </p>
+        </div>
+        <div class="col l2 s4">
+          <h5 class="gold-text" data-i18n="footer.nav">Navigation</h5>
+          <ul>
+            <li><a class="white-text" href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a class="white-text" href="product.html" data-i18n="nav.product">Produkt</a></li>
+            <li><a class="white-text" href="tutorial.html" data-i18n="nav.anleitung">Anleitung</a></li>
+            <li><a class="white-text" href="impressum.html" data-i18n="nav.impressum">Impressum</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s4">
+          <h5 class="gold-text" data-i18n="footer.contact">Kontakt</h5>
+          <ul>
+            <li><a class="white-text" href="https://www.amazon.de/todo" data-i18n="footer.purchase">Bestellen</a></li>
+            <li><a class="white-text" href="mailto:info@bonopiano.com" data-i18n="footer.email-info">Info-Mail</a></li>
+            <li><a class="white-text" href="mailto:order@bonopiano.com"
+                data-i18n="footer.email-purchase">Bestell-Mail</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s4">
+          <h5 class="gold-text" data-i18n="footer.social">Social Media</h5>
+          <ul>
+            <li><a class="white-text" href="https://www.youtube.com/@NataliyaTkachenko" target="_blank">Youtube</a></li>
+            <li><a class="white-text" href="https://www.youtube.com/@NataliyaTkachenko" target="_blank">TikTok</a></li>
+            <li><a class="white-text" href="https://www.youtube.com/@NataliyaTkachenko" target="_blank">Instagram</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
       <div class="container">
-        <div class="row">
-          <div class="col l4 s12">
-            <h5 class="gold-text" data-i18n="footer.about">Leiser klingen. Natürlich spielen.</h5>
-            <p class="grey-text text-lighten-4" data-i18n="footer.aboutText">
-              Lorem Ipsum, sol ardet omnibus, asinus tacet.
-            </p>
-          </div>
-          <div class="col l2 s4">
-            <h5 class="gold-text" data-i18n="footer.nav">Navigation</h5>
-            <ul>
-              <li><a class="white-text" href="index.html" data-i18n="nav.home">Home</a></li>
-              <li><a class="white-text" href="product.html" data-i18n="nav.product">Produkt</a></li>
-              <li><a class="white-text" href="tutorial.html" data-i18n="nav.anleitung">Anleitung</a></li>
-              <li><a class="white-text" href="impressum.html" data-i18n="nav.impressum">Impressum</a></li>
-            </ul>
-          </div>
-          <div class="col l3 s4">
-            <h5 class="gold-text" data-i18n="footer.contact">Kontakt</h5>
-            <ul>
-              <li><a class="white-text" href="https://www.amazon.de/todo" data-i18n="footer.purchase">Bestellen</a></li>
-              <li><a class="white-text" href="mailto:info@bonopiano.com" data-i18n="footer.email-info">Info-Mail</a></li>
-              <li><a class="white-text" href="mailto:order@bonopiano.com" data-i18n="footer.email-purchase">Bestell-Mail</a></li>
-            </ul>
-          </div>
-          <div class="col l3 s4">
-            <h5 class="gold-text" data-i18n="footer.social">Social Media</h5>
-            <ul>
-              <li><a class="white-text" href="https://www.youtube.com/@NataliyaTkachenko" target="_blank">Youtube</a></li>
-              <li><a class="white-text" href="https://www.youtube.com/@NataliyaTkachenko" target="_blank">TikTok</a></li>
-              <li><a class="white-text" href="https://www.youtube.com/@NataliyaTkachenko" target="_blank">Instagram</a></li>
-            </ul>
-          </div>
-        </div>
+        <a class="black-text text-lighten-3" href="http://materializecss.com">Made with designs from materializecss</a>
       </div>
-      <div class="footer-copyright">
-        <div class="container">
-         <a class="black-text text-lighten-3" href="http://materializecss.com">Made with designs from materializecss</a>
-        </div>
-      </div>
-    </footer>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
       var elems = document.querySelectorAll('.sidenav');
       M.Sidenav.init(elems);
     });
   </script>
   <script src="js/i18n.js"></script>
   <script src="js/init.js"></script>
-  </body>
+</body>
+
 </html>
