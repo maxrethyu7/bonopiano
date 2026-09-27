@@ -14,6 +14,10 @@
   --card-bg: #353535; /* Etwas helleres Dunkelgrau für Cards */
   --nav-height: 140px; /* Höhe des Navs für scroll offset */
   --title-max-font-size: 56px; /* Max font-size for main title on large viewports */
+  --accent: #9b761e; /* Gold für Akzente (helles Design) */
+  --accent-line: #b99542;
+  --nav-bg: rgba(244, 241, 235, 0.96);
+  --control-line: rgba(23, 23, 23, 0.25);
 }
 /* Increase base font size site-wide (rem-based sizing scales with this) */
 @media only screen and (min-width: 0) { html { font-size: 17px; } }
@@ -1303,7 +1307,7 @@ blockquote-artist footer {
 
 .product-page nav {
   min-height: 76px;
-  background: rgba(244, 241, 235, 0.96) !important;
+  background: var(--nav-bg) !important;
   border-bottom: 1px solid var(--product-line);
 }
 
@@ -1359,19 +1363,19 @@ blockquote-artist footer {
 }
 
 .product-page nav ul#nav-mobile li.active a {
-  color: #9b761e !important;
-  border-bottom: 1px solid #b99542;
+  color: var(--accent) !important;
+  border-bottom: 1px solid var(--accent-line);
 }
 
 .product-page nav .lang-button {
-  border-color: rgba(23, 23, 23, 0.25);
+  border-color: var(--control-line);
   background-color: transparent;
 }
 
 .product-page nav .lang-button:hover,
 .product-page nav .lang-button.active {
   background-color: rgba(185, 149, 66, 0.12);
-  border-color: #b99542;
+  border-color: var(--accent-line);
 }
 
 .product-main {
@@ -1396,7 +1400,7 @@ blockquote-artist footer {
 
 .product-eyebrow {
   margin: 0 0 1.6rem !important;
-  color: #9b761e !important;
+  color: var(--accent) !important;
   font-size: 0.72rem !important;
   font-weight: 700;
   letter-spacing: 0.22em;
@@ -1430,7 +1434,7 @@ blockquote-artist footer {
   align-items: center;
   gap: 1.3rem;
   padding: 0.9rem 0;
-  border-bottom: 1px solid #9b761e;
+  border-bottom: 1px solid var(--accent);
   color: var(--product-ink) !important;
   font-size: 0.78rem;
   font-weight: 700;
@@ -1439,7 +1443,7 @@ blockquote-artist footer {
 }
 
 .product-hero-cta span:last-child {
-  color: #9b761e;
+  color: var(--accent);
   font-size: 1.2rem;
 }
 
@@ -1490,7 +1494,7 @@ blockquote-artist footer {
 
 .benefit-number {
   grid-row: span 2;
-  color: #9b761e;
+  color: var(--accent);
   font-size: 0.7rem;
   letter-spacing: 0.08em;
 }
@@ -1591,7 +1595,7 @@ blockquote-artist footer {
 
 .product-main blockquote,
 .product-main blockquote-artist {
-  border-left-color: #b99542;
+  border-left-color: var(--accent-line);
   background: rgba(255, 255, 255, 0.45);
   color: var(--product-ink);
 }
@@ -1668,7 +1672,7 @@ blockquote-artist footer {
 .tutorial-page nav,
 .impressum-page nav {
   min-height: 76px;
-  background: rgba(244, 241, 235, 0.96) !important;
+  background: var(--nav-bg) !important;
   border-bottom: 1px solid var(--site-line);
 }
 
@@ -1731,8 +1735,8 @@ blockquote-artist footer {
 .home-page nav ul#nav-mobile li.active a,
 .tutorial-page nav ul#nav-mobile li.active a,
 .impressum-page nav ul#nav-mobile li.active a {
-  color: #9b761e !important;
-  border-bottom: 1px solid #b99542;
+  color: var(--accent) !important;
+  border-bottom: 1px solid var(--accent-line);
 }
 
 .home-page nav .nav-left,
@@ -1744,7 +1748,7 @@ blockquote-artist footer {
 .home-page nav .lang-button,
 .tutorial-page nav .lang-button,
 .impressum-page nav .lang-button {
-  border-color: rgba(23, 23, 23, 0.25);
+  border-color: var(--control-line);
   background-color: transparent;
 }
 
@@ -1755,7 +1759,7 @@ blockquote-artist footer {
 .impressum-page nav .lang-button:hover,
 .impressum-page nav .lang-button.active {
   background-color: rgba(185, 149, 66, 0.12);
-  border-color: #b99542;
+  border-color: var(--accent-line);
 }
 
 .home-page > .row {
@@ -1800,7 +1804,7 @@ blockquote-artist footer {
 .home-page > .row > .container h2.header {
   display: block;
   margin-top: 1rem;
-  color: #9b761e !important;
+  color: var(--accent) !important;
   font-size: clamp(1.1rem, 2vw, 1.7rem) !important;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1922,7 +1926,7 @@ blockquote-artist footer {
 }
 
 .home-page .gallery-thumb:hover {
-  border-color: #b99542;
+  border-color: var(--accent-line);
   transform: scale(1.02);
 }
 
@@ -1971,7 +1975,7 @@ blockquote-artist footer {
   gap: 1rem;
   margin-top: 2rem;
   padding: 1.1rem 1.4rem;
-  border-left: 3px solid #b99542;
+  border-left: 3px solid var(--accent-line);
   background: rgba(185, 149, 66, 0.07);
   color: var(--site-ink);
   font-size: 1.08rem;
@@ -1985,13 +1989,13 @@ blockquote-artist footer {
 }
 
 .home-page .home-contact-note b {
-  color: #9b761e;
+  color: var(--accent);
   font-weight: 700;
 }
 
 .home-page .home-contact-note .material-icons {
   flex-shrink: 0;
-  color: #9b761e;
+  color: var(--accent);
   font-size: 1.5rem;
 }
 
@@ -2065,7 +2069,7 @@ blockquote-artist footer {
 
 .impressum-page .impressum-layout > h2 {
   margin: 1rem 0 0;
-  color: #9b761e !important;
+  color: var(--accent) !important;
   font-size: 1rem !important;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -2109,7 +2113,7 @@ blockquote-artist footer {
 }
 
 .impressum-page .impressum-card a {
-  text-decoration-color: #b99542;
+  text-decoration-color: var(--accent-line);
 }
 
 @media (max-width: 800px) {
@@ -2232,4 +2236,149 @@ blockquote-artist footer {
 .impressum-page .impressum-card p,
 .impressum-page .impressum-card a {
   font-size: 1.08rem !important;
+}
+
+/* Front page: large centered logo above the headline. */
+.home-hero-logo {
+  display: block;
+  width: min(600px, 80%);
+  margin: 0 auto 2.5rem;
+  /* The piano mark makes the artwork heavier on the left; nudge it so it reads as centred */
+  transform: translateX(6%);
+}
+
+.home-hero-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.home-hero-logo .logo-for-dark {
+  display: none;
+}
+
+/* The hero logo replaces the small nav logo on the front page. */
+.home-page nav .brand-logo.logo2 {
+  display: none;
+}
+
+.home-page nav .nav-left {
+  margin-left: 0;
+}
+
+@media (max-width: 800px) {
+  .home-hero-logo {
+    width: min(420px, 82%);
+    margin-bottom: 2rem;
+  }
+
+  /* Headline wraps on phones: drop the word-gap margin so each line centres exactly */
+  .home-page > .row > .container h1.header:first-of-type {
+    margin-right: 0;
+  }
+}
+
+/* Theme toggle in the header */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  margin-right: 0.4rem;
+  padding: 0;
+  border: 1px solid var(--control-line);
+  border-radius: 0.5rem;
+  background: transparent;
+  color: var(--site-ink, var(--product-ink, #171717));
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  background-color: rgba(185, 149, 66, 0.12);
+  border-color: var(--accent-line);
+  transform: scale(1.05);
+}
+
+.theme-toggle .material-icons {
+  display: block;
+  height: auto;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+@media (max-width: 992px) {
+  .theme-toggle {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 0.2rem;
+  }
+}
+
+/* Dark mode: set by js/theme.js from the visitor's choice or the system setting. */
+html[data-theme="dark"] {
+  color-scheme: dark;
+  background: #121212;
+  --accent: #d9b25a;
+  --accent-line: #c9a24e;
+  --nav-bg: rgba(18, 18, 18, 0.95);
+  --control-line: rgba(242, 238, 230, 0.28);
+}
+
+[data-theme="dark"] .home-page,
+[data-theme="dark"] .tutorial-page,
+[data-theme="dark"] .impressum-page {
+  --site-ink: #f2eee6;
+  --site-muted: #b5aea2;
+  --site-paper: #121212;
+  --site-line: #2e2b26;
+}
+
+[data-theme="dark"] .product-page {
+  --product-ink: #f2eee6;
+  --product-muted: #b5aea2;
+  --product-paper: #121212;
+  --product-line: #2e2b26;
+}
+
+/* Dark-mode logo (from assets/BONO_logo.pdf, page background removed) */
+[data-theme="dark"] nav .brand-logo.logo2 {
+  background-image: url(../assets/BONO_logo_dark.svg);
+}
+
+[data-theme="dark"] .home-hero-logo .logo-for-light {
+  display: none;
+}
+
+[data-theme="dark"] .home-hero-logo .logo-for-dark {
+  display: block;
+}
+
+/* Footer keeps a dark surface (it used the ink colour, which turns light in dark mode) */
+[data-theme="dark"] body .page-footer {
+  background: #0a0a0a !important;
+  border-top: 1px solid #2e2b26;
+}
+
+[data-theme="dark"] .page-footer .footer-copyright a {
+  color: #8a847a !important;
+}
+
+[data-theme="dark"] .product-main .results-table thead th {
+  background: #2a2723;
+  color: var(--product-ink);
+}
+
+[data-theme="dark"] .product-main blockquote,
+[data-theme="dark"] .product-main blockquote-artist {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Product photos sit on white; soften the frame so they don't glare */
+[data-theme="dark"] .product-hero-image,
+[data-theme="dark"] .home-page .card-link,
+[data-theme="dark"] .home-page .gallery-thumb {
+  border-radius: 4px;
 }
