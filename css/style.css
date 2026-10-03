@@ -157,7 +157,7 @@ nav .brand-logo.logo2 {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url(../assets/bono_logo_black_piano.png);
+  background-image: url(../assets/logo_highres_transparent.png);
   width: 75%;
   max-width: 1200px;
   height: 230px; /* explicit height so background-image is visible */
@@ -1322,7 +1322,7 @@ blockquote-artist footer {
   transform: translateY(-50%);
   width: min(360px, 32vw);
   height: 68px;
-  background-image: url(../assets/bono_logo_black_piano.png);
+  background-image: url(../assets/logo_highres_transparent.png);
   background-size: contain;
 }
 
@@ -1691,7 +1691,7 @@ blockquote-artist footer {
   transform: translateY(-50%);
   width: min(360px, 32vw);
   height: 68px;
-  background-image: url(../assets/bono_logo_black_piano.png);
+  background-image: url(../assets/logo_highres_transparent.png);
   background-size: contain;
 }
 
@@ -2253,10 +2253,6 @@ blockquote-artist footer {
   height: auto;
 }
 
-.home-hero-logo .logo-for-dark {
-  display: none;
-}
-
 /* The hero logo replaces the small nav logo on the front page. */
 .home-page nav .brand-logo.logo2 {
   display: none;
@@ -2343,19 +2339,6 @@ html[data-theme="dark"] {
   --product-line: #2e2b26;
 }
 
-/* Dark-mode logo (from assets/BONO_logo.pdf, page background removed) */
-[data-theme="dark"] nav .brand-logo.logo2 {
-  background-image: url(../assets/BONO_logo_dark.svg);
-}
-
-[data-theme="dark"] .home-hero-logo .logo-for-light {
-  display: none;
-}
-
-[data-theme="dark"] .home-hero-logo .logo-for-dark {
-  display: block;
-}
-
 /* Footer keeps a dark surface (it used the ink colour, which turns light in dark mode) */
 [data-theme="dark"] body .page-footer {
   background: #0a0a0a !important;
@@ -2381,4 +2364,239 @@ html[data-theme="dark"] {
 [data-theme="dark"] .home-page .card-link,
 [data-theme="dark"] .home-page .gallery-thumb {
   border-radius: 4px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Phones and small tablets: centred header logo, calmer type sizes.   */
+/* ------------------------------------------------------------------ */
+@media (max-width: 800px) {
+  /* Header logo centred between the menu button and the controls */
+  .product-page nav .brand-logo.logo2,
+  .tutorial-page nav .brand-logo.logo2,
+  .impressum-page nav .brand-logo.logo2 {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(180px, 44vw);
+    height: 52px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Front page: logo and headline on the exact centre line */
+  .home-hero-logo {
+    width: min(320px, 78%);
+    transform: none;
+    margin-bottom: 1.5rem;
+  }
+
+  .home-page > .row {
+    padding-top: 2.25rem;
+  }
+
+  .home-page > .row > .container h1.header {
+    font-size: 2rem !important;
+    line-height: 1.1;
+  }
+
+  .home-page > .row > .container h2.header {
+    font-size: 0.95rem !important;
+    margin-top: 0.75rem;
+  }
+
+  .home-page .custom-card h4,
+  .home-page .custom-card .flow-text {
+    font-size: 1.05rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .home-page .home-right .custom-card h2,
+  .home-page .home-right .custom-card h3,
+  .home-page .home-product-copy h3,
+  .home-page .home-product-links h3 {
+    font-size: 1.3rem !important;
+  }
+
+  .home-page .home-contact-note {
+    font-size: 1rem;
+  }
+
+  /* Product page: centred hero, smaller headings and body text */
+  .product-page .product-hero-copy {
+    text-align: center !important;
+    text-align-last: center !important;
+  }
+
+  .product-page .product-hero .product-eyebrow,
+  .product-page .product-hero h1,
+  .product-page .product-hero .product-hero-intro {
+    text-align: center !important;
+    text-align-last: center !important;
+  }
+
+  .product-hero h1 {
+    font-size: 2.4rem !important;
+    line-height: 1.02;
+  }
+
+  .product-hero-intro {
+    max-width: none;
+    font-size: 1.05rem !important;
+  }
+
+  .product-benefits strong {
+    font-size: 0.9rem;
+  }
+
+  .product-benefits p {
+    font-size: 0.95rem !important;
+  }
+
+  .product-main section.anchor {
+    padding-top: 3rem;
+  }
+
+  .product-main section.anchor h3 {
+    font-size: 1.75rem !important;
+  }
+
+  .product-main section.anchor h4,
+  .product-main section.anchor p,
+  .product-main section.anchor li,
+  .product-main section.anchor .collection-item {
+    font-size: 1.02rem !important;
+    line-height: 1.55 !important;
+  }
+
+  /* Inline-styled highlights (e.g. gold intro lines, table captions) */
+  .product-main [style*="font-size"] {
+    font-size: 1.2rem !important;
+    line-height: 1.35;
+  }
+
+  /* Justified text leaves big gaps on narrow screens */
+  .product-page p,
+  .product-page li,
+  .product-page h3,
+  .product-page .flow-text,
+  .product-page .collection-item,
+  [data-i18n="footer.aboutText"] {
+    text-align: left !important;
+  }
+
+  /* Result tables fit the screen instead of scrolling sideways */
+  .product-main .results-table {
+    display: table;
+    white-space: normal;
+    font-size: 0.85rem;
+  }
+
+  .product-main .results-table th,
+  .product-main .results-table td {
+    padding: 6px 8px;
+  }
+
+  /* Tutorial and Impressum: centred titles, readable sizes */
+  .tutorial-page > .row {
+    padding: 3.5rem 1rem 4rem;
+    min-height: 0;
+  }
+
+  .tutorial-page h1.header {
+    font-size: 2.4rem !important;
+  }
+
+  .tutorial-page h2.header {
+    font-size: 1.05rem !important;
+  }
+
+  .impressum-page .impressum-layout {
+    width: 100%;
+    padding: 3rem 1rem 4rem;
+  }
+
+  .impressum-page .impressum-layout > h1,
+  .impressum-page .impressum-layout > h2,
+  .impressum-page .impressum-note {
+    text-align: center !important;
+  }
+
+  .impressum-page .impressum-layout > h1 {
+    font-size: 2.4rem !important;
+  }
+
+  .impressum-page .impressum-layout > h2 {
+    font-size: 0.85rem !important;
+  }
+
+  .impressum-page .impressum-note {
+    margin: 1.5rem auto 2rem;
+    font-size: 0.95rem !important;
+  }
+
+  .impressum-page .impressum-card {
+    min-width: 0;
+    min-height: 0;
+    padding: 1.2rem 1rem;
+    overflow-wrap: anywhere;
+  }
+
+  .impressum-page .impressum-card p,
+  .impressum-page .impressum-card a {
+    font-size: 0.95rem !important;
+  }
+
+  /* Footer: smaller headings and links so the three columns fit */
+  footer.page-footer h5 {
+    font-size: 1.1rem;
+  }
+
+  footer.page-footer ul li a {
+    font-size: 0.9rem;
+  }
+
+  footer.page-footer .row .col.s4 {
+    padding: 0 0.3rem;
+  }
+}
+
+/* Key results list: tighter spacing between the check-mark items */
+.product-main section.anchor .collection .collection-item {
+  padding: 0.55rem 0 !important;
+}
+
+.product-main section.anchor .collection .collection-item h4 {
+  margin: 0 !important;
+}
+
+/* Quotes (test report + artist voices): comfortable reading size on phones */
+@media (max-width: 600px) {
+  .product-main blockquote,
+  .product-main blockquote-artist,
+  .product-main blockquote *,
+  .product-main blockquote-artist * {
+    text-align: left !important;
+  }
+
+  .product-main blockquote,
+  .product-main blockquote-artist {
+    padding: 0.8rem 0.9rem;
+    font-size: 1.02rem;
+    line-height: 1.5;
+  }
+
+  .product-main blockquote footer,
+  .product-main blockquote-artist footer {
+    font-size: 0.92rem;
+    line-height: 1.4;
+  }
+
+  .product-main blockquote-artist .artist-photo {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+/* Quote source was white on the light background */
+.product-main blockquote footer {
+  color: var(--product-muted);
 }
