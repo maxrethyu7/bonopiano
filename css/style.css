@@ -2238,36 +2238,7 @@ blockquote-artist footer {
   font-size: 1.08rem !important;
 }
 
-/* Front page: large centered logo above the headline. */
-.home-hero-logo {
-  display: block;
-  width: min(600px, 80%);
-  margin: 0 auto 2.5rem;
-  /* The piano mark makes the artwork heavier on the left; nudge it so it reads as centred */
-  transform: translateX(6%);
-}
-
-.home-hero-logo img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* The hero logo replaces the small nav logo on the front page. */
-.home-page nav .brand-logo.logo2 {
-  display: none;
-}
-
-.home-page nav .nav-left {
-  margin-left: 0;
-}
-
 @media (max-width: 800px) {
-  .home-hero-logo {
-    width: min(420px, 82%);
-    margin-bottom: 2rem;
-  }
-
   /* Headline wraps on phones: drop the word-gap margin so each line centres exactly */
   .home-page > .row > .container h1.header:first-of-type {
     margin-right: 0;
@@ -2382,13 +2353,6 @@ html[data-theme="dark"] {
 }
 
 @media (max-width: 600px) {
-  /* Front page: logo and headline on the exact centre line */
-  .home-hero-logo {
-    width: min(320px, 78%);
-    transform: none;
-    margin-bottom: 1.5rem;
-  }
-
   .home-page > .row {
     padding-top: 2.25rem;
   }
@@ -2609,11 +2573,6 @@ html[data-theme="dark"] {
 @media only screen and (min-width: 1200px) { html { font-size: 17px; } }
 
 /* Front page */
-.home-hero-logo {
-  width: min(400px, 60%);
-  margin-bottom: 1.5rem;
-}
-
 .home-page > .row {
   max-width: 1100px;
   padding: 2.5rem 1.5rem 4rem;
@@ -2823,11 +2782,6 @@ footer.page-footer .footer-copyright {
 
 /* Phones */
 @media (max-width: 600px) {
-  .home-hero-logo {
-    width: min(250px, 66%);
-    margin-bottom: 1.25rem;
-  }
-
   .home-page > .row {
     padding: 1.75rem 1rem 3rem;
   }
@@ -2935,5 +2889,191 @@ footer.page-footer .footer-copyright {
   footer.page-footer p,
   footer.page-footer ul li a {
     font-size: 0.88rem;
+  }
+}
+
+/* ================================================================== */
+/* Header: menu on the left, logo in the centre, controls on the right */
+/* ================================================================== */
+nav .nav-wrapper,
+.product-page nav .nav-wrapper,
+.home-page nav .nav-wrapper,
+.tutorial-page nav .nav-wrapper,
+.impressum-page nav .nav-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  column-gap: 1rem;
+}
+
+nav .nav-wrapper > .nav-left,
+.product-page nav .nav-left,
+.home-page nav .nav-left,
+.tutorial-page nav .nav-left,
+.impressum-page nav .nav-left {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+nav .nav-wrapper > .nav-right {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+  margin-left: 0;
+  padding-right: 0;
+}
+
+nav .brand-logo.logo2,
+.product-page nav .brand-logo.logo2,
+.home-page nav .brand-logo.logo2,
+.tutorial-page nav .brand-logo.logo2,
+.impressum-page nav .brand-logo.logo2 {
+  grid-column: 2;
+  grid-row: 1;
+  position: static;
+  left: auto;
+  top: auto;
+  transform: none;
+  pointer-events: auto;
+  width: min(240px, 22vw);
+  height: 60px;
+  max-height: none;
+}
+
+@media (max-width: 992px) {
+  nav .brand-logo.logo2,
+  .product-page nav .brand-logo.logo2,
+  .home-page nav .brand-logo.logo2,
+  .tutorial-page nav .brand-logo.logo2,
+  .impressum-page nav .brand-logo.logo2 {
+    width: min(200px, 44vw);
+    height: 52px;
+  }
+}
+
+/* Only the link carries padding, so the menu stays clear of the centred logo */
+.product-page nav ul#nav-mobile li,
+.home-page nav ul#nav-mobile li,
+.tutorial-page nav ul#nav-mobile li,
+.impressum-page nav ul#nav-mobile li {
+  padding: 0 !important;
+}
+
+/* Narrow desktops: tighten the menu so it never runs into the centred logo */
+@media (min-width: 993px) and (max-width: 1180px) {
+  nav .brand-logo.logo2,
+  .product-page nav .brand-logo.logo2,
+  .home-page nav .brand-logo.logo2,
+  .tutorial-page nav .brand-logo.logo2,
+  .impressum-page nav .brand-logo.logo2 {
+    width: 180px;
+    height: 52px;
+  }
+
+  .product-page nav ul#nav-mobile li a,
+  .home-page nav ul#nav-mobile li a,
+  .tutorial-page nav ul#nav-mobile li a,
+  .impressum-page nav ul#nav-mobile li a {
+    padding: 0.65rem 0.45rem !important;
+    letter-spacing: 0.06em;
+  }
+}
+
+/* ================================================================== */
+/* Front page: one even spacing rhythm between the blocks              */
+/* ================================================================== */
+.home-page {
+  --home-gap: 2rem;
+  --home-gap-sm: 0.9rem;
+}
+
+.home-page > .row {
+  padding-top: var(--home-gap);
+  padding-bottom: calc(var(--home-gap) * 1.25);
+}
+
+.home-page > .row > .container {
+  margin-bottom: var(--home-gap);
+}
+
+.home-page .home-left {
+  margin-bottom: var(--home-gap);
+}
+
+.home-page .custom-card h4,
+.home-page .custom-card .flow-text {
+  margin-top: 0;
+  margin-bottom: var(--home-gap-sm);
+}
+
+.home-page .home-left .card-media {
+  margin-top: 0 !important;
+  margin-bottom: var(--home-gap-sm);
+}
+
+.home-page .home-right .custom-card h2,
+.home-page .home-right .custom-card h3 {
+  margin-bottom: 0.4rem;
+}
+
+.home-page .card-link {
+  margin-top: var(--home-gap-sm);
+  margin-bottom: var(--home-gap-sm);
+}
+
+.home-page .gallery-thumbs {
+  margin-bottom: var(--home-gap);
+}
+
+.home-page .home-product-copy,
+.home-page .home-product-links {
+  margin-top: var(--home-gap);
+  padding-top: var(--home-gap);
+}
+
+.home-page .home-product-copy {
+  margin-top: 0;
+}
+
+.home-page .home-product-copy h3,
+.home-page .home-product-links h3 {
+  margin-bottom: var(--home-gap-sm) !important;
+}
+
+.home-page .custom-card > :last-child,
+.home-page .home-product-copy > :last-child {
+  margin-bottom: 0;
+}
+
+.home-page .home-product-links .collection {
+  margin-bottom: 0;
+}
+
+.home-page .home-contact-note {
+  margin-top: var(--home-gap-sm);
+}
+
+@media (max-width: 800px) {
+  /* Divider between the two columns sits exactly in the middle of the gap */
+  .home-page .home-left {
+    margin-bottom: 0;
+  }
+
+  .home-page .home-left .custom-card {
+    padding-bottom: var(--home-gap);
+  }
+
+  .home-page .home-right .custom-card {
+    padding-top: var(--home-gap);
+  }
+}
+
+@media (max-width: 600px) {
+  .home-page {
+    --home-gap: 1.5rem;
+    --home-gap-sm: 0.75rem;
   }
 }
