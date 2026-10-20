@@ -345,8 +345,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!galleryBox) {
       galleryBox = document.createElement('div');
       galleryBox.className = 'gallery-box';
-      // move existing image into the gallery box
-      galleryBox.appendChild(modalImg);
+      // move existing image into a frame that shrink-wraps it, so the close
+      // button can sit on the image itself (not at the top of the tall box)
+      var frame = document.createElement('div');
+      frame.className = 'gallery-frame';
+      frame.appendChild(modalImg);
+      galleryBox.appendChild(frame);
       // caption container
       var caption = document.createElement('div');
       caption.className = 'gallery-caption';
@@ -377,7 +381,7 @@ document.addEventListener('DOMContentLoaded', function() {
       closeBtn.className = 'gallery-close';
       closeBtn.setAttribute('aria-label', 'Close gallery');
       closeBtn.innerHTML = '&times;';
-      content.appendChild(closeBtn);
+      (content.querySelector('.gallery-frame') || content).appendChild(closeBtn);
     }
 
     var captionEl = content.querySelector('.gallery-caption');
@@ -397,6 +401,16 @@ document.addEventListener('DOMContentLoaded', function() {
         // remember which thumb opened the modal for focus restore
         modalEl._lastThumb = thumb;
         show(idx);
+        modalInstance.open();
+      });
+    });
+
+    // The large photo above the thumbnails opens the same gallery at its own image
+    document.querySelectorAll('.gallery-main').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        modalEl._lastThumb = link;
+        show(Math.max(0, images.indexOf(link.getAttribute('href'))));
         modalInstance.open();
       });
     });
@@ -434,6 +448,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // initialize gallery modal handlers
   initGalleryModal();
+
+  // Product page: sections are collapsible <details>. Open the one a link
+  // points to (e.g. index.html -> product.html#feature-2, or the hero button).
+  function openSectionForHash(hash) {
+    if (!hash || hash.length < 2) return null;
+    var target = document.getElementById(decodeURIComponent(hash.slice(1)));
+    var details = target && target.querySelector('details.product-accordion');
+    if (!details) return null;
+    details.open = true;
+    return target;
+  }
+
+  var initialTarget = openSectionForHash(window.location.hash);
+  // Text is filled in by i18n before this runs, so the layout is final; re-align to the section.
+  if (initialTarget) initialTarget.scrollIntoView();
+  window.addEventListener('hashchange', function() { openSectionForHash(window.location.hash); });
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href^="#"]');
+    if (link) openSectionForHash(link.getAttribute('href'));
+  });
 
   // Results tables keep the same layout on mobile; CSS provides horizontal scrolling when needed.
 
