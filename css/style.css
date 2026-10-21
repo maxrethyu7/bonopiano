@@ -1036,7 +1036,7 @@ h4 {
    (Materialize toggles inline `display: block` on open). This prevents
    the modal from capturing pointer events when closed. */
 #gallery-modal.modal[style*="display: block"] {
-  display: flex;
+  display: flex !important; /* must beat Materialize's inline display: block */
   align-items: center;
   justify-content: center;
 }
@@ -1100,7 +1100,7 @@ h4 {
   display: block;
   /* make the image as large as possible inside the fixed 90vw x 90vh box */
   max-width: calc(90vw - 80px); /* leave space for buttons and small padding */
-  max-height: calc(90vh - 80px);
+  max-height: 80vh; /* never taller than .gallery-box, which clips overflow (and the close button) */
   width: auto;
   height: auto;
   object-fit: contain; /* ensure scaling without cropping */
@@ -1131,12 +1131,19 @@ h4 {
   background: transparent;
 }
 
-/* Close button centered above the image */
+/* Shrink-wraps the image so the close button is positioned on the image */
+.gallery-frame {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  line-height: 0;
+}
+
+/* Close button in the top right corner of the image */
 .gallery-close {
   position: absolute;
   top: 8px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 8px;
   z-index: 4200;
   background: rgba(255, 255, 255, 0.897); /* stronger contrast */
   color: black; /* golden cross */
@@ -1175,7 +1182,6 @@ h4 {
     color: var(--text-color) !important;
   }
   h2.header { color: var(--text-color) !important; }
-  .gallery-close { background: rgba(0,0,0,0.72) !important; color: var(--heading-color) !important; }
   .gallery-caption { background: rgba(0,0,0,0.6) !important; color: var(--text-color) !important; }
   .card, .card-panel, .card .card-content { background-color: var(--card-bg) !important; color: var(--text-color) !important; }
 }
@@ -3075,5 +3081,68 @@ nav .brand-logo.logo2,
   .home-page {
     --home-gap: 1.5rem;
     --home-gap-sm: 0.75rem;
+  }
+}
+
+/* Product page: collapsible sections (<details>), so visitors pick what to read */
+.product-main section.anchor {
+  padding: 0;
+}
+
+/* Sections are split over two containers; keep the divider above the second group */
+.product-main > .container + .container section.anchor:first-child {
+  border-top: 1px solid var(--product-line);
+}
+
+.product-main > .container:last-child section.anchor:last-child {
+  border-bottom: 1px solid var(--product-line);
+}
+
+.product-accordion > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.6rem 0;
+  cursor: pointer;
+  list-style: none;
+}
+
+.product-accordion > summary::-webkit-details-marker {
+  display: none;
+}
+
+.product-accordion > summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.product-main section.anchor .product-accordion > summary h3 {
+  margin: 0;
+  transition: color 0.15s ease;
+}
+
+.product-main section.anchor .product-accordion > summary:hover h3 {
+  color: var(--accent) !important;
+}
+
+.product-accordion-icon {
+  flex: 0 0 auto;
+  color: var(--accent);
+  font-size: 2rem;
+  transition: transform 0.2s ease;
+}
+
+.product-accordion[open] .product-accordion-icon {
+  transform: rotate(180deg);
+}
+
+.product-accordion-body {
+  padding-bottom: 2.5rem;
+}
+
+@media (max-width: 600px) {
+  .product-accordion > summary {
+    padding: 1.2rem 0;
   }
 }
