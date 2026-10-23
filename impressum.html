@@ -1,27 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>bono-piano.com</title>
-    <link rel="icon" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  </head>
-  <body class="impressum-page">
-    
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bono-piano.com</title>
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/theme.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body class="impressum-page">
+
   <nav>
     <div class="nav-wrapper container">
       <div class="nav-left">
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger hide-on-large-only"><i class="material-icons">menu</i></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger hide-on-large-only"><i
+            class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="hide-on-med-and-down">
           <li><a href="index.html" data-i18n="nav.home">Home</a></li>
           <li><a href="product.html" data-i18n="nav.product">Produkt</a></li>
@@ -30,6 +34,8 @@
         </ul>
       </div>
       <div class="nav-right">
+        <button class="theme-toggle" type="button" aria-label="Dunkles Design aktivieren" aria-pressed="false"><i
+            class="material-icons" aria-hidden="true">dark_mode</i></button>
         <!-- Desktop: Normale Sprachauswahl -->
         <div class="language-selector hide-on-med-and-down">
           <button class="lang-button" data-lang="de" aria-label="Deutsch">DE</button>
@@ -38,7 +44,8 @@
         </div>
         <!-- Mobile: Burger-Menu für Sprachen (Materialize dropdown) -->
         <div class="language-burger hide-on-large-only">
-          <a class="dropdown-trigger language-toggle" href="#!" data-target="language-menu-mobile" aria-label="Sprachen"><i class="material-icons">language</i></a>
+          <a class="dropdown-trigger language-toggle" href="#!" data-target="language-menu-mobile"
+            aria-label="Sprachen"><i class="material-icons">language</i></a>
           <ul id="language-menu-mobile" class="dropdown-content">
             <li><a class="lang-button" data-lang="de" aria-label="Deutsch">DE</a></li>
             <li><a class="lang-button" data-lang="en" aria-label="English">EN</a></li>
@@ -46,7 +53,7 @@
           </ul>
         </div>
       </div>
-    <a href="index.html" class="brand-logo logo2"></a>
+      <a href="index.html" class="brand-logo logo2"></a>
     </div>
   </nav>
   <ul class="sidenav" id="mobile-demo">
@@ -55,106 +62,119 @@
     <li><a href="tutorial.html" data-i18n="nav.anleitung">Anleitung</a></li>
     <li><a href="impressum.html" data-i18n="nav.impressum">Impressum</a></li>
   </ul>
-    <div class="section no-pad-bot" id="index-banner">
-      <div class="container impressum-layout">
-        <h1 class="header center gold-text" data-i18n="impressum.title">Impressum</h1>
-        <h2 class="header center gold-text" data-i18n="impressum.subtitle">Angaben gemäß § 5 TMG</h2>
-        <p class="center flow-text impressum-note" data-i18n="impressum.exampleNote">Hinweis: Dieses Impressum ist ein Beispiel-Layout und ersetzt keine Rechtsberatung.</p>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container impressum-layout">
+      <h1 class="header center gold-text" data-i18n="impressum.title">Impressum</h1>
+      <h2 class="header center gold-text" data-i18n="impressum.subtitle">Angaben gemäß § 5 TMG</h2>
+      <p class="center flow-text impressum-note" data-i18n="impressum.exampleNote">Hinweis: Dieses Impressum ist ein
+        Beispiel-Layout und ersetzt keine Rechtsberatung.</p>
 
-        <div class="impressum-grid">
-          <section class="impressum-card">
-            <h3 data-i18n="impressum.section.provider">Anbieter</h3>
-            <p data-i18n="impressum.provider.name">BONO Piano Akustik</p>
-            <p data-i18n="impressum.provider.owner">Inhaberin: Nataliya Tkachenko</p>
-            <p data-i18n="impressum.provider.address">Musterstraße 12<br>80331 München<br>Deutschland</p>
-          </section>
+      <div class="impressum-grid">
+        <section class="impressum-card">
+          <h3 data-i18n="impressum.section.provider">Anbieter</h3>
+          <p data-i18n="impressum.provider.name">BONO Piano Akustik</p>
+          <p data-i18n="impressum.provider.owner">Inhaberin: Nataliya Tkachenko</p>
+          <p data-i18n="impressum.provider.address">Musterstraße 12<br>80331 München<br>Deutschland</p>
+        </section>
 
-          <section class="impressum-card">
-            <h3 data-i18n="impressum.section.contact">Kontakt</h3>
-            <p><span data-i18n="impressum.contact.phoneLabel">Telefon:</span> <a href="tel:+491234567890" data-i18n="impressum.contact.phone">+49 123 4567890</a></p>
-            <p><span data-i18n="impressum.contact.emailLabel">E-Mail:</span> <a href="mailto:info@bonopiano.com" data-i18n="impressum.contact.email">info@bonopiano.com</a></p>
-            <p><span data-i18n="impressum.contact.hoursLabel">Erreichbarkeit:</span> <span data-i18n="impressum.contact.hours">Mo-Fr, 10:00-17:00 Uhr</span></p>
-          </section>
+        <section class="impressum-card">
+          <h3 data-i18n="impressum.section.contact">Kontakt</h3>
+          <p><span data-i18n="impressum.contact.phoneLabel">Telefon:</span> <a href="tel:+491234567890"
+              data-i18n="impressum.contact.phone">+49 123 4567890</a></p>
+          <p><span data-i18n="impressum.contact.emailLabel">E-Mail:</span> <a href="mailto:info@bonopiano.com"
+              data-i18n="impressum.contact.email">info@bonopiano.com</a></p>
+          <p><span data-i18n="impressum.contact.hoursLabel">Erreichbarkeit:</span> <span
+              data-i18n="impressum.contact.hours">Mo-Fr, 10:00-17:00 Uhr</span></p>
+        </section>
 
-          <section class="impressum-card">
-            <h3 data-i18n="impressum.section.vat">Umsatzsteuer</h3>
-            <p data-i18n="impressum.vat.note">Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:</p>
-            <p data-i18n="impressum.vat.id">DE123456789</p>
-          </section>
+        <section class="impressum-card">
+          <h3 data-i18n="impressum.section.vat">Umsatzsteuer</h3>
+          <p data-i18n="impressum.vat.note">Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:</p>
+          <p data-i18n="impressum.vat.id">DE123456789</p>
+        </section>
 
-          <section class="impressum-card">
-            <h3 data-i18n="impressum.section.responsible">Verantwortlich für den Inhalt</h3>
-            <p data-i18n="impressum.responsible.name">Nataliya Tkachenko</p>
-            <p data-i18n="impressum.responsible.address">Musterstraße 12<br>80331 München<br>Deutschland</p>
-          </section>
+        <section class="impressum-card">
+          <h3 data-i18n="impressum.section.responsible">Verantwortlich für den Inhalt</h3>
+          <p data-i18n="impressum.responsible.name">Nataliya Tkachenko</p>
+          <p data-i18n="impressum.responsible.address">Musterstraße 12<br>80331 München<br>Deutschland</p>
+        </section>
 
-          <section class="impressum-card impressum-card-wide">
-            <h3 data-i18n="impressum.section.dispute">Streitbeilegung</h3>
-            <p data-i18n="impressum.dispute.eu">Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:</p>
-            <p><a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a></p>
-            <p data-i18n="impressum.dispute.consumer">Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
-          </section>
+        <section class="impressum-card impressum-card-wide">
+          <h3 data-i18n="impressum.section.dispute">Streitbeilegung</h3>
+          <p data-i18n="impressum.dispute.eu">Die Europäische Kommission stellt eine Plattform zur
+            Online-Streitbeilegung (OS) bereit:</p>
+          <p><a href="https://ec.europa.eu/consumers/odr/" target="_blank"
+              rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a></p>
+          <p data-i18n="impressum.dispute.consumer">Wir sind nicht verpflichtet und nicht bereit, an
+            Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+        </section>
 
-          <section class="impressum-card impressum-card-wide">
-            <h3 data-i18n="impressum.section.liability">Haftungshinweis</h3>
-            <p data-i18n="impressum.liability.content">Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
-            <h3 data-i18n="impressum.section.copyright">Urheberrecht</h3>
-            <p data-i18n="impressum.copyright.text">Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet.</p>
-          </section>
+        <section class="impressum-card impressum-card-wide">
+          <h3 data-i18n="impressum.section.liability">Haftungshinweis</h3>
+          <p data-i18n="impressum.liability.content">Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine
+            Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren
+            Betreiber verantwortlich.</p>
+          <h3 data-i18n="impressum.section.copyright">Urheberrecht</h3>
+          <p data-i18n="impressum.copyright.text">Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen
+            Seiten unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet.</p>
+        </section>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="page-footer gray">
+    <div class="container">
+      <div class="row">
+        <div class="col l4 s12">
+          <h5 class="gold-text" data-i18n="footer.about">Leiser klingen. Natürlich spielen.</h5>
+          <p class="grey-text text-lighten-4" data-i18n="footer.aboutText">
+            Lorem Ipsum, sol ardet omnibus, asinus tacet.
+          </p>
+        </div>
+        <div class="col l2 s4">
+          <h5 class="gold-text" data-i18n="footer.nav">Navigation</h5>
+          <ul>
+            <li><a class="white-text" href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a class="white-text" href="product.html" data-i18n="nav.product">Produkt</a></li>
+            <li><a class="white-text" href="tutorial.html" data-i18n="nav.anleitung">Anleitung</a></li>
+            <li><a class="white-text" href="impressum.html" data-i18n="nav.impressum">Impressum</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s4">
+          <h5 class="gold-text" data-i18n="footer.contact">Kontakt</h5>
+          <ul>
+            <li><a class="white-text" href="https://www.amazon.de/todo" data-i18n="footer.purchase">Bestellen</a></li>
+            <li><a class="white-text" href="mailto:info@bonopiano.com" data-i18n="footer.email-info">Info-Mail</a></li>
+            <li><a class="white-text" href="mailto:order@bonopiano.com"
+                data-i18n="footer.email-purchase">Bestell-Mail</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s4">
+          <h5 class="gold-text" data-i18n="footer.social">Social Media</h5>
+          <ul>
+            <li><a class="white-text" href="https://www.youtube.com/@NataliyaTkachenko" target="_blank">Youtube</a></li>
+            <li><a class="white-text" href="https://www.youtube.com/@NataliyaTkachenko" target="_blank">TikTok</a></li>
+            <li><a class="white-text" href="https://www.youtube.com/@NataliyaTkachenko" target="_blank">Instagram</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-     
-
-    <footer class="page-footer gray">
+    <div class="footer-copyright">
       <div class="container">
-        <div class="row">
-          <div class="col l4 s12">
-            <h5 class="gold-text" data-i18n="footer.about">Leiser klingen. Natürlich spielen.</h5>
-            <p class="grey-text text-lighten-4" data-i18n="footer.aboutText">
-              Lorem Ipsum, sol ardet omnibus, asinus tacet.
-            </p>
-          </div>
-          <div class="col l2 s4">
-            <h5 class="gold-text" data-i18n="footer.nav">Navigation</h5>
-            <ul>
-              <li><a class="white-text" href="index.html" data-i18n="nav.home">Home</a></li>
-              <li><a class="white-text" href="product.html" data-i18n="nav.product">Produkt</a></li>
-              <li><a class="white-text" href="tutorial.html" data-i18n="nav.anleitung">Anleitung</a></li>
-              <li><a class="white-text" href="impressum.html" data-i18n="nav.impressum">Impressum</a></li>
-            </ul>
-          </div>
-          <div class="col l3 s4">
-            <h5 class="gold-text" data-i18n="footer.contact">Kontakt</h5>
-            <ul>
-              <li><a class="white-text" href="https://www.amazon.de/todo" data-i18n="footer.purchase">Bestellen</a></li>
-              <li><a class="white-text" href="mailto:info@bonopiano.com" data-i18n="footer.email-info">Info-Mail</a></li>
-              <li><a class="white-text" href="mailto:order@bonopiano.com" data-i18n="footer.email-purchase">Bestell-Mail</a></li>
-            </ul>
-          </div>
-          <div class="col l3 s4">
-            <h5 class="gold-text" data-i18n="footer.social">Social Media</h5>
-            <ul>
-              <li><a class="white-text" href="https://www.youtube.com/@NataliyaTkachenko" target="_blank">Youtube</a></li>
-              <li><a class="white-text" href="https://www.youtube.com/@NataliyaTkachenko" target="_blank">TikTok</a></li>
-              <li><a class="white-text" href="https://www.youtube.com/@NataliyaTkachenko" target="_blank">Instagram</a></li>
-            </ul>
-          </div>
-        </div>
+        <a class="black-text text-lighten-3" href="http://materializecss.com">Made with designs from materializecss</a>
       </div>
-      <div class="footer-copyright">
-        <div class="container">
-         <a class="black-text text-lighten-3" href="http://materializecss.com">Made with designs from materializecss</a>
-        </div>
-      </div>
-    </footer>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
       var elems = document.querySelectorAll('.sidenav');
       M.Sidenav.init(elems);
     });
   </script>
   <script src="js/i18n.js"></script>
   <script src="js/init.js"></script>
-  </body>
+</body>
+
 </html>

@@ -1,27 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>bono-piano.com</title>
-    <link rel="icon" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  </head>
-  <body>
-    
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bono-piano.com</title>
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/theme.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body class="tutorial-page">
+
   <nav>
     <div class="nav-wrapper container">
       <div class="nav-left">
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger hide-on-large-only"><i class="material-icons">menu</i></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger hide-on-large-only"><i
+            class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="hide-on-med-and-down">
           <li><a href="index.html" data-i18n="nav.home">Home</a></li>
           <li><a href="product.html" data-i18n="nav.product">Produkt</a></li>
@@ -30,6 +34,8 @@
         </ul>
       </div>
       <div class="nav-right">
+        <button class="theme-toggle" type="button" aria-label="Dunkles Design aktivieren" aria-pressed="false"><i
+            class="material-icons" aria-hidden="true">dark_mode</i></button>
         <!-- Desktop: Normale Sprachauswahl -->
         <div class="language-selector hide-on-med-and-down">
           <button class="lang-button" data-lang="de" aria-label="Deutsch">DE</button>
@@ -38,7 +44,8 @@
         </div>
         <!-- Mobile: Burger-Menu für Sprachen (Materialize dropdown) -->
         <div class="language-burger hide-on-large-only">
-          <a class="dropdown-trigger language-toggle" href="#!" data-target="language-menu-mobile" aria-label="Sprachen"><i class="material-icons">language</i></a>
+          <a class="dropdown-trigger language-toggle" href="#!" data-target="language-menu-mobile"
+            aria-label="Sprachen"><i class="material-icons">language</i></a>
           <ul id="language-menu-mobile" class="dropdown-content">
             <li><a class="lang-button" data-lang="de" aria-label="Deutsch">DE</a></li>
             <li><a class="lang-button" data-lang="en" aria-label="English">EN</a></li>
@@ -46,7 +53,7 @@
           </ul>
         </div>
       </div>
-    <a href="index.html" class="brand-logo logo2"></a>
+      <a href="index.html" class="brand-logo logo2"></a>
     </div>
   </nav>
   <ul class="sidenav" id="mobile-demo">
@@ -55,65 +62,69 @@
     <li><a href="tutorial.html" data-i18n="nav.anleitung">Anleitung</a></li>
     <li><a href="impressum.html" data-i18n="nav.impressum">Impressum</a></li>
   </ul>
-    <div class="row">
-      <div class="col s12 m12 l12">
-        <div class="spacer-md"></div>
-        <h1 class="header" data-i18n="tutorial.title">Anleitung</h1>
-        <h2 class="header" data-i18n="tutorial.subtitle">Diese Webseite ist momentan noch in Arbeit!<br>Bitte haben Sie Geduld.</h2>
-        <div class="spacer-md"></div>
+  <div class="row">
+    <div class="col s12 m12 l12">
+      <div class="spacer-md"></div>
+      <h1 class="header" data-i18n="tutorial.title">Anleitung</h1>
+      <h2 class="header" data-i18n="tutorial.subtitle">Diese Webseite ist momentan noch in Arbeit!<br>Bitte haben Sie
+        Geduld.</h2>
+      <div class="spacer-md"></div>
+    </div>
+  </div>
+
+
+  <footer class="page-footer gray">
+    <div class="container">
+      <div class="row">
+        <div class="col l4 s12">
+          <h5 class="gold-text" data-i18n="footer.about">Leiser klingen. Natürlich spielen.</h5>
+          <p class="grey-text text-lighten-4" data-i18n="footer.aboutText">
+            Lorem Ipsum, sol ardet omnibus, asinus tacet.
+          </p>
+        </div>
+        <div class="col l2 s4">
+          <h5 class="gold-text" data-i18n="footer.nav">Navigation</h5>
+          <ul>
+            <li><a class="white-text" href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a class="white-text" href="product.html" data-i18n="nav.product">Produkt</a></li>
+            <li><a class="white-text" href="tutorial.html" data-i18n="nav.anleitung">Anleitung</a></li>
+            <li><a class="white-text" href="impressum.html" data-i18n="nav.impressum">Impressum</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s4">
+          <h5 class="gold-text" data-i18n="footer.contact">Kontakt</h5>
+          <ul>
+            <li><a class="white-text" href="https://www.amazon.de/todo" data-i18n="footer.purchase">Bestellen</a></li>
+            <li><a class="white-text" href="mailto:info@bonopiano.com" data-i18n="footer.email-info">Info-Mail</a></li>
+            <li><a class="white-text" href="mailto:order@bonopiano.com"
+                data-i18n="footer.email-purchase">Bestell-Mail</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s4">
+          <h5 class="gold-text" data-i18n="footer.social">Social Media</h5>
+          <ul>
+            <li><a class="white-text" href="https://www.youtube.com/@NataliyaTkachenko" target="_blank">Youtube</a></li>
+            <li><a class="white-text" href="https://www.youtube.com/@NataliyaTkachenko" target="_blank">TikTok</a></li>
+            <li><a class="white-text" href="https://www.youtube.com/@NataliyaTkachenko" target="_blank">Instagram</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-     
-
-    <footer class="page-footer gray">
+    <div class="footer-copyright">
       <div class="container">
-        <div class="row">
-          <div class="col l4 s12">
-            <h5 class="gold-text" data-i18n="footer.about">Leiser klingen. Natürlich spielen.</h5>
-            <p class="grey-text text-lighten-4" data-i18n="footer.aboutText">
-              Lorem Ipsum, sol ardet omnibus, asinus tacet.
-            </p>
-          </div>
-          <div class="col l2 s4">
-            <h5 class="gold-text" data-i18n="footer.nav">Navigation</h5>
-            <ul>
-              <li><a class="white-text" href="index.html" data-i18n="nav.home">Home</a></li>
-              <li><a class="white-text" href="product.html" data-i18n="nav.product">Produkt</a></li>
-              <li><a class="white-text" href="tutorial.html" data-i18n="nav.anleitung">Anleitung</a></li>
-              <li><a class="white-text" href="impressum.html" data-i18n="nav.impressum">Impressum</a></li>
-            </ul>
-          </div>
-          <div class="col l3 s4">
-            <h5 class="gold-text" data-i18n="footer.contact">Kontakt</h5>
-            <ul>
-              <li><a class="white-text" href="https://www.amazon.de/todo" data-i18n="footer.purchase">Bestellen</a></li>
-              <li><a class="white-text" href="mailto:info@bonopiano.com" data-i18n="footer.email-info">Info-Mail</a></li>
-              <li><a class="white-text" href="mailto:order@bonopiano.com" data-i18n="footer.email-purchase">Bestell-Mail</a></li>
-            </ul>
-          </div>
-          <div class="col l3 s4">
-            <h5 class="gold-text" data-i18n="footer.social">Social Media</h5>
-            <ul>
-              <li><a class="white-text" href="https://www.youtube.com/@NataliyaTkachenko" target="_blank">Youtube</a></li>
-              <li><a class="white-text" href="https://www.youtube.com/@NataliyaTkachenko" target="_blank">TikTok</a></li>
-              <li><a class="white-text" href="https://www.youtube.com/@NataliyaTkachenko" target="_blank">Instagram</a></li>
-            </ul>
-          </div>
-        </div>
+        <a class="black-text text-lighten-3" href="http://materializecss.com">Made with designs from materializecss</a>
       </div>
-      <div class="footer-copyright">
-        <div class="container">
-         <a class="black-text text-lighten-3" href="http://materializecss.com">Made with designs from materializecss</a>
-        </div>
-      </div>
-    </footer>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
       var elems = document.querySelectorAll('.sidenav');
       M.Sidenav.init(elems);
     });
   </script>
   <script src="js/i18n.js"></script>
   <script src="js/init.js"></script>
-  </body>
+</body>
+
 </html>
