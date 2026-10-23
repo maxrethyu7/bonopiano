@@ -39,7 +39,10 @@ document.addEventListener('DOMContentLoaded', function() {
         constrainWidth: false,
         coverTrigger: false,
         alignment: 'right',
-        stopPropagation: false
+        stopPropagation: false,
+        // Materialize closes on touchend and shrinks the menu before iOS fires the
+        // click, so taps land beside the flags. Close it ourselves after the click.
+        closeOnClick: false
       });
     }
   }
@@ -77,6 +80,14 @@ document.addEventListener('DOMContentLoaded', function() {
       var burger = toggle.closest('.language-burger');
       var menu = burger ? burger.querySelector('.language-dropdown') : null;
       if (menu) menu.classList.toggle('active');
+      return;
+    }
+
+    var menuFlag = e.target.closest('.dropdown-content .lang-button');
+    if (menuFlag && window.M) {
+      var trigger = document.querySelector('.dropdown-trigger[data-target="' + menuFlag.closest('.dropdown-content').id + '"]');
+      var dropdown = trigger && M.Dropdown.getInstance(trigger);
+      if (dropdown) dropdown.close();
       return;
     }
 
