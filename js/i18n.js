@@ -18,7 +18,7 @@
       'index.header.title1': '<span style="font-size: 5rem;">Innovative</span>',
       'index.header.title2': '<span style="font-size: 5rem;"> <span style="color: #b50a0a"> Schalldämpfung</span></span>',
       'index.header.subtitle': '<span style="font-size: 3.5rem; color: #E6C07A">für <em>Flügel</em> und <em>Klaviere</em></span>',
-      'index.text1': 'Die elegante Akustiklösung von BONO Piano Akustik reduziert die Lautstärke akustischer Flügel und Klaviere deutlich — ohne den natürlichen Klangcharakter zu beeinträchtigen und ganz ohne Eingriffe in die Mechanik, das Gehäuse oder der Raumarchitektur!',
+      'index.text1': 'Die elegante Akustiklösung von BONO Piano Akustik reduziert die Lautstärke akustischer Flügel und Klaviere deutlich — ohne den natürlichen Klangcharakter zu beeinträchtigen und ganz ohne Eingriffe in die Mechanik, das Gehäuse oder die Raumarchitektur!',
       'index.text1b': 'Entwickelt für Konzertpianisten, Musikstudierende, Theater, Musikschulen und Hochschulen, Studios und alle privaten Räume.',
       'index.text2': 'Mehr Infos zum Produkt:',
       'index.title2': '<em>Natürlich spielen.</em>',
