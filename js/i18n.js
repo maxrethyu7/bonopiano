@@ -17,6 +17,7 @@
       'index.header.title1': '<span style="font-size: 5rem;">Innovative</span>',
       'index.header.title2': '<span style="font-size: 5rem;"> <span style="color: #b50a0a"> Schalldämpfung</span></span>',
       'index.header.subtitle': '<span style="font-size: 3.5rem; color: #E6C07A">für <em>Flügel</em> und <em>Klaviere</em></span>',
+      'index.text0': 'Ist Ihr Flügel oder Klavier zu Hause, im Aufnahmestudio oder auf einer kleinen Theaterbühne zu laut?<span style="color: #E6C07A"><em> Dann sind Sie bei BONO Piano Akustik genau richtig!</em></span>',
       'index.text1': 'Die elegante Akustiklösung von BONO Piano Akustik reduziert die Lautstärke akustischer Flügel und Klaviere deutlich — ohne den natürlichen Klangcharakter zu beeinträchtigen und ganz ohne Eingriffe in die Mechanik, das Gehäuse oder die Raumarchitektur!',
       'index.text1b': 'Entwickelt für Konzertpianisten, Musikstudierende, Theater, Musikschulen und Hochschulen, Studios und alle privaten Räume.',
       'index.text2': 'Mehr Infos zum Produkt:',
@@ -252,6 +253,7 @@
       'index.header.title1': '<span style="font-size: 5rem;">Innovative</span>',
       'index.header.title2': '<span style="font-size: 5rem;"> <span style="color: #b50a0a"> Sound Damping</span></span>',
       'index.header.subtitle': '<span style="font-size: 3.5rem; color: #E6C07A">for <em>Grand</em> and <em>Upright Pianos</em></span>',
+      'index.text0': 'Is your grand piano or upright piano at home, in a recording studio, or on a small theater stage too loud?<span style="color: #E6C07A"><em> Then BONO Piano Akustik is just what you need!</em></span>',
       'index.text1b': 'Developed for concert pianists, music students, theatres, music schools and universities, studios, and all private spaces.',
       'index.text2': 'More information about the product:',
       'index.title2b': '<em>Sound quieter.</em>',
@@ -382,6 +384,7 @@
       'index.header.title1': '<span style="font-size: 5rem;">创新</span>',
       'index.header.title2': '<span style="font-size: 5rem;"> <span style="color: #b50a0a"> 消音方案</span></span>',
       'index.header.subtitle': '<span style="font-size: 3.5rem; color: #E6C07A">适用于<em>三角钢琴</em>与<em>立式钢琴</em></span>',
+      'index.text0': '您的三角钢琴或立式钢琴在家中、录音室或小型剧院舞台上声音太大吗？<span style="color: #E6C07A"><em>那么，BONO Piano Akustik 正是您的理想之选！</em></span>',
       'index.text1b': '专为音乐会钢琴家、音乐专业学生、剧院、音乐学校和音乐学院、录音室以及各种私人空间而研发。',
       'index.text2': '更多产品信息：',
       'index.title2b': '<em>琴声更轻。</em>',
@@ -563,4 +566,3 @@
 
   translatePage();
 });
-
