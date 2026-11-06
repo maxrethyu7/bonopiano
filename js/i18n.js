@@ -17,7 +17,7 @@
       'index.header.title1': '<span style="font-size: 5rem;">Innovative</span>',
       'index.header.title2': '<span style="font-size: 5rem;"> <span style="color: #b50a0a"> Schalldämpfung</span></span>',
       'index.header.subtitle': '<span style="font-size: 3.5rem; color: #E6C07A">für <em>Flügel</em> und <em>Klaviere</em></span>',
-      'index.text0': 'Ist Ihr Flügel oder Klavier zu Hause, im Aufnahmestudio oder auf einer kleinen Theaterbühne zu laut?<span style="color: #E6C07A"><em> Dann sind Sie bei BONO Piano Akustik genau richtig!</em></span>',
+      'index.text0': 'Ist Ihr Flügel oder Klavier zu Hause, im Aufnahmestudio oder auf einer kleinen Theaterbühne zu laut?<span style="color: #E6C07A"><em> Dann sind Sie bei BONO Piano Akustik richtig!</em></span>',
       'index.text1': 'Die elegante Akustiklösung von BONO Piano Akustik reduziert die Lautstärke akustischer Flügel und Klaviere deutlich — ohne den natürlichen Klangcharakter zu beeinträchtigen und ganz ohne Eingriffe in die Mechanik, das Gehäuse oder die Raumarchitektur!',
       'index.text1b': 'Entwickelt für Konzertpianisten, Musikstudierende, Theater, Musikschulen und Hochschulen, Studios und alle privaten Räume.',
       'index.text2': 'Mehr Infos zum Produkt:',
@@ -115,6 +115,8 @@
       'product.feature6.quoteSource1': '<br>— Nataliya Tkachenko,<br>Konzertpianistin und Klavierpädagogin',
       'product.feature6.quote2': '„Ich bin Pianistin und wohne in einer Altbauwohnung, in der auch mein Steinway steht. Für meine Konzerte muss ich regelmäßig üben, außerdem unterrichte ich zahlreiche Schüler. Ein Flügel in einer Wohnung kann bekanntlich schnell zum Problem werden, zum einen wegen der Nachbarn, vor allem aber, weil ein solches Instrument ja für einen großen Saal gedacht ist und in einem normalen Zimmer oft einfach zu laut klingt — auch wenn man es geschlossen lässt.<br><br>Von der Lautstärke des Flügels, egal ob ich ihn spielte oder meine Schüler, war ich zunehmend genervt und suchte nach Lösungen, den Klang etwas zu dämpfen. Zum Beispiel legte ich einen separaten Teppich unter das Instrument (wir haben Parkettboden). Das half nur wenig. Ich war schon drauf und dran, den schönen Flügel zu verkaufen und durch ein Klavier zu ersetzen, als ich von der Lösung erfuhr, die BONO Piano anbietet. Ich versuchte es und war mit dem Ergebnis hochzufrieden. Die Dämpfung funktioniert wirklich und ohne die Klangqualität zu beeinträchtigen, sie lässt sich leicht anbringen und ist optisch unauffällig.<br><br>Ich kann BONO Piano guten Gewissens weiterempfehlen.“',
       'product.feature6.quoteSource2': '<br>— Elena Gurevich,<br>Steinway-Artistin in München',
+      'product.feature6.quote3': '„Beim Klavierspielen in Wohnräumen können Möbel oder andere Gegenstände störend mit vibrieren. Mit BONO Piano passiert das deutlich weniger. Auch bei geöffnetem Deckel wirkte der Klang im Raum weicher, was ich beim Spielen als sehr angenehm empfand. Für mich eine ideale Lösung für das Klavierspiel zu Hause.“',
+      'product.feature6.quoteSource3': '<br>— Tetsuya Hori,<br>Komponist',
       'product.feature6.youtubeVid': 'In diesem Video spielt die Erfinderin des Produkts, Nataliya Tkachenko, Erik Saties <em>Gnossienne Nr. 1</em> auf einem Flügel mit der BONO Piano Akustik Schalldämpfung. Die Lautstärke wird dabei deutlich reduziert und ermöglicht so hochwertige Aufnahmen auch in relativ kleinen Räumen — ohne den natürlichen Klangcharakter und die Ausdruckskraft des Instruments zu beeinträchtigen.<br><br><span style="font-size: 1.7rem; color: #E6C07A"><b>Überzeugen Sie sich von der Akustik!</b></span>',
 
       'tutorial.title': 'Anleitung',
@@ -315,6 +317,8 @@
       'product.feature6.quoteSource1': '<br>- Nataliya Tkachenko,<br>Concert pianist and piano teacher',
       'product.feature6.quote2': '"I am a pianist and live in an old apartment building where my Steinway also stands. For my concerts I need to practice regularly, and I also teach many students. A grand piano in an apartment can quickly become a problem - on one hand because of neighbors, but above all because such an instrument is designed for a large hall and in a normal room often simply sounds too loud, even when closed.<br><br>I became increasingly annoyed by the piano\'s volume, whether I played or my students did, and I looked for ways to dampen the sound somewhat. For example, I placed a separate carpet under the instrument (we have parquet flooring). That helped only a little. I was about to sell the beautiful grand piano and replace it with an upright when I heard about BONO Piano\'s solution. I tried it and was very satisfied with the result. The damping really works, without affecting sound quality, it is easy to attach, and visually discreet.<br><br>I can recommend BONO Piano with full confidence."',
       'product.feature6.quoteSource2': '<br>- Elena Gurevich,<br>Steinway Artist in Munich',
+      'product.feature6.quote3': '"When playing the piano at home, furniture or other objects can vibrate along distractingly. With BONO Piano, this happens much less. Even with the lid open, the sound in the room seemed softer, which I found very pleasant while playing. For me, it is an ideal solution for playing the piano at home."',
+      'product.feature6.quoteSource3': '<br>- Tetsuya Hori,<br>Composer',
       'product.feature6.youtubeVid': 'In this video, the inventor of the product, Nataliya Tkachenko, plays Erik Satie\'s <em>Gnossienne No. 1</em> on a grand piano with BONO Piano Akustik sound damping. The volume is significantly reduced and enables high-quality recordings even in relatively small rooms - without affecting the instrument\'s natural tonal character and expressiveness.<br><br><span style="font-size: 1.7rem; color: #E6C07A"><b>Experience the acoustics for yourself!</b></span>',
       'tutorial.subtitle': 'Here we explain how to correctly install the <span style="color: #E6C07A">BONO Piano Akustik sound damper</span>.<br><br>This website is currently still under construction!<br>Please be patient.',
       'impressum.firm': 'Sample Company'
@@ -446,6 +450,8 @@
       'product.feature6.quoteSource1': '<br>— Nataliya Tkachenko，<br>音乐会钢琴家、钢琴教育家',
       'product.feature6.quote2': '“我是一名钢琴家，住在一套老房子里，我的斯坦威钢琴也放在家中。我需要为音乐会经常练琴，还教很多学生。众所周知，在公寓里放三角钢琴很容易带来麻烦：一是会影响邻居，但更主要的是，这种乐器本是为大音乐厅设计的，放在普通房间里往往太响——即使合上琴盖也是如此。<br><br>无论是我自己弹还是学生弹，钢琴的音量都让我越来越烦躁，于是我开始寻找让声音小一些的办法。例如，我在钢琴下面专门铺了一块地毯（我家是实木地板），但作用不大。我差点就要卖掉这台漂亮的三角钢琴，换一台立式钢琴，这时我得知了 BONO Piano 的解决方案。试用之后，我对效果非常满意：消音确实有效，而且不影响音质，安装简单，外观也毫不显眼。<br><br>我可以放心地向大家推荐 BONO Piano。”',
       'product.feature6.quoteSource2': '<br>— Elena Gurevich，<br>斯坦威艺术家，现居慕尼黑',
+      'product.feature6.quote3': '“在家中弹钢琴时，家具或其他物品有时也会随之振动，令人困扰。使用 BONO Piano 后，这种情况明显减少。即使打开琴盖，房间里的声音也显得更加柔和，让我演奏时感觉非常舒适。对我来说，这是在家弹钢琴的理想解决方案。”',
+      'product.feature6.quoteSource3': '<br>— Tetsuya Hori，<br>作曲家',
       'product.feature6.youtubeVid': '在这段视频中，产品发明者 Nataliya Tkachenko 在一台装有 BONO Piano Akustik 消音器的三角钢琴上演奏埃里克·萨蒂的<em>《玄秘曲第一号》</em>（Gnossienne No. 1）。音量明显降低，因此即使在较小的房间里也能进行高品质录音，而乐器的自然音色和表现力丝毫不受影响。<br><br><span style="font-size: 1.7rem; color: #E6C07A"><b>请亲耳感受它的声音效果！</b></span>',
       'tutorial.subtitle': '本页将为您介绍如何正确安装 <span style="color: #E6C07A">BONO Piano Akustik 消音器</span>。<br><br>本页面目前仍在建设中，<br>敬请期待！',
       'impressum.title': '法律声明',
@@ -516,6 +522,7 @@
       setActiveLangButton();
       translatePage();
     });
+
   });
 
   function t(key) {
