@@ -1355,6 +1355,7 @@ blockquote-artist footer {
   flex-direction: row !important;
   align-items: center !important;
   gap: 0.4rem !important;
+  padding-top: 0 !important;
 }
 
 .product-page nav ul#nav-mobile li,
@@ -1721,6 +1722,7 @@ blockquote-artist footer {
   flex-direction: row !important;
   align-items: center !important;
   gap: 0.4rem !important;
+  padding-top: 0 !important;
 }
 
 .home-page nav ul#nav-mobile li,
@@ -2401,9 +2403,10 @@ blockquote-artist footer {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
   width: 2.8rem;
   height: 2.8rem;
-  margin-right: 0.4rem;
+  margin-right: 0.7rem;
   padding: 0;
   border: 1px solid var(--control-line);
   border-radius: 0.5rem;
