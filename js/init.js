@@ -1,51 +1,66 @@
-document.addEventListener('DOMContentLoaded', function() {
-  // Initialize Materialize components
-  if (window.M) {
-    var sidenavElems = document.querySelectorAll('.sidenav');
-    if (sidenavElems.length) {
-      M.Sidenav.init(sidenavElems, {
+function positionSidenav(el) {
+  var nav = document.querySelector('nav');
+  if (!nav || !el) return;
+  var languageToggle = document.querySelector('.language-toggle');
+  var top = nav.getBoundingClientRect().bottom;
+  if (languageToggle && window.matchMedia('(max-width: 992px)').matches) {
+    top = languageToggle.getBoundingClientRect().bottom;
+  }
+  el.style.setProperty('top', Math.round(top + window.scrollY) + 'px', 'important');
+}
+
+function initializeNavigationComponents() {
+  if (!window.M) return;
+
+  var sidenavElems = document.querySelectorAll('.sidenav');
+  sidenavElems.forEach(function(el) {
+    if (!M.Sidenav.getInstance(el)) {
+      M.Sidenav.init(el, {
         edge: 'left',
         onOpenStart: function(el) {
-          // position and make visible
           positionSidenav(el);
-          // ensure it's fully onscreen
           el.style.transform = 'translateX(0)';
         },
         onCloseEnd: function(el) {
-          // hide it off-canvas so its right edge isn't visible
           el.style.transform = 'translateX(-120%)';
         }
       });
     }
-    // Ensure sidenav is positioned directly below the navbar when opened
-    function positionSidenav(el) {
-      var nav = document.querySelector('nav');
-      if (!nav || !el) return;
-      var navRect = nav.getBoundingClientRect();
-      // Use the distance from the top of the viewport to nav's bottom
-      var topPx = Math.round(navRect.bottom) + 'px';
-      el.style.top = topPx;
-    }
-    // Initial positioning
-    sidenavElems.forEach(function(el) { positionSidenav(el); });
-    // Reposition on resize/scroll in case navbar height or page offset changes
-    window.addEventListener('resize', function() { sidenavElems.forEach(positionSidenav); });
-    window.addEventListener('scroll', function() { sidenavElems.forEach(positionSidenav); });
+    positionSidenav(el);
+  });
+
+  if (M.Dropdown) {
+    var dropdownElems = document.querySelectorAll('.dropdown-trigger');
+    dropdownElems.forEach(function(el) {
+      if (!M.Dropdown.getInstance(el)) {
+        M.Dropdown.init(el, {
+          constrainWidth: false,
+          coverTrigger: false,
+          alignment: 'right',
+          stopPropagation: false,
+          // Keep the mobile language dropdown open until its flag is handled.
+          closeOnClick: false
+        });
+      }
+    });
+  }
+}
+
+document.addEventListener('componentsLoaded', initializeNavigationComponents);
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize Materialize components
+  initializeNavigationComponents();
+  if (window.M) {
     var parallaxElems = document.querySelectorAll('.parallax');
     if (parallaxElems.length && M.Parallax) M.Parallax.init(parallaxElems);
-    var dropdownElems = document.querySelectorAll('.dropdown-trigger');
-    if (dropdownElems.length && M.Dropdown) {
-      M.Dropdown.init(dropdownElems, {
-        constrainWidth: false,
-        coverTrigger: false,
-        alignment: 'right',
-        stopPropagation: false,
-        // Materialize closes on touchend and shrinks the menu before iOS fires the
-        // click, so taps land beside the flags. Close it ourselves after the click.
-        closeOnClick: false
-      });
-    }
   }
+  window.addEventListener('resize', function() {
+    document.querySelectorAll('.sidenav').forEach(positionSidenav);
+  });
+  window.addEventListener('scroll', function() {
+    document.querySelectorAll('.sidenav').forEach(positionSidenav);
+  });
 
   // Make the sidenav-trigger toggle the sidenav (open on first click, close on second)
   // Use capture phase and stop propagation so Materialize's own handler doesn't double-toggle.
