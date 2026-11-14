@@ -1,9 +1,8 @@
-// Light/dark theme: follows the system setting until the visitor picks one with the header toggle.
-// Loaded in <head> so the theme is applied before the page paints (no light flash in dark mode).
+// Dark is the default theme; visitors can choose light mode with the header toggle.
+// Loaded in <head> so the theme is applied before the page paints.
 (function () {
   var THEME_KEY = 'bono-theme';
   var root = document.documentElement;
-  var media = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
 
   function storedTheme() {
     try {
@@ -12,10 +11,6 @@
     } catch (e) {
       return null;
     }
-  }
-
-  function systemTheme() {
-    return media && media.matches ? 'dark' : 'light';
   }
 
   function updateToggles(theme) {
@@ -35,19 +30,13 @@
     updateToggles(theme);
   }
 
-  applyTheme(storedTheme() || systemTheme());
-
-  // Follow system changes while the visitor hasn't chosen a theme themselves.
-  if (media) {
-    var onSystemChange = function () {
-      if (!storedTheme()) applyTheme(systemTheme());
-    };
-    if (media.addEventListener) media.addEventListener('change', onSystemChange);
-    else if (media.addListener) media.addListener(onSystemChange);
-  }
+  applyTheme(storedTheme() || 'dark');
 
   document.addEventListener('DOMContentLoaded', function () {
     updateToggles(root.getAttribute('data-theme'));
+    document.addEventListener('componentsLoaded', function () {
+      updateToggles(root.getAttribute('data-theme'));
+    });
     document.addEventListener('click', function (e) {
       var btn = e.target.closest('.theme-toggle');
       if (!btn) return;
