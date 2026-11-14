@@ -409,7 +409,6 @@ nav .language-dropdown button.lang-button:hover {
   /* Make the opened navigation (sidenav) compact: only as big as the buttons need */
   .sidenav {
     position: absolute !important;
-    top: var(--nav-height) !important;
     left: 1rem !important;
     right: auto !important;
     width: auto !important;
@@ -2246,9 +2245,8 @@ blockquote-artist footer {
 }
 
 @media (max-width: 800px) {
-  /* Headline wraps on phones: drop the word-gap margin so each line centres exactly */
   .home-page > .row > .container h1.header:first-of-type {
-    margin-right: 0;
+    margin-right: 0.28em;
   }
 }
 
@@ -2789,6 +2787,10 @@ footer.page-footer .footer-copyright {
 
 /* Phones */
 @media (max-width: 600px) {
+  .home-page > .row > .container h1.header:first-of-type {
+    margin-bottom: 0.2em;
+  }
+
   .home-page > .row {
     padding: 1.75rem 1rem 3rem;
   }

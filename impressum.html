@@ -5,7 +5,12 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>bono-piano.com</title>
+  <title>Impressum – BONO Piano Akustik</title>
+  <template
+    data-component="meta"
+    data-title="Impressum – BONO Piano Akustik"
+    data-description="Impressum von BONO Piano Akustik mit Angaben zum Anbieter, Kontakt, Verantwortlichen und rechtlichen Hinweisen."
+  ></template>
   <link rel="icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,47 +26,7 @@
 
 <body class="impressum-page">
 
-  <nav>
-    <div class="nav-wrapper container">
-      <div class="nav-left">
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger hide-on-large-only"><i
-            class="material-icons">menu</i></a>
-        <ul id="nav-mobile" class="hide-on-med-and-down">
-          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-          <li><a href="product.html" data-i18n="nav.product">Produkt</a></li>
-          <li><a href="tutorial.html" data-i18n="nav.anleitung">Anleitung</a></li>
-          <li class="active"><a href="impressum.html" data-i18n="nav.impressum">Impressum</a></li>
-        </ul>
-      </div>
-      <div class="nav-right">
-        <button class="theme-toggle" type="button" aria-label="Dunkles Design aktivieren" aria-pressed="false"><i
-            class="material-icons" aria-hidden="true">dark_mode</i></button>
-        <!-- Desktop: Normale Sprachauswahl -->
-        <div class="language-selector hide-on-med-and-down">
-          <button class="lang-button" data-lang="de" aria-label="Deutsch">DE</button>
-          <button class="lang-button" data-lang="en" aria-label="English">EN</button>
-          <button class="lang-button" data-lang="zh" aria-label="中文">ZH</button>
-        </div>
-        <!-- Mobile: Burger-Menu für Sprachen (Materialize dropdown) -->
-        <div class="language-burger hide-on-large-only">
-          <a class="dropdown-trigger language-toggle" href="#!" data-target="language-menu-mobile"
-            aria-label="Sprachen"><i class="material-icons">language</i></a>
-          <ul id="language-menu-mobile" class="dropdown-content">
-            <li><a class="lang-button" data-lang="de" aria-label="Deutsch">DE</a></li>
-            <li><a class="lang-button" data-lang="en" aria-label="English">EN</a></li>
-            <li><a class="lang-button" data-lang="zh" aria-label="中文">ZH</a></li>
-          </ul>
-        </div>
-      </div>
-      <a href="index.html" class="brand-logo logo2"></a>
-    </div>
-  </nav>
-  <ul class="sidenav" id="mobile-demo">
-    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-    <li><a href="product.html" data-i18n="nav.product">Produkt</a></li>
-    <li><a href="tutorial.html" data-i18n="nav.anleitung">Anleitung</a></li>
-    <li><a href="impressum.html" data-i18n="nav.impressum">Impressum</a></li>
-  </ul>
+  <div data-component="header"></div>
   <div class="section no-pad-bot" id="index-banner">
     <div class="container impressum-layout">
       <h1 class="header center gold-text" data-i18n="impressum.title">Impressum</h1>
@@ -123,54 +88,8 @@
   </div>
 
 
-  <footer class="page-footer gray">
-    <div class="container">
-      <div class="row">
-        <div class="col l4 s12">
-          <h5 class="gold-text" data-i18n="footer.about">Leiser klingen. Natürlich spielen.</h5>
-          <p class="grey-text text-lighten-4" data-i18n="footer.aboutText">
-            Lorem Ipsum, sol ardet omnibus, asinus tacet.
-          </p>
-        </div>
-        <div class="col l2 s4">
-          <h5 class="gold-text" data-i18n="footer.nav">Navigation</h5>
-          <ul>
-            <li><a class="white-text" href="index.html" data-i18n="nav.home">Home</a></li>
-            <li><a class="white-text" href="product.html" data-i18n="nav.product">Produkt</a></li>
-            <li><a class="white-text" href="tutorial.html" data-i18n="nav.anleitung">Anleitung</a></li>
-            <li><a class="white-text" href="impressum.html" data-i18n="nav.impressum">Impressum</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s4">
-          <h5 class="gold-text" data-i18n="footer.contact">Kontakt</h5>
-          <ul>
-            <li><a class="white-text" href="https://www.amazon.de/" data-i18n="footer.purchase">Bestellen</a></li>
-            <li><a class="white-text" href="mailto:info@bonopiano.com" data-i18n="footer.email-info">E-Mail</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s4">
-          <h5 class="gold-text" data-i18n="footer.social">Social Media</h5>
-          <ul>
-            <li><a class="white-text" href="https://www.youtube.com/@NataliyaTkachenko" target="_blank">Youtube</a></li>
-            <li><a class="white-text" href="https://www.instagram.com/bonopianoakustik" target="_blank">Instagram</a></li>
-            <!-- TikTok link is currently disabled. -->
-            <!--li><a class="white-text" href="https://www.youtube.com/@NataliyaTkachenko" target="_blank">Instagram</a></li-->
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-        <a class="black-text text-lighten-3">© BONO Piano Akustik</a>
-      </div>
-    </div>
-  </footer>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var elems = document.querySelectorAll('.sidenav');
-      M.Sidenav.init(elems);
-    });
-  </script>
+  <div data-component="footer"></div>
+  <script src="js/components.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/init.js"></script>
 </body>
