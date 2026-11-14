@@ -2079,19 +2079,108 @@ blockquote-artist footer {
 .contact-page .contact-email,
 .contact-page .contact-related-link {
   display: inline-flex;
+  align-self: center;
   align-items: center;
   gap: 0.5rem;
   margin-top: 0.35rem;
   color: var(--accent);
   font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+
+.contact-page .contact-email span,
+.contact-page .contact-related-link {
   text-decoration: underline;
   text-decoration-color: var(--accent-line);
   text-underline-offset: 0.2em;
 }
 
 .contact-page .contact-email-address {
+  align-self: center;
   margin-top: 0.45rem;
   color: var(--site-muted);
+  text-align: center;
+}
+
+.contact-page .contact-social-card {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.contact-page .contact-social-card > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-page .contact-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  align-self: center;
+  margin-top: 0.35rem;
+}
+
+.contact-page .contact-social-links .contact-related-link {
+  align-self: auto;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.contact-page .contact-social-divider {
+  width: 1px;
+  height: 1.2em;
+  background: var(--site-line);
+}
+
+.contact-page .contact-social-preview {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+  color: #fff;
+  line-height: 0;
+}
+
+.contact-page .contact-social-preview img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.contact-page .contact-social-preview:hover img {
+  transform: scale(1.03);
+}
+
+.contact-page .contact-social-preview > .material-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 3.5rem;
+  line-height: 1;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.contact-page .contact-social-preview-label {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: #fff;
+  line-height: 1.4;
+  text-align: center;
 }
 
 .impressum-page .impressum-layout {
@@ -2243,6 +2332,22 @@ blockquote-artist footer {
 
   .contact-page .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-page .contact-social-card {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .contact-page .contact-social-links {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr);
+    gap: 0.5rem;
+  }
+
+  .contact-page .contact-social-links .contact-related-link {
+    font-size: 0.82rem;
+    white-space: normal;
   }
 
   .impressum-page .impressum-layout {
