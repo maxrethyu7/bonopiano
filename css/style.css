@@ -1663,7 +1663,7 @@ blockquote-artist footer {
 
 /* Shared visual language for the supporting pages. */
 .home-page,
-.tutorial-page,
+.contact-page,
 .impressum-page {
   --site-ink: #171717;
   --site-muted: #65635d;
@@ -1674,7 +1674,7 @@ blockquote-artist footer {
 }
 
 .home-page nav,
-.tutorial-page nav,
+.contact-page nav,
 .impressum-page nav {
   min-height: 76px;
   background: var(--nav-bg) !important;
@@ -1682,7 +1682,7 @@ blockquote-artist footer {
 }
 
 .home-page nav .nav-wrapper,
-.tutorial-page nav .nav-wrapper,
+.contact-page nav .nav-wrapper,
 .impressum-page nav .nav-wrapper {
   min-height: 76px;
   max-width: 1280px !important;
@@ -1690,7 +1690,7 @@ blockquote-artist footer {
 }
 
 .home-page nav .brand-logo.logo2,
-.tutorial-page nav .brand-logo.logo2,
+.contact-page nav .brand-logo.logo2,
 .impressum-page nav .brand-logo.logo2 {
   left: 1.5rem;
   transform: translateY(-50%);
@@ -1701,7 +1701,7 @@ blockquote-artist footer {
 }
 
 .home-page nav ul#nav-mobile,
-.tutorial-page nav ul#nav-mobile,
+.contact-page nav ul#nav-mobile,
 .impressum-page nav ul#nav-mobile {
   flex-direction: row !important;
   align-items: center !important;
@@ -1709,14 +1709,14 @@ blockquote-artist footer {
 }
 
 .home-page nav .nav-wrapper.container > .nav-left > ul#nav-mobile,
-.tutorial-page nav .nav-wrapper.container > .nav-left > ul#nav-mobile,
+.contact-page nav .nav-wrapper.container > .nav-left > ul#nav-mobile,
 .impressum-page nav .nav-wrapper.container > .nav-left > ul#nav-mobile {
   flex-direction: row !important;
   align-items: center !important;
 }
 
 .home-page nav .language-selector,
-.tutorial-page nav .language-selector,
+.contact-page nav .language-selector,
 .impressum-page nav .language-selector {
   flex-direction: row !important;
   align-items: center !important;
@@ -1725,8 +1725,8 @@ blockquote-artist footer {
 
 .home-page nav ul#nav-mobile li,
 .home-page nav ul#nav-mobile li a,
-.tutorial-page nav ul#nav-mobile li,
-.tutorial-page nav ul#nav-mobile li a,
+.contact-page nav ul#nav-mobile li,
+.contact-page nav ul#nav-mobile li a,
 .impressum-page nav ul#nav-mobile li,
 .impressum-page nav ul#nav-mobile li a {
   margin: 0 !important;
@@ -1738,20 +1738,20 @@ blockquote-artist footer {
 }
 
 .home-page nav ul#nav-mobile li.active a,
-.tutorial-page nav ul#nav-mobile li.active a,
+.contact-page nav ul#nav-mobile li.active a,
 .impressum-page nav ul#nav-mobile li.active a {
   color: var(--accent) !important;
   border-bottom: 1px solid var(--accent-line);
 }
 
 .home-page nav .nav-left,
-.tutorial-page nav .nav-left,
+.contact-page nav .nav-left,
 .impressum-page nav .nav-left {
   margin-left: min(380px, 30vw);
 }
 
 .home-page nav .lang-button,
-.tutorial-page nav .lang-button,
+.contact-page nav .lang-button,
 .impressum-page nav .lang-button {
   border-color: var(--control-line);
   background-color: transparent;
@@ -1759,8 +1759,8 @@ blockquote-artist footer {
 
 .home-page nav .lang-button:hover,
 .home-page nav .lang-button.active,
-.tutorial-page nav .lang-button:hover,
-.tutorial-page nav .lang-button.active,
+.contact-page nav .lang-button:hover,
+.contact-page nav .lang-button.active,
 .impressum-page nav .lang-button:hover,
 .impressum-page nav .lang-button.active {
   background-color: rgba(185, 149, 66, 0.12);
@@ -2013,44 +2013,85 @@ blockquote-artist footer {
 }
 
 .home-page .page-footer,
-.tutorial-page .page-footer,
+.contact-page .page-footer,
 .impressum-page .page-footer {
   background: var(--site-ink) !important;
 }
 
-.tutorial-page > .row {
+.contact-page .contact-layout {
   max-width: 1000px;
-  min-height: calc(100vh - 76px);
+  min-height: calc(100vh - 152px);
   margin: 0 auto;
   padding: 7rem 2rem 8rem;
 }
 
-.tutorial-page > .row > .col {
-  float: none;
-  width: 100%;
-  padding: 0;
-}
-
-.tutorial-page .header {
+.contact-page .contact-layout h1.header {
   max-width: 760px;
-  margin: 0 auto 1.2rem;
+  margin: 0 auto 1.5rem;
   color: var(--site-ink) !important;
   text-align: center !important;
-}
-
-.tutorial-page h1.header {
   font-size: clamp(3rem, 7vw, 6rem) !important;
   font-weight: 500;
   letter-spacing: -0.05em;
   line-height: 0.95;
 }
 
-.tutorial-page h2.header {
+.contact-page .contact-intro {
   max-width: 620px;
+  margin: 0 auto 2.5rem;
   color: var(--site-muted) !important;
   font-size: 1.1rem !important;
   font-weight: 400;
-  line-height: 1.6 !important;
+  line-height: 1.7 !important;
+  text-align: center;
+}
+
+.contact-page .contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.contact-page .contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.75rem;
+  border: 1px solid var(--site-line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.contact-page .contact-card h2 {
+  margin: 0 0 0.75rem;
+  color: var(--site-ink);
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.contact-page .contact-card p {
+  margin: 0 0 1.25rem;
+  color: var(--site-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.contact-page .contact-email,
+.contact-page .contact-related-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.35rem;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--accent-line);
+  text-underline-offset: 0.2em;
+}
+
+.contact-page .contact-email-address {
+  margin-top: 0.45rem;
+  color: var(--site-muted);
 }
 
 .impressum-page .impressum-layout {
@@ -2124,13 +2165,13 @@ blockquote-artist footer {
 
 @media (max-width: 800px) {
   .home-page nav .nav-wrapper,
-  .tutorial-page nav .nav-wrapper,
+  .contact-page nav .nav-wrapper,
   .impressum-page nav .nav-wrapper {
     padding: 0 0.75rem !important;
   }
 
   .home-page nav .brand-logo.logo2,
-  .tutorial-page nav .brand-logo.logo2,
+  .contact-page nav .brand-logo.logo2,
   .impressum-page nav .brand-logo.logo2 {
     left: 4.5rem;
     transform: translateY(-50%);
@@ -2139,7 +2180,7 @@ blockquote-artist footer {
   }
 
   .home-page nav .nav-left,
-  .tutorial-page nav .nav-left,
+  .contact-page nav .nav-left,
   .impressum-page nav .nav-left {
     margin-left: 0;
   }
@@ -2195,9 +2236,13 @@ blockquote-artist footer {
     gap: 0;
   }
 
-  .tutorial-page > .row {
+  .contact-page .contact-layout {
     min-height: calc(100vh - 76px);
     padding: 5rem 1rem 6rem;
+  }
+
+  .contact-page .contact-grid {
+    grid-template-columns: 1fr;
   }
 
   .impressum-page .impressum-layout {
@@ -2232,10 +2277,6 @@ blockquote-artist footer {
 
 .home-page .collection .collection-item a {
   font-size: 0.9rem;
-}
-
-.tutorial-page h2.header {
-  font-size: 1.25rem !important;
 }
 
 .impressum-page .impressum-note,
@@ -2300,7 +2341,7 @@ html[data-theme="dark"] {
 }
 
 [data-theme="dark"] .home-page,
-[data-theme="dark"] .tutorial-page,
+[data-theme="dark"] .contact-page,
 [data-theme="dark"] .impressum-page {
   --site-ink: #f2eee6;
   --site-muted: #b5aea2;
@@ -2348,7 +2389,7 @@ html[data-theme="dark"] {
 @media (max-width: 800px) {
   /* Header logo centred between the menu button and the controls */
   .product-page nav .brand-logo.logo2,
-  .tutorial-page nav .brand-logo.logo2,
+  .contact-page nav .brand-logo.logo2,
   .impressum-page nav .brand-logo.logo2 {
     left: 50%;
     transform: translate(-50%, -50%);
@@ -2464,18 +2505,18 @@ html[data-theme="dark"] {
     padding: 6px 8px;
   }
 
-  /* Tutorial and Impressum: centred titles, readable sizes */
-  .tutorial-page > .row {
+  /* Contact and Impressum: readable page spacing on smaller screens */
+  .contact-page .contact-layout {
     padding: 3.5rem 1rem 4rem;
     min-height: 0;
   }
 
-  .tutorial-page h1.header {
+  .contact-page .contact-layout h1.header {
     font-size: 2.4rem !important;
   }
 
-  .tutorial-page h2.header {
-    font-size: 1.05rem !important;
+  .contact-page .contact-card {
+    padding: 1.25rem;
   }
 
   .impressum-page .impressum-layout {
@@ -2711,20 +2752,7 @@ html[data-theme="dark"] {
   max-width: 640px;
 }
 
-/* Tutorial and Impressum */
-.tutorial-page > .row {
-  min-height: 0;
-  padding: 4rem 1.5rem 4.5rem;
-}
-
-.tutorial-page h1.header {
-  font-size: clamp(2.4rem, 5vw, 4rem) !important;
-}
-
-.tutorial-page h2.header {
-  font-size: 1.1rem !important;
-}
-
+/* Impressum */
 .impressum-page .impressum-layout {
   padding: 3rem 1.5rem 3.5rem;
 }
@@ -2874,11 +2902,11 @@ footer.page-footer .footer-copyright {
     width: 100%;
   }
 
-  .tutorial-page > .row {
+  .contact-page .contact-layout {
     padding: 2.5rem 1rem 3rem;
   }
 
-  .tutorial-page h1.header,
+  .contact-page .contact-layout h1.header,
   .impressum-page .impressum-layout > h1 {
     font-size: 2rem !important;
   }
@@ -2907,7 +2935,7 @@ footer.page-footer .footer-copyright {
 nav .nav-wrapper,
 .product-page nav .nav-wrapper,
 .home-page nav .nav-wrapper,
-.tutorial-page nav .nav-wrapper,
+.contact-page nav .nav-wrapper,
 .impressum-page nav .nav-wrapper {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
@@ -2918,7 +2946,7 @@ nav .nav-wrapper,
 nav .nav-wrapper > .nav-left,
 .product-page nav .nav-left,
 .home-page nav .nav-left,
-.tutorial-page nav .nav-left,
+.contact-page nav .nav-left,
 .impressum-page nav .nav-left {
   grid-column: 1;
   grid-row: 1;
@@ -2938,7 +2966,7 @@ nav .nav-wrapper > .nav-right {
 nav .brand-logo.logo2,
 .product-page nav .brand-logo.logo2,
 .home-page nav .brand-logo.logo2,
-.tutorial-page nav .brand-logo.logo2,
+.contact-page nav .brand-logo.logo2,
 .impressum-page nav .brand-logo.logo2 {
   grid-column: 2;
   grid-row: 1;
@@ -2956,7 +2984,7 @@ nav .brand-logo.logo2,
   nav .brand-logo.logo2,
   .product-page nav .brand-logo.logo2,
   .home-page nav .brand-logo.logo2,
-  .tutorial-page nav .brand-logo.logo2,
+  .contact-page nav .brand-logo.logo2,
   .impressum-page nav .brand-logo.logo2 {
     width: min(200px, 44vw);
     height: 52px;
@@ -2966,7 +2994,7 @@ nav .brand-logo.logo2,
 /* Only the link carries padding, so the menu stays clear of the centred logo */
 .product-page nav ul#nav-mobile li,
 .home-page nav ul#nav-mobile li,
-.tutorial-page nav ul#nav-mobile li,
+.contact-page nav ul#nav-mobile li,
 .impressum-page nav ul#nav-mobile li {
   padding: 0 !important;
 }
@@ -2976,7 +3004,7 @@ nav .brand-logo.logo2,
   nav .brand-logo.logo2,
   .product-page nav .brand-logo.logo2,
   .home-page nav .brand-logo.logo2,
-  .tutorial-page nav .brand-logo.logo2,
+  .contact-page nav .brand-logo.logo2,
   .impressum-page nav .brand-logo.logo2 {
     width: 180px;
     height: 52px;
@@ -2984,7 +3012,7 @@ nav .brand-logo.logo2,
 
   .product-page nav ul#nav-mobile li a,
   .home-page nav ul#nav-mobile li a,
-  .tutorial-page nav ul#nav-mobile li a,
+  .contact-page nav ul#nav-mobile li a,
   .impressum-page nav ul#nav-mobile li a {
     padding: 0.65rem 0.45rem !important;
     letter-spacing: 0.06em;
