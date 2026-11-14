@@ -14,8 +14,8 @@
       'footer.email-info': 'E-Mail',
 
 
-      'index.header.title1': '<span style="font-size: 5rem;">Innovative</span>',
-      'index.header.title2': '<span style="font-size: 5rem;"> <span style="color: #b50a0a"> Schalldämpfung</span></span>',
+      'index.header.title1': 'Innovative',
+      'index.header.title2': 'Schalldämpfung',
       'index.header.subtitle': '<span style="font-size: 3.5rem; color: #E6C07A">für <em>Flügel</em> und <em>Klaviere</em></span>',
       'index.text1': 'Die elegante Akustiklösung von BONO Piano Akustik reduziert die Lautstärke akustischer Flügel und Klaviere deutlich — ohne den natürlichen Klangcharakter zu beeinträchtigen und ganz ohne Eingriffe in die Mechanik, das Gehäuse oder die Raumarchitektur!',
       'index.text1b': 'Entwickelt für Konzertpianisten, Musikstudierende, Theater, Musikschulen und Hochschulen, Studios und alle privaten Räume.',
@@ -506,13 +506,13 @@
     });
   }
 
-  document.querySelectorAll('.lang-button').forEach((button) => {
-    button.addEventListener('click', (event) => {
-      locale = event.currentTarget.dataset.lang;
-      saveLocale(locale);
-      setActiveLangButton();
-      translatePage();
-    });
+  document.addEventListener('click', (event) => {
+    const button = event.target.closest('.lang-button');
+    if (!button) return;
+    locale = button.dataset.lang;
+    saveLocale(locale);
+    setActiveLangButton();
+    translatePage();
   });
 
   function t(key) {
@@ -561,6 +561,6 @@
     setActiveLangButton();
   }
 
+  document.addEventListener('componentsLoaded', translatePage);
   translatePage();
 });
-
