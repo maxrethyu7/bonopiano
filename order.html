@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bestellen – BONO Piano Akustik</title>
+  <template
+    data-component="meta"
+    data-title="Bestellen – BONO Piano Akustik"
+    data-description="BONO Schalldämpfung für Flügel und Klaviere in den Größen S und M bestellen."
+  ></template>
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/theme.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body class="order-page">
+
+  <div data-component="header"></div>
+  <main class="order-layout">
+    <h1 class="header" data-i18n="order.title">Bestellen</h1>
+    <div class="order-slogan" data-i18n="order.slogan">
+      <span class="order-slogan-line" aria-hidden="true"></span>
+      <span>BONO Piano Akustik – für mehr Ruhe und Freude am Klavierspiel.</span>
+      <span class="order-slogan-line" aria-hidden="true"></span>
+    </div>
+    <p class="order-intro" data-i18n="order.intro">
+      Die Bestellung ist einfach: Dank der durchdachten Form passt die Schalldämpfung zu den meisten gängigen kleinen bis mittelgroßen Flügelmodellen. Momentan können Sie ausschließlich per E-Mail bestellen. Mit einem Klick auf die gewünschte Größe wird automatisch eine E-Mail mit Ihrer Auswahl vorbereitet.
+    </p>
+    <div class="order-grid">
+      <section class="order-card">
+        <span class="order-type" data-i18n="order.grand">Flügel</span>
+        <p class="order-card-copy" data-i18n="order.grandDesc">Für Flügel mit einer Länge von 1,55–1,80 m.</p>
+        <div class="order-options">
+          <div class="order-price" aria-label="200 Euro, jetzt 180 Euro">
+            <span class="old-price" data-i18n="order.grandOldPrice" aria-label="200 Euro">200 €</span>
+            <strong data-i18n="order.grandPrice">180 €*</strong>
+          </div>
+          <div class="order-size-buttons" aria-label="Größe wählen">
+            <a class="order-email" href="mailto:info@bonopiano.com" data-mail-kind="grand" data-mail-size="S">
+              <i class="material-icons" aria-hidden="true">mail</i>
+              <span data-i18n="order.sizeS">Größe S</span>
+            </a>
+            <a class="order-email" href="mailto:info@bonopiano.com" data-mail-kind="grand" data-mail-size="M">
+              <i class="material-icons" aria-hidden="true">mail</i>
+              <span data-i18n="order.sizeM">Größe M</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="order-card">
+        <span class="order-type" data-i18n="order.upright">Klavier</span>
+        <p class="order-card-copy" data-i18n="order.uprightDesc">Bitte Modellangaben in Ihrer Bestellung nennen.</p>
+        <div class="order-options">
+          <div class="order-price" aria-label="110 Euro, jetzt 90 Euro">
+            <span class="old-price" data-i18n="order.uprightOldPrice" aria-label="110 Euro">110 €</span>
+            <strong data-i18n="order.uprightPrice">90 €*</strong>
+          </div>
+          <div class="order-size-buttons" aria-label="Größe wählen">
+            <a class="order-email" href="mailto:info@bonopiano.com" data-mail-kind="piano" data-mail-size="S">
+              <i class="material-icons" aria-hidden="true">mail</i>
+              <span data-i18n="order.sizeS">Größe S</span>
+            </a>
+            <a class="order-email" href="mailto:info@bonopiano.com" data-mail-kind="piano" data-mail-size="M">
+              <i class="material-icons" aria-hidden="true">mail</i>
+              <span data-i18n="order.sizeM">Größe M</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+    
+    <section class="order-card order-custom-card">
+      <h2 data-i18n="order.customTitle">Sonderanfertigungen</h2>
+      <div class="order-custom-text order-card-copy" data-i18n="order.customText">
+        <p class="order-card-copy">Für Flügel ab 1,83 m bis hin zum Steinway D (274 cm) erstellen wir Ihnen gerne ein individuelles Angebot. Diese Modelle werden nach Maß und in kleinen Stückzahlen gefertigt. Die Preise können daher abweichen. Bitte senden Sie uns Ihre Anfrage per E-Mail mit genauer Angabe der Flügellänge und der Marke.</p>
+      </div>
+      <a class="order-email" href="mailto:info@bonopiano.com" data-mail-kind="custom">
+        <i class="material-icons" aria-hidden="true">mail</i>
+        <span data-i18n="order.customEmail">Sonderanfertigung anfragen</span>
+      </a>
+    </section>
+    <p class="order-footnote" data-i18n="order.introPriceNote"><span class="footnote-mark">*</span>Einführungspreise gelten nur für die ersten 500 Stück. <br>Durch die teilweise Fertigung in China können wir Ihnen trotz hochwertiger Materialien und umfangreicher Entwicklungsarbeit besonders attraktive Preise anbieten.</p>
+  </main>
+  <div data-component="footer"></div>
+  <script src="js/components.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/init.js"></script>
+</body>
+
+</html>
